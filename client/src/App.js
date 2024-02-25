@@ -9,7 +9,7 @@ import Error from "./notFound/NotFound"
 import DashboardLayout from './layouts';
 import CategoryDisplay from './MenuRelated/CategoryDisplay';
 import YourOrder from './order/YourOrder';
-
+import MenuSelect from './MenuRelated/MenuSelect';
 
 
 
@@ -38,7 +38,7 @@ const App  = () =>  {
       children: [
         {
           path: '',
-          element: <Navigate to="/menucategories" replace />,
+          element: <Navigate to="/menuselect" replace />,
         },
         {
           path: 'menucategories',
@@ -60,6 +60,11 @@ const App  = () =>  {
         {
           path: 'yourorder' ,
           element:  <YourOrder/>
+        },
+
+        {
+          path: 'menuselect' ,
+          element:  <MenuSelect/>
         },
 
         {

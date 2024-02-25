@@ -83,11 +83,11 @@ export default function Nav({ openNav, onCloseNav }) {
           </Typography>       
         <br></br><br></br>
 
-        <Typography component={Link} to="/" style={{ color: '#FFFFFF', fontFamily: 'Roboto Mono', display: 'flex', textDecoration: 'none', fontSize: '15px', fontWeight: 'bold', marginLeft: '20%', border: 'none', }}>
+        <Typography component={Link} to="/menuselect" style={{ color: '#FFFFFF', fontFamily: 'Roboto Mono', display: 'flex', textDecoration: 'none', fontSize: '15px', fontWeight: 'bold', marginLeft: '20%', border: 'none', }}>
             <ListItemIcon style={{ color: '#808080', marginRight: '-25px' }}>
               <DateRangeIcon />
             </ListItemIcon>
-            Sample
+            Menu Select
           </Typography>       
         <br></br><br></br>
 
