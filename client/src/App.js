@@ -7,7 +7,7 @@ import {BrowserRouter as Router, Route, Navigate,  Routes, useLocation, useRoute
 
 import Error from "./notFound/NotFound"
 import DashboardLayout from './layouts';
-import CategoryDisplay from './MenuRelated/CategoryDisplay';
+import MenuItems from './MenuRelated/MenuItems';
 import YourOrder from './order/YourOrder';
 import MenuSelect from './MenuRelated/MenuSelect';
 
@@ -53,8 +53,8 @@ const App  = () =>  {
         },
 
         {
-          path: 'categorydisplay' ,
-          element:  <CategoryDisplay/>
+          path: 'menuItems' ,
+          element:  <MenuItems/>
         },
 
         {

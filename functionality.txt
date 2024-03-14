@@ -1,0 +1,32 @@
+MenuSelect.js 
+    -select menu option
+    -sends indicator to meneSelectConfirm.js (i.e menu = deluxe)
+    
+MenuSelectConfirm.js
+    -if cancel is pressed go back to MenuSelect.js
+    -if confirm is pressed, send indicator to menuCategories.js (menu = deluxe)
+
+MenuCategories.js
+    -uses the indicator to decide which file to retrieve data from in FoodInfo. (i.e menu = deluxe, will retrieve data from deluxeFoods.json)
+    -Displays categories using the array of categories in deluxeFoods.json
+    -select category
+    -send user to MenuItems.js with indicator of category (i.e category = burgers)
+
+MenuItems.js
+    -uses indicators to decide which part of the data to show from in foodInfo. (i.e category = burger, will retrieve item info for burger only)
+    -Store and display all relevant data
+    -Select View Item
+    -send user to ItemDisplay with indicator of item (i.e item = chickenBurger)
+    
+ItemDisplay.js
+    -uses indicators to retrieve and display relevant info 
+    -select nutritional info
+    -send user to NutritionDisplay.js with all relevant indicators. (i.e menu, category, item,)
+
+NutritionDisplay.js
+    -retrieve and display relevant info using indicators
+
+
+
+**Indicators can be stored in url. For example localhost:3000/deluxe/burgers/chickenBurger/nutrition
+** when developing, you can use placeholder indicators. For example just create variables named menu/category and fill them manually with values.
