@@ -1,0 +1,62 @@
+{
+    "categories": [
+      {
+        "name": "Appetizers",
+        "foods": [
+          {
+            "name": "Bruschetta",
+            "nutritionalInfo": {
+              "calories": 150,
+              "fat": 8,
+              "carbohydrates": 18,
+              "protein": 3
+            },
+            "price": 9.99,
+            "description": "Toasted bread topped with diced tomatoes, garlic, basil, and olive oil.",
+            "photo": "https://via.placeholder.com/150"
+          },
+          {
+            "name": "Mozzarella Sticks",
+            "nutritionalInfo": {
+              "calories": 250,
+              "fat": 15,
+              "carbohydrates": 20,
+              "protein": 9
+            },
+            "price": 8.99,
+            "description": "Deep-fried sticks of mozzarella cheese, served with marinara sauce.",
+            "photo": "https://via.placeholder.com/150"
+          }
+        ]
+      },
+      {
+        "name": "Burgers",
+        "foods": [
+          {
+            "name": "Grilled Salmon",
+            "nutritionalInfo": {
+              "calories": 300,
+              "fat": 20,
+              "carbohydrates": 2,
+              "protein": 25
+            },
+            "price": 18.99,
+            "description": "Grilled salmon fillet served with steamed vegetables and mashed potatoes.",
+            "photo": "https://via.placeholder.com/150"
+          },
+          {
+            "name": "Chicken Alfredo",
+            "nutritionalInfo": {
+              "calories": 450,
+              "fat": 22,
+              "carbohydrates": 35,
+              "protein": 30
+            },
+            "price": 14.99,
+            "description": "Creamy Alfredo sauce served over fettuccine pasta with grilled chicken.",
+            "photo": "https://via.placeholder.com/150"
+          }
+        ]
+      }
+    ]
+  }

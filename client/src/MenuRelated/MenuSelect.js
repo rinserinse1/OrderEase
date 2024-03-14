@@ -9,7 +9,8 @@ import Paper from '@mui/material/Paper';
 import {Button, Typography, Container} from '@mui/material'
 import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
-const MenuSelect = () => {
+import { Card, CardMedia,Box, ButtonBase, } from '@mui/material';
+const MenuSelectConfirm = () => {
 
 
   const [error, setError] = useState("");
@@ -17,11 +18,14 @@ const MenuSelect = () => {
 
     return (
         <>
-        <br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/>
         <Container maxWidth="sm">
           <Typography variant="h4" align="center" gutterBottom>
-            Welcome! <br></br> Pick your menu
+            Welcome to <br></br> OrderEase! <br></br> Pick your menu
           </Typography>
+          </Container>
+          <br/><br/><br/><br/>
+          {/*
           <Grid container spacing={2}>
           <Grid item xs={6}>
               <Button
@@ -50,10 +54,70 @@ const MenuSelect = () => {
             </Grid>
 
           </Grid>
-        </Container>
+        
+    */}
+
+
+        <Grid container justifyContent="center" spacing={2}>
+      <Grid item>
+        <Card sx={{ maxWidth: 345 }}>
+          <ButtonBase
+            component={Link}
+            to="/menucategories"
+            style={{ width: '100%' }}
+          >
+            <CardMedia
+              component="img"
+              height="140"
+              image="https://via.placeholder.com/345x140"
+              alt="Deluxe Menu"
+            />
+          </ButtonBase>
+          <Box
+            sx={{
+              backgroundColor: 'white',
+              textAlign: 'center',
+              padding: '10px',
+            }}
+          >
+            <Typography variant="h6" component="div">
+              Deluxe Menu
+            </Typography>
+          </Box>
+        </Card>
+      </Grid>
+      
+      <Grid item>
+        <Card sx={{ maxWidth: 345, marginTop: 10 }}>
+          <ButtonBase
+            component={Link}
+            to="/menucategories"
+            style={{ width: '100%' }}
+          >
+            <CardMedia
+              component="img"
+              height="140"
+              image="https://via.placeholder.com/345x140"
+              alt="Deluxe Menu"
+            />
+          </ButtonBase>
+          <Box
+            sx={{
+              backgroundColor: 'white',
+              textAlign: 'center',
+              padding: '10px',
+            }}
+          >
+            <Typography variant="h6" component="div">
+              Deluxe Menu
+            </Typography>
+          </Box>
+        </Card>
+      </Grid>
+    </Grid>
       </>
     )
     
 };
 
-export default MenuSelect
+export default MenuSelectConfirm

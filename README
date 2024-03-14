@@ -3,6 +3,7 @@ MERN Stack Application (react + node.js)
 
 Must have: 
 -NODE: version -- 14.x (we used v14.17.1)
+- nvm install 14.17.1 (to download the node version only for the current directory)
 
 
 Package Installation:
