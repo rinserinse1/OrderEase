@@ -71,7 +71,7 @@ export default function Nav({ openNav, onCloseNav }) {
             <ListItemIcon style={{ color: '#808080', marginRight: '-25px' }}>
               <DateRangeIcon />
             </ListItemIcon>
-            Menu Categories
+            Menu Select
           </Typography>       
         <br></br><br></br>
 
