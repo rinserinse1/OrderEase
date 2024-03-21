@@ -63,7 +63,7 @@ const MenuSelectConfirm = () => {
         <Card sx={{ maxWidth: 345 }}>
           <ButtonBase
             component={Link}
-            to="/menucategories"
+            to="/menuselectconfirm/deluxe"
             style={{ width: '100%' }}
           >
             <CardMedia
@@ -91,7 +91,7 @@ const MenuSelectConfirm = () => {
         <Card sx={{ maxWidth: 345, marginTop: 10 }}>
           <ButtonBase
             component={Link}
-            to="/menucategories"
+            to="/menuselectconfirm/regular"
             style={{ width: '100%' }}
           >
             <CardMedia
@@ -109,7 +109,7 @@ const MenuSelectConfirm = () => {
             }}
           >
             <Typography variant="h6" component="div">
-              Deluxe Menu
+              Regular Menu
             </Typography>
           </Box>
         </Card>

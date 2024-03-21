@@ -10,7 +10,7 @@ import DashboardLayout from './layouts';
 import MenuItems from './MenuRelated/MenuItems';
 import YourOrder from './order/YourOrder';
 import MenuSelect from './MenuRelated/MenuSelect';
-
+import MenuSelectConfirm from './MenuRelated/MenuSelectConfirm';
 
 
 
@@ -66,7 +66,17 @@ const App  = () =>  {
           path: 'menuselect' ,
           element:  <MenuSelect/>
         },
+        {
+          path: 'menuselectconfirm' ,
+          element:  <MenuSelectConfirm/>,
+          children: [
+            {
+              path: ':id' ,
+              element:  <AddLogging></AddLogging>
+            },
 
+          ],
+        },
         {
           path: '404' ,
           element:  <Error/>

@@ -8,10 +8,11 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import {Button, Typography, Container} from '@mui/material'
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom'
 
 const CategoryDisplay = () => {
 
-
+  const {id} = useParams();  //this is either deluxe or regular
   const [error, setError] = useState("");
 
 
@@ -20,7 +21,7 @@ const CategoryDisplay = () => {
       <br></br><br></br>
       <Container maxWidth="md" sx={{ textAlign: 'center', marginTop: '50px' }}>
       <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
-        Order Categories
+        Order Categories For {id}
       </Typography>
       <br></br><br></br>
     <TableContainer component={Paper} style={{
