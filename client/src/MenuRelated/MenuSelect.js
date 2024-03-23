@@ -25,37 +25,6 @@ const MenuSelectConfirm = () => {
           </Typography>
           </Container>
           <br/><br/><br/><br/>
-          {/*
-          <Grid container spacing={2}>
-          <Grid item xs={6}>
-              <Button
-                variant="contained"
-                size="large"
-                color="primary"
-                fullWidth
-                component={Link}
-                to="/menucategories"
-              >
-                Regular
-              </Button>
-            </Grid>
-            <Grid item xs={6}>
-              <Button
-                variant="contained"
-                size="large"
-                color="primary"
-                fullWidth
-
-                component={Link}
-                to="/menucategories"
-              >
-                Deluxe
-              </Button>
-            </Grid>
-
-          </Grid>
-        
-    */}
 
 
         <Grid container justifyContent="center" spacing={2}>

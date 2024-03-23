@@ -11,8 +11,8 @@ import MenuItems from './MenuRelated/MenuItems';
 import YourOrder from './order/YourOrder';
 import MenuSelect from './MenuRelated/MenuSelect';
 import MenuSelectConfirm from './MenuRelated/MenuSelectConfirm';
-
-
+import ItemDisplay from './MenuRelated/ItemDisplay';
+import NutritionDisplay from './MenuRelated/NutritionDisplay';
 
 const App  = () =>  { 
     
@@ -40,27 +40,6 @@ const App  = () =>  {
           path: '',
           element: <Navigate to="/menuselect" replace />,
         },
-        {
-          path: 'menucategories',
-          element: <MenuCategories/>,
-          children: [
-            {
-              path: ':id' ,
-              element:  <AddLogging></AddLogging>
-            },
-
-          ],
-        },
-
-        {
-          path: 'menuItems' ,
-          element:  <MenuItems/>
-        },
-
-        {
-          path: 'yourorder' ,
-          element:  <YourOrder/>
-        },
 
         {
           path: 'menuselect' ,
@@ -77,6 +56,60 @@ const App  = () =>  {
 
           ],
         },
+        
+        {
+          path: 'menucategories',
+          element: <MenuCategories/>,
+          children: [
+            {
+              path: ':id' ,
+              element:  <AddLogging></AddLogging>
+            },
+
+          ],
+        },
+
+        {
+          path: 'menuItems' ,
+          element:  <MenuItems/>,
+          children: [
+            {
+              path: ':id/:category' ,
+              element:  <AddLogging></AddLogging>
+            },
+
+          ],
+        },
+        {
+          path: 'itemDisplay' ,
+          element:  <ItemDisplay/>,
+          children: [
+            {
+              path: ':id/:category/:food' ,
+              element:  <AddLogging></AddLogging>
+            },
+
+          ],
+        },
+
+        {
+          path: 'NutritionDisplay' ,
+          element:  <NutritionDisplay/>,
+          children: [
+            {
+              path: ':id/:category/:food' ,
+              element:  <AddLogging></AddLogging>
+            },
+
+          ],
+        },
+
+        {
+          path: 'yourorder' ,
+          element:  <YourOrder/>
+        },
+
+
         {
           path: '404' ,
           element:  <Error/>
