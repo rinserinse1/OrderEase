@@ -12,6 +12,7 @@ import { useParams } from 'react-router-dom'
 import RegularFoods from "../FoodInfo/RegularFoods.json"
 import DeluxeFoods from "../FoodInfo/DeluxeFoods.json"
 
+
 const CategoryDisplay = () => {
 
   const {id} = useParams();  //this is either deluxe or regular
