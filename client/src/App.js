@@ -13,6 +13,7 @@ import MenuSelect from './MenuRelated/MenuSelect';
 import MenuSelectConfirm from './MenuRelated/MenuSelectConfirm';
 import ItemDisplay from './MenuRelated/ItemDisplay';
 import NutritionDisplay from './MenuRelated/NutritionDisplay';
+import Assistance from './Assistance/Assistance';
 
 const App  = () =>  { 
     
@@ -104,6 +105,17 @@ const App  = () =>  {
         {
           path: 'yourorder' ,
           element:  <YourOrder/>
+        },
+        {
+          path: 'assistance' ,
+          element:  <Assistance/>,
+          children: [
+            {
+              path: ':id' ,
+              element:  <AddLogging></AddLogging>
+            },
+
+          ],
         },
 
 

@@ -13,6 +13,7 @@ import {  Stack, AppBar, Toolbar } from '@mui/material';
 
 // ----------------------------------------------------------------------
 const AssistanceModal = ({ open, onClose }) => {
+    const {id} = useParams();  
     return (
       <>
       
@@ -59,7 +60,10 @@ const AssistanceModal = ({ open, onClose }) => {
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
               <Button variant="contained" color="error" onClick={onClose}>No, Cancel</Button>
-              <Button variant="contained" color="success" onClick={onClose}>Yes, Confirm</Button>
+              <Button       
+              component={Link} 
+                to={`/assistance/${id}`}
+              variant="contained" color="success" onClick={onClose}>Yes, Confirm</Button>
             </Box>
           </Box>
         </Modal>
@@ -72,7 +76,7 @@ const AssistanceModal = ({ open, onClose }) => {
 
 
 export default function Footer() {
-
+    const {id} = useParams();  //this is either deluxe or regular
  const [value, setValue] = useState(0);
 
   const [assistanceModalOpen, setAssistanceModalOpen] = useState(false);
@@ -96,7 +100,10 @@ export default function Footer() {
         setValue(newValue);
       }}
     >
-      <BottomNavigationAction label="Categories" icon={<GridViewOutlinedIcon />} />
+      <BottomNavigationAction label="Categories"
+      component={Link} 
+      to={`/menucategories/${id}`}
+      icon={<GridViewOutlinedIcon />} />
       <BottomNavigationAction label="View Order" icon={<ShoppingCartOutlinedIcon />} />
       <BottomNavigationAction label="Assistance"  icon={<HelpOutlineOutlinedIcon />} onClick={handleAssistanceIconClick} />
     </BottomNavigation>
