@@ -79,7 +79,7 @@ const MenuCategories = () => {
       setError("Invalid id parameter.");
     }
   }, [id]);
-
+  console.log(categories)
   const handleAssistanceIconClick = () => {
     setAssistanceModalOpen(true);
   };
@@ -127,7 +127,7 @@ const MenuCategories = () => {
                   <CardMedia
                     component="img"
                     height="140"
-                    image={category.photo}
+                    image={category.foods[0].photo}
                     alt={category.name}
                   />
                   <CardContent>
