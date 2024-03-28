@@ -24,7 +24,7 @@ const MenuSelectConfirm = () => {
     <>
       <GlobalStyles
         styles={{
-          body: { backgroundColor: '#FDDFB3' }
+          body: { background: `radial-gradient(#FFFFFF, #CA933F)` }
         }}
       />
       <br/><br/><br/><br/>
@@ -36,9 +36,9 @@ const MenuSelectConfirm = () => {
   justifyContent="center"
   flexDirection="column"
   p={2}
-  sx={{ border: '2px solid grey', bgcolor: "white" }}
+  sx={{ border: '2px solid grey', bgcolor: "white", boxShadow: 2 }}
 >
-  <Typography variant="h4" align="center" gutterBottom>
+  <Typography variant="h4" align="center" gutterBottom fontWeight='medium'>
     Welcome to <br/> OrderEase! <br/> Pick your menu:
   </Typography>
 </Box>
@@ -49,7 +49,7 @@ const MenuSelectConfirm = () => {
         <Grid item xs={12} sm={6}>
         <Box display="flex" justifyContent="center">
 
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ maxWidth: 345, boxShadow: 3, border: 1}}>
             <ButtonBase
               component={Link}
               to="/menuselectconfirm/deluxe"
@@ -69,7 +69,7 @@ const MenuSelectConfirm = () => {
                 padding: '10px',
               }}
             >
-              <Typography variant="h6" component="div">
+              <Typography variant="h6" component="div" fontWeight='bold'>
                 Deluxe Menu
               </Typography>
             </Box>
@@ -81,7 +81,7 @@ const MenuSelectConfirm = () => {
         <Grid item xs={12} sm={6}>
         <Box display="flex" justifyContent="center">
 
-          <Card sx={{ maxWidth: 345, marginTop: 10 }}>
+          <Card sx={{ maxWidth: 345, marginTop: 10, boxShadow: 3, border: 1 }}>
             <ButtonBase
               component={Link}
               to="/menuselectconfirm/regular"
@@ -100,7 +100,7 @@ const MenuSelectConfirm = () => {
                 padding: '10px',
               }}
             >
-              <Typography variant="h6" component="div">
+              <Typography variant="h6" component="div" fontWeight='bold'>
                 Regular Menu
               </Typography>
             </Box>
