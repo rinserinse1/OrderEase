@@ -13,7 +13,7 @@
             },
             "price": 9.99,
             "description": "Toasted bread topped with diced tomatoes, garlic, basil, and olive oil.",
-            "photo": "https://via.placeholder.com/150"
+          "photo":  "https://thehealthfulideas.com/wp-content/uploads/2021/08/Bruschetta-with-Mozzarella-SQUARE3.jpg"
           },
           {
             "name": "Mozzarella Sticks",
@@ -25,7 +25,7 @@
             },
             "price": 8.99,
             "description": "Deep-fried sticks of mozzarella cheese, served with marinara sauce.",
-            "photo": "https://via.placeholder.com/150"
+            "photo": "https://sugarspunrun.com/wp-content/uploads/2021/07/Homemade-Mozzarella-Sticks-Recipe-1-of-1.jpg"
           }
         ]
       },

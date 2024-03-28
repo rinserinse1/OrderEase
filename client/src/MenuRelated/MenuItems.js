@@ -12,6 +12,7 @@ import { useParams } from 'react-router-dom'
 import RegularFoods from "../FoodInfo/RegularFoods.json"
 import DeluxeFoods from "../FoodInfo/DeluxeFoods.json"
 
+//import mozarellasticks from "../images/mozarellasticks.jpg"
 
 const MenuItems = () => {
 
@@ -71,7 +72,8 @@ const MenuItems = () => {
                   {item.description}
                 </TableCell>
                 <TableCell style={{ fontFamily: 'Roboto Mono' }}>
-                  {item.photo}
+                <img src={item.photo} alt="Homemade Mozzarella Sticks" style={{ maxWidth: '30%', height: '20%' }} />
+
                 </TableCell>
               </TableRow>
             ))}
