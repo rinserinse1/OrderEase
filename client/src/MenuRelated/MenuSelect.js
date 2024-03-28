@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import { Card, CardMedia,Box, ButtonBase } from '@mui/material';
 
-import MenuSelect from "./MenuSelect.css"
 import Deluxe_Menu from "../images/Deluxe Menu.png";
 import Regular_Menu from "../images/Regular Menu.png";
 import GlobalStyles from '@mui/material/GlobalStyles';
@@ -23,11 +22,7 @@ const MenuSelectConfirm = () => {
 
   return (
     <>
-      <GlobalStyles
-        styles={{
-          body: { background: `radial-gradient(#FFFFFF, #CA933F)` }
-        }}
-      />
+
       <br/><br/><br/><br/>
       <Container maxWidth="sm">
       <Box

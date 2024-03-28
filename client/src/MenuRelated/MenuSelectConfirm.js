@@ -20,11 +20,7 @@ const MenuSelectConfirm = () => {
 
     return (
       <>
-      <GlobalStyles
-        styles={{
-          body: { backgroundColor: '#FDDFB3' }
-        }}
-      />
+
 
       <Container maxWidth="sm">
         <Box
