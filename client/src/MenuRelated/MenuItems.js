@@ -12,6 +12,7 @@ import { useParams } from 'react-router-dom'
 import RegularFoods from "../FoodInfo/RegularFoods.json"
 import DeluxeFoods from "../FoodInfo/DeluxeFoods.json"
 
+
 //import mozarellasticks from "../images/mozarellasticks.jpg"
 
 const MenuItems = () => {
@@ -51,10 +52,10 @@ const MenuItems = () => {
         <Table aria-label="order data table" style={{ fontFamily: 'Roboto Mono' }}>
           <TableHead>
             <TableRow>    
-              <TableCell style={{ fontFamily: 'Roboto Mono' }}>Category</TableCell>
+              {/*<TableCell style={{ fontFamily: 'Roboto Mono' }}>Category</TableCell>
               <TableCell style={{ fontFamily: 'Roboto Mono' }}>Price</TableCell>
               <TableCell style={{ fontFamily: 'Roboto Mono' }}>Description</TableCell>
-              <TableCell style={{ fontFamily: 'Roboto Mono' }}>Photo</TableCell>
+    <TableCell style={{ fontFamily: 'Roboto Mono' }}>Photo</TableCell>*/}
             </TableRow>
           </TableHead>
           <TableBody>
@@ -62,19 +63,20 @@ const MenuItems = () => {
               <TableRow key={index}>
                 <TableCell component="th" scope="row" style={{ fontFamily: 'Roboto Mono' }}>
                   <Button component={Link} to={`/itemDisplay/${id}/${category}/${item.name}`} style={{ color: 'black', textDecoration: 'none', fontSize: '14px', fontWeight: 'bold' }}>
-                    {item.name}
+                  <img src={item.photo} alt={item.name} style={{ maxWidth: '30%', height: '20%' }} />
+                    
                   </Button>
                 </TableCell>
                 <TableCell style={{ fontFamily: 'Roboto Mono' }}>
+                {item.name}
+                <br></br><br></br>
                   {item.price}
-                </TableCell>
-                <TableCell style={{ fontFamily: 'Roboto Mono' }}>
-                  {item.description}
-                </TableCell>
-                <TableCell style={{ fontFamily: 'Roboto Mono' }}>
-                <img src={item.photo} alt={item.name} style={{ maxWidth: '30%', height: '20%' }} />
+                  <br></br><br></br>
+               
 
                 </TableCell>
+
+
               </TableRow>
             ))}
           </TableBody>
@@ -98,7 +100,7 @@ const MenuItems = () => {
       </Button>
         </Container>
         <br></br><br></br><br></br>
-
+        
     </>
     );
   };

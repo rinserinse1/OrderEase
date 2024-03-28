@@ -71,7 +71,13 @@ const MenuSelectConfirm = () => {
           sx={{ border: '2px solid grey', bgcolor: "white" }}
         >
           <Typography variant="h6" align="center" gutterBottom>
-Explore an exquisite selection of dishes meticulously crafted to tantalize your taste buds and elevate your dining experience to new heights. From sumptuous seafood delights to decadent desserts, each dish promises an unforgettable journey of flavors and indulgence.          </Typography>
+              {id === 'deluxe' && (
+            "DELUXE DESC"
+          )}
+            {id === 'regular' && (
+          "REG DESC"
+            )}
+    </Typography>
         </Box>
       </Container>
 
