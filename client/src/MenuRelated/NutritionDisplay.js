@@ -54,7 +54,7 @@ const NutritionDisplay = () => {
         Item: {itemInfo.name}
       </Typography>
         <br></br><br></br>
-        Photo: {itemInfo.photo}
+        Photo:  <img src={itemInfo.photo} alt={itemInfo.name} style={{ maxWidth: '30%', height: '20%' }} />
         <br></br><br></br>
         Calories: {nutritionalInfo.calories}
         <br></br><br></br>

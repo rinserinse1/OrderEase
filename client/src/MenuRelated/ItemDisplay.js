@@ -43,7 +43,7 @@ const ItemDisplay = () => {
         Item: {itemInfo.name}
       </Typography>
         <br></br><br></br>
-        Photo: {itemInfo.photo}
+        Photo:  <img src={itemInfo.photo} alt={itemInfo.name} style={{ maxWidth: '30%', height: '20%' }} />
         <br></br><br></br>
         Price: {itemInfo.price}
         <br></br><br></br>

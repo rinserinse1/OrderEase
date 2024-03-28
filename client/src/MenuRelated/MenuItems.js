@@ -72,7 +72,7 @@ const MenuItems = () => {
                   {item.description}
                 </TableCell>
                 <TableCell style={{ fontFamily: 'Roboto Mono' }}>
-                <img src={item.photo} alt="Homemade Mozzarella Sticks" style={{ maxWidth: '30%', height: '20%' }} />
+                <img src={item.photo} alt={item.name} style={{ maxWidth: '30%', height: '20%' }} />
 
                 </TableCell>
               </TableRow>
