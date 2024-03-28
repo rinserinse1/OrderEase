@@ -15,6 +15,7 @@ import MenuSelect from "./MenuSelect.css"
 import Deluxe_Menu from "../images/Deluxe Menu.png";
 import Regular_Menu from "../images/Regular Menu.png";
 import GlobalStyles from '@mui/material/GlobalStyles';
+import Stack from '@mui/material/Stack';
 
 const MenuSelectConfirm = () => {
 
@@ -53,26 +54,28 @@ const MenuSelectConfirm = () => {
             <ButtonBase
               component={Link}
               to="/menuselectconfirm/deluxe"
-              style={{ width: '100%' }}
+              style={{ width: '100%'}}
             >
-              <CardMedia
-                component="img"
-                height="140"
-                image={Deluxe_Menu}
-                alt="Deluxe Menu"
-              />
+              <Stack direction="column">
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={Deluxe_Menu}
+                  alt="Deluxe Menu"
+                />
+                <Box
+                sx={{
+                  backgroundColor: 'white',
+                  textAlign: 'center',
+                  padding: '10px',
+                }}
+                >
+                  <Typography variant="h6" component="div" fontWeight='bold'>
+                    Deluxe Menu
+                  </Typography>
+                </Box>
+              </Stack>
             </ButtonBase>
-            <Box
-              sx={{
-                backgroundColor: 'white',
-                textAlign: 'center',
-                padding: '10px',
-              }}
-            >
-              <Typography variant="h6" component="div" fontWeight='bold'>
-                Deluxe Menu
-              </Typography>
-            </Box>
           </Card>
           </Box>
 
@@ -87,23 +90,25 @@ const MenuSelectConfirm = () => {
               to="/menuselectconfirm/regular"
               style={{ width: '100%' }}
             >
-              <CardMedia
-                component="img"
-                height="140"
-                image={Regular_Menu}
-              />
+              <Stack direction="column">
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={Regular_Menu}
+                />
+                <Box
+                sx={{
+                  backgroundColor: 'white',
+                  textAlign: 'center',
+                  padding: '10px',
+                }}
+                >
+                  <Typography variant="h6" component="div" fontWeight='bold'>
+                    Regular Menu
+                  </Typography>
+                </Box>
+              </Stack>
             </ButtonBase>
-            <Box
-              sx={{
-                backgroundColor: 'white',
-                textAlign: 'center',
-                padding: '10px',
-              }}
-            >
-              <Typography variant="h6" component="div" fontWeight='bold'>
-                Regular Menu
-              </Typography>
-            </Box>
           </Card>
           </Box>
 
