@@ -61,18 +61,31 @@ const MenuItems = () => {
           <TableBody>
             {foods.map((item, index) => (
               <TableRow key={index}>
-                <TableCell component="th" scope="row" style={{ fontFamily: 'Roboto Mono' }}>
-                  <Button component={Link} to={`/itemDisplay/${id}/${category}/${item.name}`} style={{ color: 'black', textDecoration: 'none', fontSize: '14px', fontWeight: 'bold' }}>
-                  <img src={item.photo} alt={item.name} style={{ maxWidth: '30%', height: '20%' }} />
+                <TableCell component="th" scope="row" style={{ paddingRight: '-10px' }} >
+                  <Button component={Link} to={`/itemDisplay/${id}/${category}/${item.name}`} style={{ color: 'black', textDecoration: 'none', fontSize: '10px', fontWeight: 'bold' }}>
+                  <img src={item.photo} alt={item.name} style={{ maxWidth: '100%', height: '20%' }} />
                     
                   </Button>
                 </TableCell>
-                <TableCell style={{ fontFamily: 'Roboto Mono' }}>
+                <TableCell>
                 {item.name}
                 <br></br><br></br>
                   {item.price}
                   <br></br><br></br>
-               
+                  <Button 
+                    component={Link} 
+                    to={`/itemDisplay/${id}/${category}/${item.name}`}
+                    variant="contained" 
+                    color="primary"
+                    style={{
+                      display: 'block',
+                      backgroundColor: 'green',
+                      color: 'white',
+                      textTransform: 'none', // Prevent text from being all caps
+                    }}
+                  >
+                         <Typography style = {{fontSize:"8px"}} >VIEW ITEM</Typography>
+                  </Button>
 
                 </TableCell>
 

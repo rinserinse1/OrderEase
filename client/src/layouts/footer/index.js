@@ -6,16 +6,16 @@ import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import CloseIcon from '@mui/icons-material/Close';
-
+import { alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import GlobalStyles from '@mui/material/GlobalStyles';
-
-
-
+import {  Stack, AppBar, Toolbar } from '@mui/material';
 
 // ----------------------------------------------------------------------
 const AssistanceModal = ({ open, onClose }) => {
     return (
       <>
+      
         <GlobalStyles
           styles={{
             body: { backgroundColor: '#FDDFB3' }
@@ -26,6 +26,7 @@ const AssistanceModal = ({ open, onClose }) => {
           onClose={onClose}
           aria-labelledby="assistance-modal-title"
           aria-describedby="assistance-modal-description"
+          
         >
           <Box
             sx={{
@@ -86,7 +87,8 @@ export default function Footer() {
 
   return (
     <>
-    <Box sx={{ width: '100%', position: 'fixed', bottom: 0 }}>
+
+    <Box sx={{ width: '100%', position: 'fixed', bottom: 0, zIndex: 9999 }}>
     <BottomNavigation
       showLabels
       value={value}
@@ -101,6 +103,7 @@ export default function Footer() {
   </Box>
 
   <AssistanceModal open={assistanceModalOpen} onClose={closeAssistanceModal} />
+
   </>
   );
 }
