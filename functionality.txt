@@ -30,3 +30,4 @@ NutritionDisplay.js
 
 **Indicators can be stored in url. For example localhost:3000/deluxe/burgers/chickenBurger/nutrition
 ** when developing, you can use placeholder indicators. For example just create variables named menu/category and fill them manually with values.
+test
