@@ -10,65 +10,13 @@ import RegularFoods from "../FoodInfo/RegularFoods.json";
 import DeluxeFoods from "../FoodInfo/DeluxeFoods.json";
 import GlobalStyles from '@mui/material/GlobalStyles';
 
-const AssistanceModal = ({ open, onClose }) => {
-  return (
-    <>
-      <GlobalStyles
-        styles={{
-          body: { backgroundColor: '#FDDFB3' }
-        }}
-      />
-      <Modal
-        open={open}
-        onClose={onClose}
-        aria-labelledby="assistance-modal-title"
-        aria-describedby="assistance-modal-description"
-      >
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            bgcolor: 'white',
-            boxShadow: 24,
-            p: 4,
-            width: 'calc(100% - 40px)',
-            maxWidth: 300,
-          }}
-        >
-          <IconButton
-            sx={{
-              position: 'absolute',
-              top: 8,
-              right: 8,
-            }}
-            onClick={onClose}
-          >
-            <CloseIcon />
-          </IconButton>
-          <Typography id="assistance-modal-title" variant="h6" component="h2">
-            Do you want to call a server for assistance?
-          </Typography>
-          <Typography id="assistance-modal-description" sx={{ mt: 2 }}>
-            Describe your issue or ask for help here.
-          </Typography>
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
-            <Button variant="contained" color="error" onClick={onClose}>No, Cancel</Button>
-            <Button variant="contained" color="success" onClick={onClose}>Yes, Confirm</Button>
-          </Box>
-        </Box>
-      </Modal>
-    </>
-  );
-};
+
 
 const MenuCategories = () => {
   const { id } = useParams();
   const [error, setError] = useState("");
   const [categories, setCategories] = useState([]);
-  const [value, setValue] = useState(0);
-  const [assistanceModalOpen, setAssistanceModalOpen] = useState(false);
+
 
   useEffect(() => {
     if (id === "regular") {
@@ -80,13 +28,6 @@ const MenuCategories = () => {
     }
   }, [id]);
   console.log(categories)
-  const handleAssistanceIconClick = () => {
-    setAssistanceModalOpen(true);
-  };
-
-  const closeAssistanceModal = () => {
-    setAssistanceModalOpen(false);
-  };
 
   return (
     <>
@@ -141,21 +82,6 @@ const MenuCategories = () => {
         </Grid>
       </Container>
 
-      <Box sx={{ width: '100%', position: 'fixed', bottom: 0 }}>
-        <BottomNavigation
-          showLabels
-          value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
-        >
-          <BottomNavigationAction label="Categories" icon={<GridViewOutlinedIcon />} />
-          <BottomNavigationAction label="View Order" icon={<ShoppingCartOutlinedIcon />} />
-          <BottomNavigationAction label="Assistance"  icon={<HelpOutlineOutlinedIcon />} onClick={handleAssistanceIconClick} />
-        </BottomNavigation>
-      </Box>
-
-      <AssistanceModal open={assistanceModalOpen} onClose={closeAssistanceModal} />
     </>
   );
 };

@@ -31,7 +31,21 @@ const App  = () =>  {
 
 
   const routes = useRoutes([
+    {
+      path: 'menuselect' ,
+      element:  <MenuSelect/>
+    },
+    {
+      path: 'menuselectconfirm' ,
+      element:  <MenuSelectConfirm/>,
+      children: [
+        {
+          path: ':id' ,
+          element:  <AddLogging></AddLogging>
+        },
 
+      ],
+    },
     {
       path: '/',
       element: <DashboardLayout />,
@@ -40,23 +54,6 @@ const App  = () =>  {
           path: '',
           element: <Navigate to="/menuselect" replace />,
         },
-
-        {
-          path: 'menuselect' ,
-          element:  <MenuSelect/>
-        },
-        {
-          path: 'menuselectconfirm' ,
-          element:  <MenuSelectConfirm/>,
-          children: [
-            {
-              path: ':id' ,
-              element:  <AddLogging></AddLogging>
-            },
-
-          ],
-        },
-        
         {
           path: 'menucategories',
           element: <MenuCategories/>,
