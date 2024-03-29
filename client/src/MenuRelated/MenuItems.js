@@ -11,6 +11,8 @@ import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
 import RegularFoods from "../FoodInfo/RegularFoods.json"
 import DeluxeFoods from "../FoodInfo/DeluxeFoods.json"
+import { TextField, Grid } from "@mui/material"
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 
 //import mozarellasticks from "../images/mozarellasticks.jpg"
@@ -39,9 +41,23 @@ const MenuItems = () => {
           <br></br><br></br>
       <Container maxWidth="md" sx={{ textAlign: 'center', marginTop: '50px' }}>
       <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
-        Food Items For {category}
+        {category}
       </Typography>
       <br></br><br></br>
+      <TextField 
+        id="outlined-basic" 
+        label=""
+        variant="outlined" 
+        placeholder="Search by Menu Item Name" 
+        fullWidth
+        InputProps={{
+          startAdornment: (
+            <SearchOutlinedIcon />
+          ),
+          sx: { backgroundColor: 'white' }
+        }}
+      />      
+      <br/><br/><br/><br/>
       <TableContainer component={Paper} style={{
         fontFamily: 'Roboto Mono',
         backgroundColor: '#F9F9F9',
@@ -60,7 +76,7 @@ const MenuItems = () => {
           </TableHead>
           <TableBody>
             {foods.map((item, index) => (
-              <TableRow key={index}>
+              <TableRow key={index} sx={{border: 1}}>
                 <TableCell component="th" scope="row" style={{ paddingRight: '-10px' }} >
                   <Button component={Link} to={`/itemDisplay/${id}/${category}/${item.name}`} style={{ color: 'black', textDecoration: 'none', fontSize: '10px', fontWeight: 'bold' }}>
                   <img src={item.photo} alt={item.name} style={{ maxWidth: '100%', height: '20%' }} />
