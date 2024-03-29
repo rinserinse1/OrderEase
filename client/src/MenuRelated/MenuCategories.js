@@ -73,6 +73,8 @@ const MenuCategories = () => {
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                       {category.description}
+                   
+                      ({category.foods.length})
                     </Typography>
                   </CardContent>
                 </Card>
