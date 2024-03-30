@@ -71,35 +71,48 @@ const MenuCategories = () => {
         <br/><br/>
 
         <Grid container spacing={3}>
-          {filteredCategories.map((category, index) => (
-            <Grid item xs={6} sm={6} md={4} lg={3} key={index}>
-              <Link to={`/menuItems/${id}/${category.name}`} style={{ textDecoration: 'none' }}>
-                <Card sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between',
-                  height: 320, 
-                  boxShadow: 3,
-                  borderRadius: 2,
-                }}>
-                  <CardMedia
-                    component="img"
-                    sx={{ height: 180, objectFit: 'cover' }}
-                    image={category.name === "Drinks" ? category.thumbnail : category.foods[0].photo}
-                    alt={category.name}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h6" component="div" sx={{
-                      whiteSpace: 'nowrap',
-                      overflow: 'hidden',
-                      textOverflow: 'ellipsis',
-                    }}>
-                      {category.name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      ({category.foods.length})
-                    </Typography>
-                  </CardContent>
+        {filteredCategories.map((category, index) => (
+        <Grid item xs={6} sm={6} md={4} lg={3} key={index}>
+        <Link to={`/menuItems/${id}/${category.name}`} style={{ textDecoration: 'none' }}>
+        <Card sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          height: 'auto', 
+          boxShadow: 3,
+          borderRadius: 2,
+        }}>
+          <CardMedia
+            component="img"
+            sx={{ height: 180, objectFit: 'cover' }}
+            image={category.name === "Drinks" ? category.thumbnail : category.foods[0].photo}
+            alt={category.name}
+          />
+          <CardContent sx={{
+            paddingTop: '4px', 
+            paddingBottom: '4px', 
+            display: 'flex', 
+            flexDirection: 'column', 
+            justifyContent: 'center',
+            alignItems: 'center', 
+            padding: '8px', 
+            '&:last-child': {
+              paddingBottom: '4px',
+            },
+          }}>
+            <Typography variant="subtitle1" component="div" sx={{
+              fontWeight: 'bold',
+              textAlign: 'center',
+            }}>
+              {category.name}
+            </Typography>
+            <Typography variant="subtitle1" color="text.secondary" sx={{
+              fontWeight: 'bold',
+            }}>
+              ({category.foods.length})
+            </Typography>
+          </CardContent>
+
                 </Card>
               </Link>
             </Grid>
