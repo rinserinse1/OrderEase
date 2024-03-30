@@ -1,62 +1,264 @@
 {
-    "categories": [
-      {
-        "name": "Appetizers",
-        "foods": [
+  "categories": [
+    {
+      "name": "Appetizers",
+      "foods": [
+        {
+          "name": "Tteokbokki (Rice Cakes)",
+          "nutritionalInfo": {
+            "calories": 90,
+            "fat": 1,
+            "carbohydrates": 20,
+            "protein": 2
+          },
+          "description": "Savor the chewy delight of soft spicy rice cakes, glazed in a rich, fiery sauce. Perfect for sharing, this quintessential Korean comfort food is a must-try.",
+          "Portion Size, Per Order": "4 pieces",
+          "photo": "https://hips.hearstapps.com/hmg-prod/images/tteokbokki-horizontal-4-jpg-1595262663.jpg"
+        },
+        {
+          "name": "Mat-Tang (Fried Sweet Potatoes)",
+          "nutritionalInfo": {
+            "calories": 160,
+            "fat": 2,
+            "carbohydrates": 34,
+            "protein": 1
+          },
+          "description": "Indulge in golden-fried sweet potatoes, candied to perfection and drizzled with a sweet garlic sauce, offering a unique blend of textures and flavors.",
+          "Portion Size, Per Order": "100 grams",
+          "photo": "https://drivemehungry.com/wp-content/uploads/2020/11/korean-candied-sweet-potatoes-6.jpg"
+        },
+        {
+          "name": "Dak Gang Jeong (Deep-Fried Boneless Chicken)",
+          "nutritionalInfo": {
+            "calories": 220,
+            "fat": 9,
+            "carbohydrates": 18,
+            "protein": 14
+          },
+          "description": "Experience the crunch with our deep-fried boneless chicken, glazed in Sweet & Spicy or Soy Garlic for a memorable fusion of Korean flavors. Specify your choice of glaze.",
+          "Portion Size, Per Order": "100 grams",
+          "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Dak-gangjeong_3.jpg"
+        },
+        {
+          "name": "Japchae (Glass Noodles)",
+          "nutritionalInfo": {
+            "calories": 120,
+            "fat": 1,
+            "carbohydrates": 25,
+            "protein": 3
+          },
+          "description": "Glass noodles and sautéed vegetables, tossed in a savory sauce, make for a delightful mix of textures and tastes, showcasing the best of Korean stir-fry.",
+          "Portion Size, Per Order": "100 grams",
+          "photo": "https://www.koreanbapsang.com/wp-content/uploads/2010/01/DSC5028-4.jpg"
+        },
+        {
+          "name": "Vegetarian Dumpling",
+          "nutritionalInfo": {
+            "calories": 70,
+            "fat": 3,
+            "carbohydrates": 9,
+            "protein": 2
+          },
+          "description": "Our deep-fried vegetable dumplings are a crispy wonder, filled with a hearty mix of vegetables, perfect for a veggie-packed bite.",
+          "Portion Size, Per Order": "1 piece",
+          "photo": "https://www.koreanbapsang.com/wp-content/uploads/2009/09/DSC_1354-350x350.jpg"
+        },
+        {
+          "name": "Kim Ma Ri (Deep-Fried Seaweed Rolls)",
+          "nutritionalInfo": {
+            "calories": 80,
+            "fat": 4,
+            "carbohydrates": 10,
+            "protein": 2
+          },
+          "description": "Dive into the crispy world of deep-fried seaweed rolls, offering a crunchy exterior wrapped around a soft, flavorful filling.",
+          "Portion Size, Per Order": "1 piece",
+          "photo": "https://koreankitchencardiff.com/wp-content/uploads/2020/05/img_20200512_181245_786-2.jpg?w=1024"
+        },
+        {
+          "name": "Edamame (Salted Soybean in Pod)",
+          "nutritionalInfo": {
+            "calories": 122,
+            "fat": 5,
+            "carbohydrates": 10,
+            "protein": 11
+          },
+          "description": "Enjoy a simple, yet satisfying snack of edamame. Each order serves these lightly salted soybeans in the pod, perfect for a healthy, nibble-worthy treat.",
+          "Portion Size, Per Order": "100 grams",
+          "photo": "https://plantbasedmatters.net/wp-content/uploads/2020/01/Korean-Style-Stir-Fry-Edamame-500x500.jpeg"
+        },
+        {
+          "name": "Tang Su Yuk (Deep-Fried Pork)",
+          "nutritionalInfo": {
+            "calories": 250,
+            "fat": 12,
+            "carbohydrates": 20,
+            "protein": 13
+          },
+          "description": "A serving of crispy deep-fried pork, bathed in a tangy sweet & sour sauce. This dish is a delightful blend of textures and flavors, offering a satisfying crunch with every bite.",
+          "Portion Size, Per Order": "100 grams",
+          "photo": "https://i.ytimg.com/vi/TEszU_dPh-U/maxresdefault.jpg"
+        },
+        {
+          "name": "Takoyaki (Octopus Balls)",
+          "nutritionalInfo": {
+            "calories": 70,
+            "fat": 3.5,
+            "carbohydrates": 8,
+            "protein": 4
+          },
+          "description": "Savor the flavors of Japan with our Takoyaki. Each order presents a piece of grilled octopus ball, smothered in Takoyaki sauce, for a warm, savory treat with a chewy octopus center.",
+          "Portion Size, Per Order": "1 piece",
+          "photo": "https://mamaloli.com/wp-content/uploads/2011/12/takoyaki-14.jpg"
+        },
+        {
+          "name": "Potato & Veg Croquette",
+          "nutritionalInfo": {
+            "calories": 150,
+            "fat": 9,
+            "carbohydrates": 16,
+            "protein": 3
+          },
+          "description": "Crispy on the outside, soft and flavorful on the inside, our deep-fried mashed potato and vegetable croquette is a comforting piece of culinary delight, blending smooth potatoes with vibrant veggies.",
+          "Portion Size, Per Order": "1 piece",
+          "photo": "https://i.ytimg.com/vi/nfsfaV_PhtU/maxresdefault.jpg"
+        },
+        {
+          "name": "Ssam (Lettuce Wrap)",
+          "nutritionalInfo": {
+            "calories": 20,
+            "fat": 1,
+            "carbohydrates": 2,
+            "protein": 1
+          },
+          "description": "Wrap your senses around our Ssam, offering a piece of Lettuce to wrap your BBQ meat for a burst of flavor in every bite.",
+          "Portion Size, Per Order": "1 piece",
+          "photo": "https://i2.wp.com/hipfoodiemom.com/wp-content/uploads/2022/02/Ssam-Korean-Lettuce-Wraps_c.jpg"
+        }
+      ]
+    },
+    {
+      "name": "BBQ Meat - Beef",
+      "foods": [
           {
-            "name": "Bruschetta",
-            "nutritionalInfo": {
-              "calories": 150,
-              "fat": 8,
-              "carbohydrates": 18,
-              "protein": 3
-            },
-            "price": 9.99,
-            "description": "Toasted bread topped with diced tomatoes, garlic, basil, and olive oil.",
-          "photo":  "https://thehealthfulideas.com/wp-content/uploads/2021/08/Bruschetta-with-Mozzarella-SQUARE3.jpg"
+              "name": "Bulgogi (Marinated Beef)",
+              "nutritionalInfo": {
+                  "calories": 260,
+                  "fat": 15,
+                  "carbohydrates": 5,
+                  "protein": 26
+              },
+              "description": "Succulent slices of beef marinated in a blend of soy sauce, sugar, sesame oil, and garlic, then grilled to perfection.",
+              "Portion Size, Per Order": "100 grams",
+              "photo": "https://thestayathomechef.com/wp-content/uploads/2021/02/Korean-Beef-Bulgogi-4.jpg"
           },
           {
-            "name": "Mozzarella Sticks",
-            "nutritionalInfo": {
-              "calories": 250,
-              "fat": 15,
-              "carbohydrates": 20,
-              "protein": 9
-            },
-            "price": 8.99,
-            "description": "Deep-fried sticks of mozzarella cheese, served with marinara sauce.",
-            "photo": "https://sugarspunrun.com/wp-content/uploads/2021/07/Homemade-Mozzarella-Sticks-Recipe-1-of-1.jpg"
-          }
-        ]
-      },
-      {
-        "name": "Burgers",
-        "foods": [
-          {
-            "name": "Grilled Salmon",
-            "nutritionalInfo": {
-              "calories": 300,
-              "fat": 20,
-              "carbohydrates": 2,
-              "protein": 25
-            },
-            "price": 18.99,
-            "description": "Grilled salmon fillet served with steamed vegetables and mashed potatoes.",
-            "photo": "https://via.placeholder.com/155"
+              "name": "Woo-samgyeob (Thin Slice Beef Brisket)",
+              "nutritionalInfo": {
+                  "calories": 200,
+                  "fat": 14,
+                  "carbohydrates": 0,
+                  "protein": 18
+              },
+              "description": "Delicate thin slices of beef brisket, offering a tender texture and rich flavor, ideal for grilling.",
+              "Portion Size, Per Order": "100 grams",
+              "photo": "https://meatboxbc.com/cdn/shop/products/Bisket_Roll_800x.jpg?v=1531847318"
           },
           {
-            "name": "Chicken Alfredo",
-            "nutritionalInfo": {
-              "calories": 450,
-              "fat": 22,
-              "carbohydrates": 35,
-              "protein": 30
-            },
-            "price": 14.99,
-            "description": "Creamy Alfredo sauce served over fettuccine pasta with grilled chicken.",
-            "photo": "https://via.placeholder.com/150"
+              "name": "Beef Sausage",
+              "nutritionalInfo": {
+                  "calories": 180,
+                  "fat": 15,
+                  "carbohydrates": 1,
+                  "protein": 12
+              },
+              "description": "Juicy and flavorful beef sausage, a perfect addition to any BBQ feast.",
+              "Portion Size, Per Order": "1 piece",
+              "photo": "https://theredcellarblog.files.wordpress.com/2019/06/soondae_3.jpg"
           }
-        ]
-      }
+      ]
+  },
+  {
+      "name": "BBQ Meat - Pork",
+      "foods": [
+          {
+              "name": "Spicy Dwaeji Bulgogi (Marinated Spicy Pork)",
+              "nutritionalInfo": {
+                  "calories": 270,
+                  "fat": 19,
+                  "carbohydrates": 6,
+                  "protein": 21
+              },
+              "description": "Tender pork slices marinated in a fiery sauce, bringing a spicy kick to your BBQ.",
+              "Portion Size, Per Order": "100 grams",
+              "photo": "https://www.siftandsimmer.com/wp-content/uploads/2023/05/spicy-pork-bulgogi2.jpg"
+          },
+          {
+              "name": "Dwaeji Galbi (Marinated Pork Ribs)",
+              "nutritionalInfo": {
+                  "calories": 310,
+                  "fat": 22,
+                  "carbohydrates": 5,
+                  "protein": 24
+              },
+              "description": "Succulent pork ribs soaked in a savory marinade, ready to sizzle on the grill.",
+              "Portion Size, Per Order": "100 grams",
+              "photo": "https://stellanspice.com/wp-content/uploads/2021/06/Screenshot-168.png"
+          },
+          {
+              "name": "Samgyeopsal-Gui (Pork Belly)",
+              "nutritionalInfo": {
+                  "calories": 290,
+                  "fat": 23,
+                  "carbohydrates": 0,
+                  "protein": 19
+              },
+              "description": "A Korean BBQ staple, thick slices of pork belly with a rich and satisfying flavor.",
+              "Portion Size, Per Order": "1 piece",
+              "photo": "https://www.maangchi.com/wp-content/uploads/2009/09/grilled-porkbelly_grilled.jpg"
+          },
+          {
+              "name": "Thin Samgyeopsal-Gui (Thin Slice Pork Belly)",
+              "nutritionalInfo": {
+                  "calories": 250,
+                  "fat": 20,
+                  "carbohydrates": 0,
+                  "protein": 17
+              },
+              "description": "Thinly sliced pork belly that crisps up beautifully on the grill, offering a lighter but equally delicious option.",
+              "Portion Size, Per Order": "100 grams",
+              "photo": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/tqjgmhcb/bfd09643-50f6-4665-8b92-fefeea891256.jpg"
+          }
+      ]
+  },
+  {
+    "name": "BBQ Meat - Chicken",
+    "foods": [
+        {
+            "name": "Spicy Dak Bulgogi (Marinated Spicy Chicken)",
+            "nutritionalInfo": {
+                "calories": 210,
+                "fat": 8,
+                "carbohydrates": 5,
+                "protein": 26
+            },
+            "description": "Juicy chicken marinated in a spicy and sweet sauce, delivering a kick of flavor with every bite.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://www.beyondkimchee.com/wp-content/uploads/2021/01/Korean-spicy-chicken-bbq-3-1.jpg"
+        },
+        {
+            "name": "Ganjang Dak Bulgogi (Marinated Chicken with Soy Sauce)",
+            "nutritionalInfo": {
+                "calories": 190,
+                "fat": 6,
+                "carbohydrates": 4,
+                "protein": 29
+            },
+            "description": "Tender chicken pieces soaked in a rich soy sauce marinade, offering a savory and slightly sweet flavor.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://www.koreanbapsang.com/wp-content/uploads/2012/03/DSC_1832-1-e1562126872480.jpg"
+        }
     ]
-  }
+}
+]
+}
