@@ -55,10 +55,7 @@ const MenuCategories = () => {
       <br/><br/>
       <Container maxWidth="md" sx={{ textAlign: 'center', marginTop: '50px' }}>
         <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
-          Menu Categories
-        </Typography>
-        <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
-          Order Categories For {id}
+          {id.charAt(0).toUpperCase() + id.slice(1)} Menu Categories
         </Typography>
         <br/><br/>
 
@@ -67,6 +64,7 @@ const MenuCategories = () => {
           label=""
           variant="outlined"
           placeholder="Search by Menu Category"
+          fullWidth
           value={searchQuery}
           onChange={handleSearchInputChange}
           InputProps={{
