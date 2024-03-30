@@ -85,7 +85,7 @@ const MenuCategories = () => {
                   <CardMedia
                     component="img"
                     height="140"
-                    image={category.foods[0].photo}
+                    image={category.name === "Drinks" ? category.thumbnail : category.foods[0].photo}
                     alt={category.name}
                   />
                   <CardContent>
