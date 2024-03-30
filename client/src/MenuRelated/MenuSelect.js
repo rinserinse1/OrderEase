@@ -18,7 +18,7 @@ const MenuOption = ({ name, image, link }) => (
           <Stack direction="column">
             <CardMedia
               component="img"
-              sx={{ height: { xs: 200, sm: 250, md: 300 } }} 
+              sx={{ height: { xs: 200, sm: 250, md: 300 }, objectFit: "cover", width: "60vw" }} 
               image={image}
               alt={name}
             />
