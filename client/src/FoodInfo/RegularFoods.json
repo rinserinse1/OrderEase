@@ -488,7 +488,7 @@
               "protein": 3
           },
           "Portion Size, Per Order": "2 scoops",
-          "photo": "https://via.placeholder.com/150",
+          "photo": "https://www.onceuponachef.com/images/2022/08/homemade-chocolate-ice-cream-760x971.jpg",
           "tags": ["Gluten-Free"]
       }, {
           "name": "Vanilla Ice Cream",
@@ -500,7 +500,7 @@
               "protein": 3
           },
           "Portion Size, Per Order": "2 scoops",
-          "photo": "https://via.placeholder.com/150",
+          "photo": "https://static.toiimg.com/thumb/63971154.cms?width=573&height=430",
           "tags": ["Gluten-Free"]
       }, {
           "name": "Strawberry Ice Cream",
@@ -512,19 +512,19 @@
               "protein": 3
           },
           "Portion Size, Per Order": "2 scoops",
-          "photo": "https://via.placeholder.com/150",
+          "photo": "https://www.allrecipes.com/thmb/pH8hoFfytcOT9XVK1DSmxv3L0OU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/140877-easy-eggless-strawberry-ice-cream-ddmfs-3x4-1-092e4d11b59049c8b3843014ea3c57f2.jpg",
           "tags": ["Gluten-Free", "Fruit-Infused"]
       }, {
           "name": "Green-Tea Ice Cream",
           "description": "Unique green-tea flavor in a refreshing ice cream.",
           "nutritionalInfo": {
-              "calories": 170,
+              "calories": 150,
               "fat": 8,
               "carbohydrates": 22,
               "protein": 4
           },
           "Portion Size, Per Order": "2 scoops",
-          "photo": "https://via.placeholder.com/150",
+          "photo": "https://www.thespruceeats.com/thmb/uXJIpnsD8coT0fLfdiO0lqsDe7I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/green-tea-matcha-ice-cream-2031118-hero-01-14e95fdc74154590b112b62048ba8f67.jpg",
           "tags": ["Gluten-Free", "Low-Calorie"]
       }, {
           "name": "Mango Ice Cream",
@@ -536,7 +536,7 @@
               "protein": 3
           },
           "Portion Size, Per Order": "2 scoops",
-          "photo": "https://via.placeholder.com/150",
+          "photo": "https://hot-thai-kitchen.com/wp-content/uploads/2016/06/mango-ice-cream-blog.jpg",
           "tags": ["Gluten-Free", "Fruit-Infused"]
       }, {
           "name": "Classic Cheesecake",
@@ -548,7 +548,7 @@
               "protein": 6
           },
           "Portion Size, Per Order": "1 slice",
-          "photo": "https://via.placeholder.com/150",
+          "photo": "https://www.allrecipes.com/thmb/IsIVofRRaO-P0Iv_3sUaSNkwWE8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Easy-Classic-Cheesecake2-2814f4f9999943688d54f103a13919b8.jpg",
           "tags": ["Nut-Free"]
       }, {
           "name": "Chocolate Lava Cake",
@@ -560,7 +560,7 @@
               "protein": 4
           },
           "Portion Size, Per Order": "1 cake",
-          "photo": "https://via.placeholder.com/150",
+          "photo": "https://www.billyparisi.com/wp-content/uploads/2022/02/lava-cake-1.jpg",
           "tags": ["Nut-Free"]
       }],
       "filters": ["Gluten-Free", "Vegan", "Dairy-Free", "Nut-Free", "Low-Calorie", "Fruit-Infused"]
