@@ -135,7 +135,8 @@
           "Portion Size, Per Order": "1 piece",
           "photo": "https://i2.wp.com/hipfoodiemom.com/wp-content/uploads/2022/02/Ssam-Korean-Lettuce-Wraps_c.jpg"
         }
-      ]
+      ],
+      "filters": ["Lactose-free", "placeholder1", "placeholder2", "placeholder3", "placeholder4", "placeholder5"]
     },
     {
       "name": "BBQ Meat - Beef",
@@ -176,7 +177,8 @@
               "Portion Size, Per Order": "1 piece",
               "photo": "https://theredcellarblog.files.wordpress.com/2019/06/soondae_3.jpg"
           }
-      ]
+      ],
+      "filters": ["Lactose-free", "placeholder1", "placeholder2", "placeholder3", "placeholder4", "placeholder5"]
   },
   {
       "name": "BBQ Meat - Pork",
@@ -229,7 +231,8 @@
               "Portion Size, Per Order": "100 grams",
               "photo": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/tqjgmhcb/bfd09643-50f6-4665-8b92-fefeea891256.jpg"
           }
-      ]
+      ],
+      "filters": ["Lactose-free", "placeholder1", "placeholder2", "placeholder3", "placeholder4", "placeholder5"]
   },
   {
     "name": "BBQ Meat - Chicken",
@@ -258,7 +261,8 @@
             "Portion Size, Per Order": "100 grams",
             "photo": "https://www.koreanbapsang.com/wp-content/uploads/2012/03/DSC_1832-1-e1562126872480.jpg"
         }
-    ]
+    ],
+    "filters": ["Lactose-free", "placeholder1", "placeholder2", "placeholder3", "placeholder4", "placeholder5"]
 }
 ]
 }
