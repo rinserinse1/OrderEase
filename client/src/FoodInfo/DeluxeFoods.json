@@ -148,7 +148,7 @@
           "description": "Succulent slices of beef marinated in a blend of soy sauce, sugar, sesame oil, and garlic, then grilled to perfection.",
           "Portion Size, Per Order": "100 grams",
           "photo": "https://thestayathomechef.com/wp-content/uploads/2021/02/Korean-Beef-Bulgogi-4.jpg",
-          "tags": ["High-Protein", "Lactose-Free"]
+          "tags": ["High-Protein", "Lactose-Free", "Marinated"]
       }, {
           "name": "Woo-samgyeob (Thin Slice Beef Brisket)",
           "nutritionalInfo": {
@@ -174,7 +174,7 @@
           "photo": "https://theredcellarblog.files.wordpress.com/2019/06/soondae_3.jpg",
           "tags": ["Gluten-Free", "Lactose-Free"]
       }],
-      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free"]
+      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free", "Marinated"]
   }, {
       "name": "BBQ Meat - Pork",
       "foods": [{
@@ -188,7 +188,7 @@
           "description": "Tender pork slices marinated in a fiery sauce, bringing a spicy kick to your BBQ.",
           "Portion Size, Per Order": "100 grams",
           "photo": "https://www.siftandsimmer.com/wp-content/uploads/2023/05/spicy-pork-bulgogi2.jpg",
-          "tags": ["Spicy", "High-Protein", "Lactose-Free"]
+          "tags": ["Spicy", "High-Protein", "Lactose-Free", "Marinated"]
       }, {
           "name": "Dwaeji Galbi (Marinated Pork Ribs)",
           "nutritionalInfo": {
@@ -224,9 +224,9 @@
           "description": "Thinly sliced pork belly that crisps up beautifully on the grill, offering a lighter but equally delicious option.",
           "Portion Size, Per Order": "100 grams",
           "photo": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/tqjgmhcb/bfd09643-50f6-4665-8b92-fefeea891256.jpg",
-          "tags": ["Low-Fat", "Lactose-Free"]
+          "tags": ["Gluten-Free", "Low-Fat", "Lactose-Free"]
       }],
-      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free"]
+      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free", "Marinated"]
   }, {
       "name": "BBQ Meat - Chicken",
       "foods": [{
@@ -252,9 +252,9 @@
           "description": "Tender chicken pieces soaked in a rich soy sauce marinade, offering a savory and slightly sweet flavor.",
           "Portion Size, Per Order": "100 grams",
           "photo": "https://www.koreanbapsang.com/wp-content/uploads/2012/03/DSC_1832-1-e1562126872480.jpg",
-          "tags": ["High-Protein", "Lactose-Free"]
+          "tags": ["High-Protein", "Lactose-Free", "Marinated"]
       }],
-      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free"]
+      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free", "Marinated"]
   }, {
       "name": "Drinks",
       "thumbnail": "https://thesmartlocal.kr/wp-content/uploads/2020/04/Korean-Alcohol-Concoctions16.jpg",
@@ -564,5 +564,117 @@
           "tags": ["Nut-Free"]
       }],
       "filters": ["Gluten-Free", "Vegan", "Dairy-Free", "Nut-Free", "Low-Calorie", "Fruit-Infused"]
+  }, {
+      "name": "Deluxe Delights",
+      "foods": [{
+          "name": "La Galbi (Beef Short Ribs)",
+          "description": "Succulent beef short ribs, marinated and grilled.",
+          "nutritionalInfo": {
+              "calories": 250,
+              "fat": 15,
+              "carbohydrates": 5,
+              "protein": 22
+          },
+          "Portion Size, Per Order": "1 piece",
+          "photo": "https://www.koreanbapsang.com/wp-content/uploads/2013/08/DSC8866-5-e1707539703959.jpg",
+          "tags": ["Grilled", "Marinated"]
+      }, {
+          "name": "Pork Dumpling",
+          "description": "Crispy deep-fried pork dumpling.",
+          "nutritionalInfo": {
+              "calories": 100,
+              "fat": 5,
+              "carbohydrates": 10,
+              "protein": 6
+          },
+          "Portion Size, Per Order": "1 piece",
+          "photo": "https://twoplaidaprons.com/wp-content/uploads/2020/05/Chinese-pork-dumplings-picking-up-a-dumpling-with-chopsticks-500x375.jpg",
+          "tags": ["Fried"]
+      }, {
+          "name": "Corn Cheese",
+          "description": "Creamy, cheesy corn served Korean style.",
+          "nutritionalInfo": {
+              "calories": 200,
+              "fat": 12,
+              "carbohydrates": 15,
+              "protein": 5
+          },
+          "Portion Size, Per Order": "1 small plate",
+          "photo": "https://jasmineandtea.com/wp-content/uploads/2021/04/korean-corn-cheese-recipe.jpg",
+          "tags": ["Cheesy"]
+      }, {
+          "name": "Cheese Sauce",
+          "description": "Rich and velvety cheese sauce.",
+          "nutritionalInfo": {
+              "calories": 150,
+              "fat": 10,
+              "carbohydrates": 5,
+              "protein": 8
+          },
+          "Portion Size, Per Order": "1 small bowl",
+          "photo": "https://sallysbakingaddiction.com/wp-content/uploads/2014/03/homemade-spicy-nacho-cheese-sauce-2.jpg",
+          "tags": ["Cheesy"]
+      }, {
+          "name": "Naengmyeon (Cold Noodles with Beef Broth)",
+          "description": "Cold buckwheat noodles, served with beef broth and half boiled egg.",
+          "nutritionalInfo": {
+              "calories": 180,
+              "fat": 1,
+              "carbohydrates": 40,
+              "protein": 8
+          },
+          "Portion Size, Per Order": "1 small bowl",
+          "photo": "https://static01.nyt.com/images/2023/11/21/multimedia/26EATrex-naengmyeon-cfbl/26EATrex-naengmyeon-cfbl-superJumbo.jpg",
+          "tags": ["Cold", "Noodles"]
+      }, {
+          "name": "Gamjatang (Pork Stew)",
+          "description": "Hearty pork back bone stew with potatoes.",
+          "nutritionalInfo": {
+              "calories": 300,
+              "fat": 20,
+              "carbohydrates": 15,
+              "protein": 20
+          },
+          "Portion Size, Per Order": "1 small bowl",
+          "photo": "https://thesubversivetable.com/wp-content/uploads/2022/03/Gamjatang-2-scaled.jpg",
+          "tags": ["Stew", "Pork"]
+      }, {
+          "name": "Kimchi Ramen Stew",
+          "description": "Spicy and tangy Kimchi stew with pork and ramen noodles.",
+          "nutritionalInfo": {
+              "calories": 250,
+              "fat": 15,
+              "carbohydrates": 10,
+              "protein": 18
+          },
+          "Portion Size, Per Order": "1 small bowl",
+          "photo": "https://lindseyeatsla.com/wp-content/uploads/2019/09/Lindseyeatsla_Kimchi_Stew-8.jpg",
+          "tags": ["Stew", "Spicy"]
+      }, {
+          "name": "Doenjang Jjigae (Soybean Stew with Brisket)",
+          "description": "Soybean paste stew with tender beef brisket.",
+          "nutritionalInfo": {
+              "calories": 220,
+              "fat": 12,
+              "carbohydrates": 8,
+              "protein": 20
+          },
+          "Portion Size, Per Order": "1 small bowl",
+          "photo": "https://twoplaidaprons.com/wp-content/uploads/2022/08/doenjang-jjigae-boiling-thumbnail.jpg",
+          "tags": ["Stew"]
+      }, {
+          "name": "Dolsot Bibimbap",
+          "description": "Mixed rice with vegetables in a sizzling stone pot.",
+          "nutritionalInfo": {
+              "calories": 500,
+              "fat": 15,
+              "carbohydrates": 80,
+              "protein": 12
+          },
+          "Portion Size, Per Order": "1 small bowl",
+          "photo": "https://upload.wikimedia.org/wikipedia/commons/4/44/Dolsot-bibimbap.jpg",
+          "tags": ["Rice", "Vegetables"]
+      }],
+      "filters": ["Fried", "Grilled", "Cheesy", "Cold", "Stew", "Marinated"]
   }]
 }
