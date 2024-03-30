@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Typography, Container, Box } from '@mui/material'
+import { Button, Typography, Box, Grid } from '@mui/material'
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
 import RegularFoods from "../FoodInfo/RegularFoods.json"
 import DeluxeFoods from "../FoodInfo/DeluxeFoods.json"
-
+import { Unstable_NumberInput as NumberInput } from '@mui/base/Unstable_NumberInput';
+import RemoveIcon from '@mui/icons-material/Remove';
+import AddIcon from '@mui/icons-material/Add';
 
 const ItemDisplay = () => {
 
@@ -31,16 +33,19 @@ const ItemDisplay = () => {
   return (
     <>
       <img src={itemInfo.photo} alt={itemInfo.name} style={{ objectFit: 'cover', width: '100vw', height: '30vh' }} />
-      <Box padding={'2vh'} marginTop={'-4vh'} sx={{backgroundColor: "white", borderTopLeftRadius: '25px', borderTopRightRadius: '25px', display: 'relative', zIndex: 10}}>
-      <Container maxWidth="md" sx={{ textAlign: 'center', marginTop: '50px' }}>
-      <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
-        Item: {itemInfo.name}
-      </Typography>
-        <br></br><br></br>
-        Portion Size per Order: {itemInfo.price}
-        <br></br><br></br>
-        Description: <br></br>{itemInfo.description}
-        <br></br><br></br>
+      <Box paddingTop={'8vh'} paddingLeft={'5vw'} paddingRight={'5vw'} paddingBottom={'10vh'} marginTop={'-4vh'} marginBottom={'-10vh'} sx={{backgroundColor: "white", borderTopLeftRadius: '25px', borderTopRightRadius: '25px', display: 'relative', zIndex: 10}}>
+        <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
+          Item: {itemInfo.name}
+        </Typography>
+        <br/>
+        <Typography variant="h7" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"18px" }}>
+          Portion Size per Order: {itemInfo['Portion Size, Per Order']}
+          <br></br><br></br>
+        </Typography>
+        <Typography variant="h8" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"15px" }}>
+          <b>Description:</b> <br></br>{itemInfo.description}
+          <br></br><br></br><br></br>
+        </Typography>
 
 
 
@@ -51,37 +56,77 @@ const ItemDisplay = () => {
         color="primary"
         style={{
           display: 'block',
-          
-          backgroundColor: 'green',
+          backgroundColor: 'primary',
           color: 'white',
+          textAlign: 'center',
+          fontFamily: 'Roboto Mono',
+          fontWeight: 'bold'
         }}
-      >
-        NutritionalInfo
-      </Button>
-      <br></br><br></br>
+        >
+          Nutritional Information
+        </Button>
+        <br></br>
 
-
-      <Button 
+        <Button 
         component={Link} 
-        to={`/menuitems/${id}/${category}`}
         variant="contained" 
         color="primary"
         style={{
           display: 'block',
-          
-          backgroundColor: 'green',
+          backgroundColor: 'primary',
           color: 'white',
+          textAlign: 'center',
+          fontFamily: 'Roboto Mono',
+          fontWeight: 'bold'
         }}
-      >
-        Go Back
-      </Button>
-      </Container>
+        >
+          Customize your order
+        </Button>
+        <br></br>
+
+        <Button 
+          component={Link} 
+          to={`/menuitems/${id}/${category}`}
+          variant="contained" 
+          color="primary"
+          style={{
+            display: 'block',
+            backgroundColor: 'primary',
+            color: 'white',
+            textAlign: 'center',
+            fontFamily: 'Roboto Mono',
+            fontWeight: 'bold'
+          }}
+        >
+          Go Back
+        </Button>
+        
+        <br></br>
+
+        <Grid container spacing={2}>
+          <Grid>
+            {/* {<NumberInput min={0} max={99} slotProps={<AddIcon/>}  />} */}
+          </Grid>
+          <Grid item xs={6} md={8}>
+            <Button 
+            component={Link} 
+            variant="contained" 
+            color="primary"
+            style={{
+              display: 'block',
+              backgroundColor: 'primary',
+              color: 'white',
+              textAlign: 'center',
+              fontFamily: 'Roboto Mono',
+              fontWeight: 'bold'
+            }}
+            >
+              Add to Order
+            </Button>
+          </Grid>
+
+        </Grid>
       </Box>
-
-
-      <br></br><br></br><br></br>
-
-
     </>
     );
   };
