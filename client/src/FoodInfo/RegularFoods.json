@@ -148,7 +148,7 @@
           "description": "Succulent slices of beef marinated in a blend of soy sauce, sugar, sesame oil, and garlic, then grilled to perfection.",
           "Portion Size, Per Order": "100 grams",
           "photo": "https://thestayathomechef.com/wp-content/uploads/2021/02/Korean-Beef-Bulgogi-4.jpg",
-          "tags": ["High-Protein", "Lactose-Free"]
+          "tags": ["High-Protein", "Lactose-Free", "Marinated"]
       }, {
           "name": "Woo-samgyeob (Thin Slice Beef Brisket)",
           "nutritionalInfo": {
@@ -174,7 +174,7 @@
           "photo": "https://theredcellarblog.files.wordpress.com/2019/06/soondae_3.jpg",
           "tags": ["Gluten-Free", "Lactose-Free"]
       }],
-      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free"]
+      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free", "Marinated"]
   }, {
       "name": "BBQ Meat - Pork",
       "foods": [{
@@ -188,7 +188,7 @@
           "description": "Tender pork slices marinated in a fiery sauce, bringing a spicy kick to your BBQ.",
           "Portion Size, Per Order": "100 grams",
           "photo": "https://www.siftandsimmer.com/wp-content/uploads/2023/05/spicy-pork-bulgogi2.jpg",
-          "tags": ["Spicy", "High-Protein", "Lactose-Free"]
+          "tags": ["Spicy", "High-Protein", "Lactose-Free", "Marinated"]
       }, {
           "name": "Dwaeji Galbi (Marinated Pork Ribs)",
           "nutritionalInfo": {
@@ -226,7 +226,7 @@
           "photo": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/tqjgmhcb/bfd09643-50f6-4665-8b92-fefeea891256.jpg",
           "tags": ["Low-Fat", "Lactose-Free"]
       }],
-      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free"]
+      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free", "Marinated"]
   }, {
       "name": "BBQ Meat - Chicken",
       "foods": [{
@@ -252,9 +252,9 @@
           "description": "Tender chicken pieces soaked in a rich soy sauce marinade, offering a savory and slightly sweet flavor.",
           "Portion Size, Per Order": "100 grams",
           "photo": "https://www.koreanbapsang.com/wp-content/uploads/2012/03/DSC_1832-1-e1562126872480.jpg",
-          "tags": ["High-Protein", "Lactose-Free"]
+          "tags": ["High-Protein", "Lactose-Free", "Marinated"]
       }],
-      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free"]
+      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free", "Marinated"]
   }, {
       "name": "Drinks",
       "thumbnail": "https://thesmartlocal.kr/wp-content/uploads/2020/04/Korean-Alcohol-Concoctions16.jpg",
