@@ -268,7 +268,7 @@ const ItemDisplay = () => {
 
         <Grid container spacing={2}>
           <Grid item xs={6} md={8}>
-            {<NumberInput min={0} max={99}  />}
+            {<NumberInput min={1} max={99}  />}
           </Grid>
           <Grid item xs={6} md={8}>
             <Button 
