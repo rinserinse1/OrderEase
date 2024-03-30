@@ -86,7 +86,7 @@ const MenuItems = () => {
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         {categoryInfo.map((filter, index) => (
           <Grid key={index} xs={2} sm={4} md={4}>
-            <Chip label={filter} onClick={() => {handleChipToggle(filter)}} color={selectedChips.includes(filter) ? "primary" : "default"} sx={{ /* backgroundColor: "white",  */fontFamily: "Roboto Mono" }}></Chip>
+            <Chip label={filter} onClick={() => {handleChipToggle(filter)}} color={selectedChips.includes(filter) ? "primary" : "default"} sx={{ fontFamily: "Roboto Mono", marginTop: 2 }}></Chip>
           </Grid>
         ))}
       </Grid>
