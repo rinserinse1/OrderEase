@@ -47,6 +47,17 @@ const MenuItems = () => {
       }
     };
 
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleSearchInputChange = (event) => {
+      setSearchQuery(event.target.value.toLowerCase());
+    };
+  
+    // Filter menu items based on search query
+    const filteredFoods = foods.filter(food =>
+      food.name.toLowerCase().includes(searchQuery)
+    );
+
 
   return (
     <>
@@ -62,6 +73,8 @@ const MenuItems = () => {
         variant="outlined" 
         placeholder="Search by Menu Item Name" 
         fullWidth
+        value={searchQuery}
+        onChange={handleSearchInputChange}
         InputProps={{
           startAdornment: (
             <SearchOutlinedIcon />
@@ -95,7 +108,7 @@ const MenuItems = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {foods.map((item, index) => (
+            {filteredFoods.map((item, index) => (
               <TableRow key={index} sx={{border: 1}}>
                 <TableCell component="th" scope="row" style={{ paddingRight: '-10px' }} >
                   <Button component={Link} to={`/itemDisplay/${id}/${category}/${item.name}`} style={{ color: 'black', textDecoration: 'none', fontSize: '10px', fontWeight: 'bold' }}>

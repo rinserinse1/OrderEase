@@ -29,6 +29,26 @@ const MenuCategories = () => {
   }, [id]);
   console.log(categories)
 
+
+
+
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleSearchInputChange = (event) => {
+      setSearchQuery(event.target.value);
+      // Here you can perform any additional actions you need, like filtering data based on the search query.
+
+
+    }
+
+  // Filter categories based on search query
+  const filteredCategories = categories.filter(category =>
+    category.name.toLowerCase().includes(searchQuery)
+  );
+
+
+
+
   return (
     <>
 
@@ -41,15 +61,16 @@ const MenuCategories = () => {
           Order Categories For {id}
         </Typography>
         <br/><br/>
-        <TextField 
-          id="outlined-basic" 
+
+        <TextField
+          id="outlined-basic"
           label=""
-          variant="outlined" 
-          placeholder="Search by Menu Category" 
+          variant="outlined"
+          placeholder="Search by Menu Category"
+          value={searchQuery}
+          onChange={handleSearchInputChange}
           InputProps={{
-            startAdornment: (
-              <SearchOutlinedIcon />
-            ),
+            startAdornment: <SearchOutlinedIcon />,
             sx: { backgroundColor: 'white' }
           }}
         />
@@ -57,7 +78,7 @@ const MenuCategories = () => {
         <br/><br/>
 
         <Grid container spacing={3}>
-          {categories.map((category, index) => (
+        {filteredCategories.map((category, index) => (
             <Grid item xs={6} sm={6} md={4} lg={3} key={index}>
               <Link to={`/menuItems/${id}/${category.name}`} style={{ textDecoration: 'none' }}>
                 <Card>
@@ -73,6 +94,8 @@ const MenuCategories = () => {
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                       {category.description}
+                   
+                      ({category.foods.length})
                     </Typography>
                   </CardContent>
                 </Card>
