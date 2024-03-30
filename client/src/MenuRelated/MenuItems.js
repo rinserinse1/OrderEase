@@ -53,7 +53,7 @@ const MenuItems = () => {
       setSearchQuery(event.target.value.toLowerCase());
     };
   
-    // Filter menu items based on search query
+    // Filter menu items based on search query and filters
     const filteredFoods = foods.filter(food =>
       food.name.toLowerCase().includes(searchQuery) && 
       selectedChips.every(filter => food.tags.includes(filter))
