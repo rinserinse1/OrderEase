@@ -30,6 +30,35 @@ const ItemDisplay = () => {
 
 
       console.log(itemInfo)   //THIS IS UR DATA ****
+
+
+
+
+
+
+      const addToOrder = () => {
+
+        let foodList = [];
+
+        const storedFood = localStorage.getItem('foodList');
+
+        if (storedFood) {
+          foodList = JSON.parse(storedFood);
+        }
+
+        const newFood = food;
+        foodList.push(newFood);
+
+        localStorage.setItem('foodList', JSON.stringify(foodList));
+
+      alert('Added to Order');
+      };
+
+
+
+
+
+
   return (
     <>
       <img src={itemInfo.photo} alt={itemInfo.name} style={{ objectFit: 'cover', width: '100vw', height: '30vh' }} />
@@ -120,7 +149,9 @@ const ItemDisplay = () => {
               fontFamily: 'Roboto Mono',
               fontWeight: 'bold'
             }}
+            onClick={addToOrder}
             >
+              
               Add to Order
             </Button>
           </Grid>
