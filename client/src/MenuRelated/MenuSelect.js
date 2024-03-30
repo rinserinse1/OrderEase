@@ -47,15 +47,18 @@ const MenuSelectConfirm = () => {
             flexDirection="column"
             p={2}
             sx={{ border: '2px solid grey', bgcolor: "white", boxShadow: 2 }}
-          >
-            <Typography variant="h4" align="center" gutterBottom fontWeight='medium'>
-              Welcome to <br/> OrderEase! <br/> Pick your menu:
+            >
+            <Typography variant="h5" align="center" gutterBottom fontWeight='Bold'>
+              Thank you for choosing OrderEase to enhance your dining experience!
+            </Typography>
+            <Typography variant="h6" align="center" mt={1} gutterBottom fontWeight='Medium'>
+              Welcome to AYCE KBBQ, please pick one of our two all you can eat menus below.
             </Typography>
           </Box>
         </Container>
       </Box>
 
-      <Grid container justifyContent="center" spacing={2}>
+      <Grid container justifyContent="center" spacing={3}>
         {menus.map(menu => (
           <MenuOption key={menu.name} {...menu} />
         ))}
