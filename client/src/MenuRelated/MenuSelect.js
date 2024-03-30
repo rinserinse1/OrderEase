@@ -37,7 +37,7 @@ const MenuOption = ({ name, image, link }) => (
 const MenuSelectConfirm = () => {
   return (
     <>
-      <Box sx={{ my: 8 }}>
+      <Box sx={{ my: 4 }}>
         <Container maxWidth="sm">
           <Box
             height="100%"
@@ -46,7 +46,7 @@ const MenuSelectConfirm = () => {
             justifyContent="center"
             flexDirection="column"
             p={2}
-            sx={{ border: '2px solid grey', bgcolor: "white", boxShadow: 2 }}
+            sx={{ border: '2px solid grey', bgcolor: "white", boxShadow: 2, mb: -2 }}
             >
             <Typography variant="h5" align="center" gutterBottom fontWeight='Bold'>
               Thank you for choosing OrderEase to enhance your dining experience!
