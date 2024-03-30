@@ -6,7 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Button, Typography, Container, TextField, Grid, Chip, boxClasses } from '@mui/material'
+import { Button, Typography, Container, TextField, Grid, Chip, boxClasses, selectClasses } from '@mui/material'
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
 import RegularFoods from "../FoodInfo/RegularFoods.json"
@@ -55,7 +55,8 @@ const MenuItems = () => {
   
     // Filter menu items based on search query
     const filteredFoods = foods.filter(food =>
-      food.name.toLowerCase().includes(searchQuery)
+      food.name.toLowerCase().includes(searchQuery) && 
+      selectedChips.every(filter => food.tags.includes(filter))
     );
 
 
