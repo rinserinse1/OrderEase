@@ -104,7 +104,14 @@ const App  = () =>  {
 
         {
           path: 'yourorder' ,
-          element:  <YourOrder/>
+          element:  <YourOrder/>,
+          children: [
+            {
+              path: ':id' ,
+              element:  <AddLogging></AddLogging>
+            },
+
+          ],
         },
         {
           path: 'assistance' ,
