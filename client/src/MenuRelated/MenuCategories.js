@@ -71,23 +71,32 @@ const MenuCategories = () => {
         <br/><br/>
 
         <Grid container spacing={3}>
-        {filteredCategories.map((category, index) => (
+          {filteredCategories.map((category, index) => (
             <Grid item xs={6} sm={6} md={4} lg={3} key={index}>
               <Link to={`/menuItems/${id}/${category.name}`} style={{ textDecoration: 'none' }}>
-                <Card>
+                <Card sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  height: 320, 
+                  boxShadow: 3,
+                  borderRadius: 2,
+                }}>
                   <CardMedia
                     component="img"
-                    height="140"
+                    sx={{ height: 180, objectFit: 'cover' }}
                     image={category.name === "Drinks" ? category.thumbnail : category.foods[0].photo}
                     alt={category.name}
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h6" component="div" sx={{
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                    }}>
                       {category.name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      {category.description}
-                   
                       ({category.foods.length})
                     </Typography>
                   </CardContent>
@@ -97,7 +106,6 @@ const MenuCategories = () => {
           ))}
         </Grid>
       </Container>
-
     </>
   );
 };
