@@ -27,7 +27,8 @@
             "description": "Deep-fried sticks of mozzarella cheese, served with marinara sauce.",
             "photo": "https://sugarspunrun.com/wp-content/uploads/2021/07/Homemade-Mozzarella-Sticks-Recipe-1-of-1.jpg"
           }
-        ]
+        ],
+      "filters": ["Lactose-free", "placeholder1", "placeholder2", "placeholder3", "placeholder4", "placeholder5"]
       },
       {
         "name": "Burgers",
@@ -56,7 +57,8 @@
             "description": "Creamy Alfredo sauce served over fettuccine pasta with grilled chicken.",
             "photo": "https://via.placeholder.com/150"
           }
-        ]
+        ],
+        "filters": ["Lactose-free", "placeholder1", "placeholder2", "placeholder3", "placeholder4", "placeholder5"]
       }
     ]
   }

@@ -6,13 +6,13 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import {Button, Typography, Container} from '@mui/material'
+import { Button, Typography, Container, TextField, Grid, Chip } from '@mui/material'
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
 import RegularFoods from "../FoodInfo/RegularFoods.json"
 import DeluxeFoods from "../FoodInfo/DeluxeFoods.json"
-import { TextField, Grid } from "@mui/material"
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import DoneIcon from '@mui/icons-material/Done';
 
 
 //import mozarellasticks from "../images/mozarellasticks.jpg"
@@ -23,17 +23,29 @@ const MenuItems = () => {
   const [error, setError] = useState("");
 
     const [foods, setFoods] = useState([]);
+    const [categoryInfo, setCategoryInfo] = useState([]);
     useEffect(() => {
       if (id === "regular") {
         setFoods(RegularFoods.categories.find(cat => cat.name === category).foods);
+        setCategoryInfo(RegularFoods.categories.find(cat => cat.name === category).filters);
       } else if (id === "deluxe") {
         setFoods(DeluxeFoods.categories.find(cat => cat.name === category).foods);
+        setCategoryInfo(DeluxeFoods.categories.find(cat => cat.name === category).filters);
       } else {
         setError("Invalid id parameter.");
       }
     }, []);
     console.log(foods)  //THIS IS UR DATA ****
 
+    const [selectedChips, setSelectedChips] = useState([]);
+
+    const handleChipToggle = (chipValue) => {
+      if (selectedChips.includes(chipValue)) {
+        setSelectedChips(selectedChips.filter((chip) => chip !== chipValue));
+      } else {
+        setSelectedChips([...selectedChips, chipValue]);
+      }
+    };
 
 
   return (
@@ -57,7 +69,15 @@ const MenuItems = () => {
           sx: { backgroundColor: 'white' }
         }}
       />      
-      <br/><br/><br/><br/>
+      <br/><br/><br/>
+      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+        {categoryInfo.map((filter, index) => (
+          <Grid key={index} xs={2} sm={4} md={4}>
+            <Chip label={filter} onClick={() => {handleChipToggle(filter)}} color={selectedChips.includes(filter) ? "primary" : "default"} sx={{ /* backgroundColor: "white",  */fontFamily: "Roboto Mono" }}></Chip>
+          </Grid>
+        ))}
+      </Grid>
+      <br/><br/>
       <TableContainer component={Paper} style={{
         fontFamily: 'Roboto Mono',
         backgroundColor: '#F9F9F9',
