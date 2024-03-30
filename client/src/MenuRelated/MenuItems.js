@@ -6,7 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Button, Typography, Container, TextField, Grid, Chip } from '@mui/material'
+import { Button, Typography, Container, TextField, Grid, Chip, boxClasses } from '@mui/material'
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
 import RegularFoods from "../FoodInfo/RegularFoods.json"
@@ -110,13 +110,10 @@ const MenuItems = () => {
           <TableBody>
             {filteredFoods.map((item, index) => (
               <TableRow key={index} sx={{border: 1}}>
-                <TableCell component="th" scope="row" style={{ paddingRight: '-10px' }} >
-                  <Button component={Link} to={`/itemDisplay/${id}/${category}/${item.name}`} style={{ color: 'black', textDecoration: 'none', fontSize: '10px', fontWeight: 'bold' }}>
-                  <img src={item.photo} alt={item.name} style={{ maxWidth: '100%', height: '20%' }} />
-                    
-                  </Button>
+                <TableCell component="th" scope="row" style={{ paddingRight: '-10px', width: '50%', borderBottom: 1 }} >
+                  <img src={item.photo} alt={item.name} style={{ objectFit: 'cover', width: '100%', height: '30vw', borderRadius: '25px' }} />
                 </TableCell>
-                <TableCell>
+                <TableCell sx={{fontWeight: '550', borderBottom: 1}}>
                 {item.name}
                 <br></br><br></br>
                   {item.price}
@@ -131,9 +128,12 @@ const MenuItems = () => {
                       backgroundColor: 'green',
                       color: 'white',
                       textTransform: 'none', // Prevent text from being all caps
+                      fontWeight: 'bold',
+                      position: 'relative',
+                      boxShadow: 3 
                     }}
                   >
-                         <Typography style = {{fontSize:"8px"}} >VIEW ITEM</Typography>
+                         <Typography style = {{fontSize:"15px", textAlign:"center"}} >VIEW ITEM</Typography>
                   </Button>
 
                 </TableCell>
