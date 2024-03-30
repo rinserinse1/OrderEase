@@ -1,12 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import {Button, Typography, Container} from '@mui/material'
+import React, { useState, useEffect } from 'react';
+import { Button, Typography, Container, Box } from '@mui/material'
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
 import RegularFoods from "../FoodInfo/RegularFoods.json"
@@ -37,15 +30,14 @@ const ItemDisplay = () => {
       console.log(itemInfo)   //THIS IS UR DATA ****
   return (
     <>
-          <br></br><br></br>
+      <img src={itemInfo.photo} alt={itemInfo.name} style={{ objectFit: 'cover', width: '100vw', height: '30vh' }} />
+      <Box padding={'2vh'} marginTop={'-4vh'} sx={{backgroundColor: "white", borderTopLeftRadius: '25px', borderTopRightRadius: '25px', display: 'relative', zIndex: 10}}>
       <Container maxWidth="md" sx={{ textAlign: 'center', marginTop: '50px' }}>
       <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
         Item: {itemInfo.name}
       </Typography>
         <br></br><br></br>
-        Photo:  <img src={itemInfo.photo} alt={itemInfo.name} style={{ maxWidth: '30%', height: '20%' }} />
-        <br></br><br></br>
-        Price: {itemInfo.price}
+        Portion Size per Order: {itemInfo.price}
         <br></br><br></br>
         Description: <br></br>{itemInfo.description}
         <br></br><br></br>
@@ -84,6 +76,9 @@ const ItemDisplay = () => {
         Go Back
       </Button>
       </Container>
+      </Box>
+
+
       <br></br><br></br><br></br>
 
 
