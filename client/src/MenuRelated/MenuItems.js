@@ -88,7 +88,7 @@ const MenuItems = () => {
         {categoryInfo.map((filter, index) => (
           <Grid key={index} xs={2} sm={4} md={4}>
             <Chip label={filter} onClick={() => {handleChipToggle(filter)}} 
-                  onDelete={{}} deleteIcon={selectedChips.includes(filter) ? <DoneIcon style={{color: "black"}}/> : <></>}
+                  onDelete={() => {handleChipToggle(filter)}} deleteIcon={selectedChips.includes(filter) ? <DoneIcon style={{color: "black"}}/> : <></>}
                   sx={selectedChips.includes(filter) ? { backgroundColor: 'orange', color: 'black', fontWeight: 'bold', fontFamily: "Roboto Mono", marginTop: 2 } 
                   : { backgroundColor: 'white', fontFamily: "Roboto Mono", marginTop: 2 }}>
             </Chip>

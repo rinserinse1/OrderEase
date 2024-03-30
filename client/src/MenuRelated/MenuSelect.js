@@ -2,8 +2,8 @@ import React from 'react';
 import { Box, ButtonBase, Card, CardMedia, Container, Grid, Typography, Stack } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-import DeluxeMenuImage from "../images/Deluxe Menu.png";
-import RegularMenuImage from "../images/Regular Menu.png";
+import DeluxeMenuImage from "../images/Deluxe_Menu_Final.PNG";
+import RegularMenuImage from "../images/Regular_Menu_Final.png";
 
 const menus = [
   { name: 'Deluxe Menu', image: DeluxeMenuImage, link: '/menuselectconfirm/deluxe' },
