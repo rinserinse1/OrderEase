@@ -104,7 +104,10 @@ export default function Footer() {
       component={Link} 
       to={`/menucategories/${id}`}
       icon={<GridViewOutlinedIcon />} />
-      <BottomNavigationAction label="View Order" icon={<ShoppingCartOutlinedIcon />} />
+      <BottomNavigationAction label="View Order" 
+      component={Link} 
+      to={`/yourorder/${id}`}
+      icon={<ShoppingCartOutlinedIcon />} />
       <BottomNavigationAction label="Assistance"  icon={<HelpOutlineOutlinedIcon />} onClick={handleAssistanceIconClick} />
     </BottomNavigation>
   </Box>
