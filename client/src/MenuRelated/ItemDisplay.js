@@ -150,7 +150,7 @@ const ItemDisplay = () => {
   const [error, setError] = useState("");
   const [itemInfo, setItemInfo] = useState([]);
 
-
+  const [quantity, setQuantity] = useState();
 
     useEffect(() => {
         if (id === "regular") {
@@ -196,7 +196,7 @@ const ItemDisplay = () => {
   return (
     <>
       <img src={itemInfo.photo} alt={itemInfo.name} style={{ objectFit: 'cover', width: '100vw', height: '30vh' }} />
-      <Box paddingTop={'8vh'} paddingLeft={'5vw'} paddingRight={'5vw'} paddingBottom={'10vh'} marginTop={'-4vh'} marginBottom={'-10vh'} sx={{backgroundColor: "white", borderTopLeftRadius: '25px', borderTopRightRadius: '25px', display: 'relative', zIndex: 10}}>
+      <Box paddingTop={'8vh'} paddingLeft={'5vw'} paddingRight={'5vw'} paddingBottom={'10vh'} marginTop={'-4vh'} marginBottom={'-10vh'} sx={{backgroundColor: "#F9F9F9", borderTopLeftRadius: '25px', borderTopRightRadius: '25px', display: 'relative', zIndex: 10}}>
         <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
           Item: {itemInfo.name}
         </Typography>
@@ -268,7 +268,7 @@ const ItemDisplay = () => {
 
         <Grid container spacing={2}>
           <Grid item xs={6} md={8}>
-            {<NumberInput min={1} max={99}  />}
+            {<NumberInput min={1} max={99} defaultValue={1} onChange={(event, val) => {setQuantity(val)}} />}
           </Grid>
           <Grid item xs={6} md={8}>
             <Button 
