@@ -12,7 +12,7 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 import CloseIcon from '@mui/icons-material/Close';
 
 
-const CustomizeModal = ({ open, onClose }) => {
+const CustomizeModal = ({ open, onClose, setCustomization, customization }) => {
   const {id} = useParams();  
   return (
     <>
@@ -53,7 +53,7 @@ const CustomizeModal = ({ open, onClose }) => {
           </Typography>
 
           <br/>
-          <TextField variant="outlined" label="Enter comments here..." multiline={true} onChange={(event) => {}} sx={{width: '100%'}}/>
+          <TextField variant="outlined" label="Enter comments here..." value={customization} multiline={true} onChange={(event) => {setCustomization(event.target.value)}} sx={{width: '100%'}}/>
           <br/><br/>
 
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
@@ -209,6 +209,7 @@ const ItemDisplay = () => {
   const [error, setError] = useState("");
   const [itemInfo, setItemInfo] = useState([]);
 
+  // Variable that tracks the quantity of the item
   const [quantity, setQuantity] = useState();
 
   const [customizeModalOpen, setCustomizeModalOpen] = useState(false);
@@ -220,6 +221,9 @@ const ItemDisplay = () => {
   const closeCustomizeModal = () => {
     setCustomizeModalOpen(false);
   };
+
+  // Variable that tracks the customization of the item entered in (string form)
+  const [customization, setCustomization] = useState("");
 
     useEffect(() => {
         if (id === "regular") {
@@ -233,8 +237,7 @@ const ItemDisplay = () => {
 
 
       console.log(itemInfo)   //THIS IS UR DATA ****
-
-
+      console.log(customization)
 
 
 
@@ -363,7 +366,7 @@ const ItemDisplay = () => {
         </Grid>
       </Box>
 
-      <CustomizeModal open={customizeModalOpen} onClose={closeCustomizeModal} />
+      <CustomizeModal open={customizeModalOpen} onClose={closeCustomizeModal} setCustomization={setCustomization} customization={customization}/>
     </>
     );
   };
