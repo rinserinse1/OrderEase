@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Typography, Box, Grid } from '@mui/material'
+import { Button, Typography, Box, Grid, Modal, IconButton, TextField } from '@mui/material'
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
 import RegularFoods from "../FoodInfo/RegularFoods.json"
@@ -8,6 +8,65 @@ import { Unstable_NumberInput as BaseNumberInput } from '@mui/base/Unstable_Numb
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 import { styled } from '@mui/system';
+import GlobalStyles from '@mui/material/GlobalStyles';
+import CloseIcon from '@mui/icons-material/Close';
+
+
+const CustomizeModal = ({ open, onClose }) => {
+  const {id} = useParams();  
+  return (
+    <>
+    
+      <Modal
+        open={open}
+        onClose={onClose}
+        aria-labelledby="customize-modal-title"
+        aria-describedby="customize-modal-description"
+        
+      >
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            bgcolor: 'white',
+            boxShadow: 24,
+            p: 4,
+            width: 'calc(100% - 40px)',
+            maxWidth: 300,
+            borderRadius: '10px'
+          }}
+        >
+          <IconButton
+            sx={{
+              position: 'absolute',
+              top: 8,
+              right: 8,
+            }}
+            onClick={onClose}
+          >
+            <CloseIcon />
+          </IconButton>
+          <Typography id="customize-modal-title" variant="h6" component="h2" fontWeight={'bold'}>
+            Enter in additional specifications
+          </Typography>
+
+          <br/>
+          <TextField variant="outlined" label="Enter comments here..." multiline={true} onChange={(event) => {}} sx={{width: '100%'}}/>
+          <br/><br/>
+
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
+            <Button variant="contained" color="error" onClick={onClose} sx={{width: '30vw', border: 1, boxShadow: 3}}>Cancel</Button>
+            <Button       
+            component={Link} 
+            variant="contained" color="success" onClick={onClose} sx={{width: '30vw', border: 1, boxShadow: 3}}>Save</Button>
+          </Box>
+        </Box>
+      </Modal>
+    </>
+  );
+};
 
 const NumberInput = React.forwardRef(function CustomNumberInput(props, ref) {
   return (
@@ -152,6 +211,16 @@ const ItemDisplay = () => {
 
   const [quantity, setQuantity] = useState();
 
+  const [customizeModalOpen, setCustomizeModalOpen] = useState(false);
+
+  const handleCustomizeIconClick = () => {
+    setCustomizeModalOpen(true);
+  };
+
+  const closeCustomizeModal = () => {
+    setCustomizeModalOpen(false);
+  };
+
     useEffect(() => {
         if (id === "regular") {
           setItemInfo(RegularFoods.categories.find(cat => cat.name === category).foods.find(cat => cat.name === food));
@@ -234,6 +303,7 @@ const ItemDisplay = () => {
         component={Link} 
         variant="contained" 
         color="primary"
+        onClick={handleCustomizeIconClick}
         style={{
           display: 'block',
           backgroundColor: 'primary',
@@ -264,7 +334,7 @@ const ItemDisplay = () => {
           Go Back
         </Button>
         
-        <br></br>
+        <br></br><br></br>
 
         <Grid container spacing={2}>
           <Grid item xs={6} md={8}>
@@ -292,6 +362,8 @@ const ItemDisplay = () => {
 
         </Grid>
       </Box>
+
+      <CustomizeModal open={customizeModalOpen} onClose={closeCustomizeModal} />
     </>
     );
   };
