@@ -30,7 +30,7 @@ const YourOrder = () => {
     getFoodListFromLocalStorage();
   }, []); 
 
-
+  console.log(foodList);
 
   const handleRemoveItem = (indexToRemove) => {
     const updatedFoodList = foodList.filter((item, index) => index !== indexToRemove);
@@ -44,16 +44,19 @@ const YourOrder = () => {
       <br /><br />
       <Typography variant="h4" gutterBottom sx={{ display: 'flex', alignItems: 'center', fontFamily: 'Roboto Mono' }}><strong>Your Order</strong></Typography>
       <br />
-      <Paper elevation={3} sx={{ padding: 3, backgroundColor: '#F9F9F9' }}>
+      <Paper elevation={3} sx={{ padding: 1, backgroundColor: '#F9F9F9' }}>
 
       <Grid container spacing={2}>
       <Grid item xs={10}>
       {foodList.map((item, index) => (
           <div key={index}>
-            <Typography variant="h6" >
-              {item} <Button onClick={() => handleRemoveItem(index)}>Remove</Button>
+            <Typography variant="h7" >
+              {item.food}
+              <Typography marginLeft="20px" variant="h7" style={{ fontStyle: 'italic' }}>{item.note}test</Typography>
+              <br></br>
+              Qty: {item.quantity}  <Button onClick={() => handleRemoveItem(index)}>Remove</Button>
             </Typography>
-            
+            <br></br><br></br>
           </div>
         ))}
       </Grid>

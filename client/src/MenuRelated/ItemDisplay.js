@@ -12,7 +12,7 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 import CloseIcon from '@mui/icons-material/Close';
 
 
-const CustomizeModal = ({ open, onClose, setCustomization, customization }) => {
+const CustomizeModal = ({ open, onClose, cancel, setCustomization, customization }) => {
   const {id} = useParams();  
   return (
     <>
@@ -44,7 +44,7 @@ const CustomizeModal = ({ open, onClose, setCustomization, customization }) => {
               top: 8,
               right: 8,
             }}
-            onClick={onClose}
+            onClick={cancel}
           >
             <CloseIcon />
           </IconButton>
@@ -57,9 +57,8 @@ const CustomizeModal = ({ open, onClose, setCustomization, customization }) => {
           <br/><br/>
 
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
-            <Button variant="contained" color="error" onClick={onClose} sx={{width: '30vw', border: 1, boxShadow: 3}}>Cancel</Button>
+            <Button variant="contained" color="error" onClick={cancel} sx={{width: '30vw', border: 1, boxShadow: 3}}>Cancel</Button>
             <Button       
-            component={Link} 
             variant="contained" color="success" onClick={onClose} sx={{width: '30vw', border: 1, boxShadow: 3}}>Save</Button>
           </Box>
         </Box>
@@ -210,10 +209,10 @@ const ItemDisplay = () => {
   const [itemInfo, setItemInfo] = useState([]);
 
   // Variable that tracks the quantity of the item
-  const [quantity, setQuantity] = useState();
+  const [quantity, setQuantity] = useState(1);
 
   const [customizeModalOpen, setCustomizeModalOpen] = useState(false);
-
+  const [customization, setCustomization] = useState("");
   const handleCustomizeIconClick = () => {
     setCustomizeModalOpen(true);
   };
@@ -221,9 +220,13 @@ const ItemDisplay = () => {
   const closeCustomizeModal = () => {
     setCustomizeModalOpen(false);
   };
-
+  
+  const cancelCustomizeModal = () => {
+    setCustomization("");
+    setCustomizeModalOpen(false);
+  };
   // Variable that tracks the customization of the item entered in (string form)
-  const [customization, setCustomization] = useState("");
+
 
     useEffect(() => {
         if (id === "regular") {
@@ -241,25 +244,25 @@ const ItemDisplay = () => {
 
 
 
-
-      const addToOrder = () => {
-
-        let foodList = [];
-
-        const storedFood = localStorage.getItem('foodList');
-
-        if (storedFood) {
-          foodList = JSON.parse(storedFood);
+      const addToOrder = (note) => {
+        let order = [];
+      
+        const storedOrder = localStorage.getItem('foodList');
+      
+        if (storedOrder) {
+          order = JSON.parse(storedOrder);
         }
+      
 
-        const newFood = food;
-        foodList.push(newFood);
-
-        localStorage.setItem('foodList', JSON.stringify(foodList));
-
-      alert('Added to Order');
+        //order = { food: food, quantity: quantity, note: customization };
+        order.push({ food: food, quantity: quantity, note: customization });
+        
+      
+        // Update the order in local storage
+        localStorage.setItem('foodList', JSON.stringify(order));
+      
+        alert('Added to Order');
       };
-
 
 
 
@@ -319,7 +322,7 @@ const ItemDisplay = () => {
           Customize your order
         </Button>
         <br></br>
-
+        CUSTOM ORDER = {customization}
         <Button 
           component={Link} 
           to={`/menuitems/${id}/${category}`}
@@ -366,7 +369,7 @@ const ItemDisplay = () => {
         </Grid>
       </Box>
 
-      <CustomizeModal open={customizeModalOpen} onClose={closeCustomizeModal} setCustomization={setCustomization} customization={customization}/>
+      <CustomizeModal open={customizeModalOpen} onClose={closeCustomizeModal} cancel={cancelCustomizeModal} setCustomization={setCustomization} customization={customization}/>
     </>
     );
   };
