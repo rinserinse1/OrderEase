@@ -35,6 +35,7 @@ const MenuOption = ({ name, image, link }) => (
 );
 
 const MenuSelectConfirm = () => {
+  localStorage.clear();
   return (
     <>
       <Box sx={{ my: 4 }}>
