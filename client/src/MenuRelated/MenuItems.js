@@ -62,8 +62,8 @@ const MenuItems = () => {
 
   return (
     <>
-          <br></br><br></br>
-      <Container maxWidth="md" sx={{ textAlign: 'center', marginTop: '50px' }}>
+          
+      <Container maxWidth="md" sx={{ textAlign: 'center', marginTop: '20px' }}>
       <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
         {category}
       </Typography>
