@@ -13,7 +13,9 @@ import MenuSelect from './MenuRelated/MenuSelect';
 import MenuSelectConfirm from './MenuRelated/MenuSelectConfirm';
 import ItemDisplay from './MenuRelated/ItemDisplay';
 import NutritionDisplay from './MenuRelated/NutritionDisplay';
-import Assistance from './Assistance/Assistance';
+import Assistance from './WaitingScreens/Assistance'
+import PlacedOrder from './order/PlacedOrder';
+import Paying from './WaitingScreens/Paying';
 
 const App  = () =>  { 
     
@@ -114,8 +116,30 @@ const App  = () =>  {
           ],
         },
         {
+          path: 'placedorder' ,
+          element:  <PlacedOrder/>,
+          children: [
+            {
+              path: ':id' ,
+              element:  <AddLogging></AddLogging>
+            },
+
+          ],
+        },
+        {
           path: 'assistance' ,
           element:  <Assistance/>,
+          children: [
+            {
+              path: ':id' ,
+              element:  <AddLogging></AddLogging>
+            },
+
+          ],
+        },
+        {
+          path: 'paying' ,
+          element:  <Paying/>,
           children: [
             {
               path: ':id' ,
