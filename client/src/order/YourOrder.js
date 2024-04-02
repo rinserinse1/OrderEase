@@ -186,54 +186,10 @@ const YourOrder = () => {
         </TableBody>
       </Table>
     </TableContainer>
-      <br /><br />
-      <Typography variant="h4" gutterBottom sx={{ display: 'flex', alignItems: 'center', fontFamily: 'Roboto Mono' }}><strong>Order History</strong></Typography>
-    <TableContainer component={Paper} sx={{border: 1}}>
-      <Table aria-label="food items table">
-        <TableHead>
-          <TableRow>
-            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Food Item</TableCell>
-            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Quantity</TableCell>
-            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Size</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {orderHistory.map((item, index) => (
-            <TableRow key={index}>
-              <TableCell>
-                {item.food}
-                <Typography marginLeft="20px" variant="h7" style={{ fontStyle: 'italic' }}><br/>{item.note}</Typography>
-                  <br></br>
-              </TableCell>
-              <TableCell>
-                {item.quantity}
-              </TableCell>
-              <TableCell>item size</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-      {/* <Paper elevation={3} sx={{ padding: 1, backgroundColor: '#F9F9F9' }}>
-        <Grid container spacing={2}>
-          <Grid item xs={10}>
-          {orderHistory.map((item, index) => (
-              <div key={index}>
-                <Typography variant="h7" >
-                  {item.food}
-                  <Typography marginLeft="20px" variant="h7" style={{ fontStyle: 'italic' }}>{item.note}</Typography>
-                  <br></br>
-                  Qty: {item.quantity}  
-                </Typography>
-                <br></br><br></br>
-              </div>
-            ))}
-          </Grid>
-        </Grid>
-      </Paper> */}
 
-      <br></br><br></br><br></br><br></br>
-      {foodList.length == 0 ? (
+    <br /><br />
+
+    {foodList.length == 0 ? (
         <Button
           variant="contained"
           color="primary"
@@ -267,6 +223,73 @@ const YourOrder = () => {
           Place Order
         </Button>
       )}
+
+    <br/><br/>
+
+    <Typography variant="h4" gutterBottom sx={{ display: 'flex', alignItems: 'center', fontFamily: 'Roboto Mono' }}><strong>Order History</strong></Typography>
+    <br/>
+    <TableContainer component={Paper} sx={{border: 1}}>
+      <Table aria-label="food items table">
+        <TableHead>
+          <TableRow>
+            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Food Item</TableCell>
+            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Quantity</TableCell>
+            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Size</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {orderHistory.map((item, index) => (
+            <TableRow key={index}>
+              <TableCell>
+                {item.food}
+                <Typography marginLeft="20px" variant="h7" style={{ fontStyle: 'italic' }}><br/>{item.note}</Typography>
+                  <br></br>
+              </TableCell>
+              <TableCell>
+                {item.quantity}
+              </TableCell>
+              <TableCell>item size</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+
+    <br></br><br></br>
+      {/* {foodList.length == 0 ? (
+        <Button
+          variant="contained"
+          color="primary"
+          style={{
+            display: 'block',
+            backgroundColor: 'grey',
+            color: 'white',
+            textAlign: 'center',
+            fontFamily: 'Roboto Mono',
+            fontWeight: 'bold'
+          }}
+        >
+          No items Added For Order To Be Placed
+        </Button>
+      ) : (
+        <Button
+          component={Link}
+          to={`/placedorder/${id}`}
+          variant="contained"
+          color="primary"
+          style={{
+            display: 'block',
+            backgroundColor: 'green',
+            color: 'white',
+            textAlign: 'center',
+            fontFamily: 'Roboto Mono',
+            fontWeight: 'bold'
+          }}
+          onClick={handlePlaceOrder}
+        >
+          Place Order
+        </Button>
+      )} */}
     </Container>
   );
 };
