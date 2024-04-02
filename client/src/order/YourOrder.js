@@ -5,11 +5,80 @@ import {
   Button,
   Grid,
   Paper,
+  Table,
+  TableContainer,
+  TableCell,
+  TableRow,
+  TableBody,
+  TableHead,
+  Stack
 } from '@mui/material';
 import { Link, useParams } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { styled } from '@mui/system';
+import DeleteIcon from '@mui/icons-material/Delete';
 
+const blue = {
+  100: '#daecff',
+  200: '#b6daff',
+  300: '#66b2ff',
+  400: '#3399ff',
+  500: '#007fff',
+  600: '#0072e5',
+  700: '#0059B2',
+  800: '#004c99',
+};
 
+const grey = {
+  50: '#F3F6F9',
+  100: '#E5EAF2',
+  200: '#DAE2ED',
+  300: '#C7D0DD',
+  400: '#B0B8C4',
+  500: '#9DA8B7',
+  600: '#6B7A90',
+  700: '#434D5B',
+  800: '#303740',
+  900: '#1C2025',
+};
+
+const StyledButton = styled('button')(
+  ({ theme }) => `
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+  line-height: 1.5;
+  border: 1px solid;
+  border-radius: 999px;
+  border-color: ${theme.palette.mode === 'dark' ? grey[800] : grey[200]};
+  background: ${theme.palette.mode === 'dark' ? grey[900] : grey[50]};
+  color: ${theme.palette.mode === 'dark' ? grey[200] : grey[900]};
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 120ms;
+
+  &:hover {
+    cursor: pointer;
+    background: ${theme.palette.mode === 'dark' ? blue[700] : blue[500]};
+    border-color: ${theme.palette.mode === 'dark' ? blue[500] : blue[400]};
+    color: ${grey[50]};
+  }
+
+  &:focus-visible {
+    outline: 0;
+  }
+
+  &.increment {
+    order: 1;
+  }
+`,
+);
 
 const YourOrder = () => {
 
@@ -81,26 +150,71 @@ const YourOrder = () => {
       <br /><br />
       <Typography variant="h4" gutterBottom sx={{ display: 'flex', alignItems: 'center', fontFamily: 'Roboto Mono' }}><strong>Your Order</strong></Typography>
       <br />
-      <Paper elevation={3} sx={{ padding: 1, backgroundColor: '#F9F9F9' }}>
-        <Grid container spacing={2}>
-          <Grid item xs={10}>
+      <TableContainer component={Paper} sx={{border: 1}}>
+      <Table aria-label="food items table">
+        <TableHead>
+          <TableRow>
+            <TableCell></TableCell>
+            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Food Item</TableCell>
+            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Quantity</TableCell>
+            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Size</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
           {foodList.map((item, index) => (
-              <div key={index}>
-                <Typography variant="h7" >
-                  {item.food}
-                  <Typography marginLeft="20px" variant="h7" style={{ fontStyle: 'italic' }}>{item.note}</Typography>
+            <TableRow key={index}>
+              <TableCell sx={{maxWidth: '10px', padding: '2px', justifyContent: 'center', alignItems: 'center'}}>
+                <StyledButton onClick={() => handleRemoveItem(index)} sx={{color: 'black', backgroundColor: 'white', border: 0}}><DeleteIcon/></StyledButton>
+              </TableCell>
+              <TableCell>
+                {item.food}
+                <Typography marginLeft="20px" variant="h7" style={{ fontStyle: 'italic' }}><br/>{item.note}</Typography>
                   <br></br>
-                  Qty: {item.quantity}  <Button onClick={() => handleRemoveItem(index)}>Remove</Button>
-                </Typography>
-                <br></br><br></br>
-              </div>
-            ))}
-          </Grid>
-        </Grid>
-      </Paper>
+              </TableCell>
+              <TableCell>
+                <Stack spacing={1} direction={'row'} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                  <StyledButton onClick={() => {}}>-</StyledButton>
+                  <div>
+                    {item.quantity}
+                  </div>
+                  <StyledButton onClick={() => {}}>+</StyledButton>
+                </Stack>
+              </TableCell>
+              <TableCell>item size</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
       <br /><br />
       <Typography variant="h4" gutterBottom sx={{ display: 'flex', alignItems: 'center', fontFamily: 'Roboto Mono' }}><strong>Order History</strong></Typography>
-      <Paper elevation={3} sx={{ padding: 1, backgroundColor: '#F9F9F9' }}>
+    <TableContainer component={Paper} sx={{border: 1}}>
+      <Table aria-label="food items table">
+        <TableHead>
+          <TableRow>
+            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Food Item</TableCell>
+            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Quantity</TableCell>
+            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Size</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {orderHistory.map((item, index) => (
+            <TableRow key={index}>
+              <TableCell>
+                {item.food}
+                <Typography marginLeft="20px" variant="h7" style={{ fontStyle: 'italic' }}><br/>{item.note}</Typography>
+                  <br></br>
+              </TableCell>
+              <TableCell>
+                {item.quantity}
+              </TableCell>
+              <TableCell>item size</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+      {/* <Paper elevation={3} sx={{ padding: 1, backgroundColor: '#F9F9F9' }}>
         <Grid container spacing={2}>
           <Grid item xs={10}>
           {orderHistory.map((item, index) => (
@@ -116,7 +230,7 @@ const YourOrder = () => {
             ))}
           </Grid>
         </Grid>
-      </Paper>
+      </Paper> */}
 
       <br></br><br></br><br></br><br></br>
       {foodList.length == 0 ? (
