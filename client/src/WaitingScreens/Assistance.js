@@ -6,6 +6,21 @@ const Assistance = () => {
   const { id } = useParams();  // This is either deluxe or regular
   const [error, setError] = useState("");
 
+
+
+    useEffect(() => {
+
+      const timeoutId = setTimeout(() => {
+
+        window.location.href = `/menucategories/${id}`;
+      }, 10000); // 10000 milliseconds = 10 seconds
+
+      // Clean up the timeout on component unmount
+      return () => clearTimeout(timeoutId);
+    }, []);
+
+
+
   return (
     <>
     <br></br><br></br>
