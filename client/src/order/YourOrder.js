@@ -107,7 +107,7 @@ const YourOrder = () => {
               <div key={index}>
                 <Typography variant="h7" >
                   {item.food}
-                  <Typography marginLeft="20px" variant="h7" style={{ fontStyle: 'italic' }}>{item.note}test</Typography>
+                  <Typography marginLeft="20px" variant="h7" style={{ fontStyle: 'italic' }}>{item.note}</Typography>
                   <br></br>
                   Qty: {item.quantity}  
                 </Typography>
