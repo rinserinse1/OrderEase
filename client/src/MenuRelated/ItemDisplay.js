@@ -269,9 +269,9 @@ const ItemDisplay = () => {
 
 
   return (
-    <>
-      <img src={itemInfo.photo} alt={itemInfo.name} style={{ objectFit: 'cover', width: '100vw', height: '30vh' }} />
-      <Box paddingTop={'8vh'} paddingLeft={'5vw'} paddingRight={'5vw'} paddingBottom={'10vh'} marginTop={'-4vh'} marginBottom={'-10vh'} sx={{backgroundColor: "#F9F9F9", borderTopLeftRadius: '25px', borderTopRightRadius: '25px', display: 'relative', zIndex: 10}}>
+    <div>
+      <Box component={"img"} src={itemInfo.photo} alt={itemInfo.name} sx={{objectFit: 'cover', width: '100vw', height: '30vh', position: 'relative', zIndex: -10}}></Box>
+      <Box paddingTop={'3vh'} paddingLeft={'5vw'} paddingRight={'5vw'} paddingBottom={'5vh'} marginTop={'-4vh'} sx={{height: '100%', backgroundColor: "#F9F9F9", borderTopLeftRadius: '25px', borderTopRightRadius: '25px', border: 1}}>
         <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
           Item: {itemInfo.name}
         </Typography>
@@ -370,7 +370,7 @@ const ItemDisplay = () => {
       </Box>
 
       <CustomizeModal open={customizeModalOpen} onClose={closeCustomizeModal} cancel={cancelCustomizeModal} setCustomization={setCustomization} customization={customization}/>
-    </>
+    </div>
     );
   };
     
