@@ -168,7 +168,7 @@ const YourOrder = () => {
               </TableCell>
               <TableCell>
                 {item.food}
-                <Typography marginLeft="20px" variant="h7" style={{ fontStyle: 'italic' }}><br/>{item.note}</Typography>
+                <Typography marginLeft="20px" variant="h7" style={{ fontStyle: 'italic' }}>{item.note}</Typography>
                   <br></br>
               </TableCell>
               <TableCell>
