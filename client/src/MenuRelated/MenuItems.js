@@ -59,6 +59,10 @@ const MenuItems = () => {
       selectedChips.every(filter => food.tags.includes(filter))
     );
 
+    const numOfFilteredFoods = (filter) => {
+      const length = foods.filter(food => food.tags.includes(filter)).length;
+      return length;
+    }
 
   return (
     <>
@@ -87,7 +91,7 @@ const MenuItems = () => {
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         {categoryInfo.map((filter, index) => (
           <Grid key={index} xs={2} sm={4} md={4}>
-            <Chip label={filter} onClick={() => {handleChipToggle(filter)}} 
+            <Chip label={`${filter} (${numOfFilteredFoods(filter)})`} onClick={() => {handleChipToggle(filter)}} 
                   onDelete={() => {handleChipToggle(filter)}} deleteIcon={selectedChips.includes(filter) ? <DoneIcon style={{color: "black"}}/> : <></>}
                   sx={selectedChips.includes(filter) ? { backgroundColor: 'orange', color: 'black', fontWeight: 'bold', fontFamily: "Roboto Mono", marginTop: 2 } 
                   : { backgroundColor: 'white', fontFamily: "Roboto Mono", marginTop: 2 }}>
@@ -104,14 +108,6 @@ const MenuItems = () => {
         marginRight: '100px',
       }}>
         <Table aria-label="order data table" style={{ fontFamily: 'Roboto Mono' }}>
-          <TableHead>
-            <TableRow>    
-              {/*<TableCell style={{ fontFamily: 'Roboto Mono' }}>Category</TableCell>
-              <TableCell style={{ fontFamily: 'Roboto Mono' }}>Price</TableCell>
-              <TableCell style={{ fontFamily: 'Roboto Mono' }}>Description</TableCell>
-    <TableCell style={{ fontFamily: 'Roboto Mono' }}>Photo</TableCell>*/}
-            </TableRow>
-          </TableHead>
           <TableBody>
             {filteredFoods.map((item, index) => (
               <TableRow key={index} sx={{border: 1}}>
