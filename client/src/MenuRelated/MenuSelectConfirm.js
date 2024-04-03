@@ -23,10 +23,10 @@ const MenuSelectConfirm = () => {
           justifyContent="center"
           flexDirection="column"
           p={2}
-          sx={{ border: '2px solid grey', bgcolor: "white" }}
+          sx={{ border: '2px solid grey', bgcolor: "white", borderRadius: '10px', font: 'Roboto Mono' }}
         >
           <Typography variant="h4" align="center" gutterBottom>
-            You have Selected the {id} Menu
+            You have selected the {id} menu!
           </Typography>
         </Box>
       </Container>
@@ -45,6 +45,7 @@ const MenuSelectConfirm = () => {
             maxWidth: '100%',
             width: '92vw',
             height: 'auto',
+            borderRadius: '10px'
           }}
         />
       </Box>
@@ -57,7 +58,7 @@ const MenuSelectConfirm = () => {
           justifyContent="center"
           flexDirection="column"
           p={2}
-          sx={{ border: '2px solid grey', bgcolor: "white" }}
+          sx={{ border: '2px solid grey', bgcolor: "white", borderRadius: '10px', fontFamily: 'Roboto Mono' }}
         >
           <Typography variant="h6" align="center" gutterBottom>
             {id === 'deluxe' ? (
@@ -88,20 +89,20 @@ const MenuSelectConfirm = () => {
           justifyContent="center"
           flexDirection="column"
           p={2}
-          sx={{ border: '2px solid grey', bgcolor: "white" }}
+          sx={{ border: '2px solid grey', bgcolor: "white", borderRadius: '10px', fontFamily: 'Roboto Mono' }}
         >
         
           <Typography variant="h4" align="center" gutterBottom>
-           Confirm menu Selection
+           Confirm menu selection
           </Typography>
 
-          <Box display="flex" justifyContent="space-between" mt={2}>
+          <Box display="flex" justifyContent="space-between" alignItems='center' mt={2} sx={{width: '100%'}}>
 
-          <Button variant="contained" color="error" component={Link}  to="/menuselect" sx={{ marginRight: 2 }}>
+          <Button variant="contained" color="error" component={Link}  to="/menuselect" sx={{ marginLeft: 2, marginRight: 2, width: '100%' }}>
               Cancel
             </Button>
 
-            <Button variant="contained"  color="success" component={Link} to={`/menucategories/${id}`} sx={{ marginRight: 2 }}>
+            <Button variant="contained"  color="success" component={Link} to={`/menucategories/${id}`} sx={{ marginRight: 2, width: '100%' }}>
               Confirm
             </Button>
 
