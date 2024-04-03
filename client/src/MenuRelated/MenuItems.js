@@ -13,7 +13,17 @@ import RegularFoods from "../FoodInfo/RegularFoods.json"
 import DeluxeFoods from "../FoodInfo/DeluxeFoods.json"
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import DoneIcon from '@mui/icons-material/Done';
+import { styled } from '@mui/system';
 
+const options = {
+  shouldForwardProp: (prop) => prop !== 'bgcolor',
+};
+
+const FilterChip = styled(Chip, options
+  )(({ bgcolor }) => ({
+  "&:focus": {
+    backgroundColor: bgcolor
+}}));
 
 //import mozarellasticks from "../images/mozarellasticks.jpg"
 
@@ -91,11 +101,12 @@ const MenuItems = () => {
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         {categoryInfo.map((filter, index) => (
           <Grid key={index} xs={2} sm={4} md={4}>
-            <Chip label={`${filter} (${numOfFilteredFoods(filter)})`} onClick={() => {handleChipToggle(filter)}} 
+            <FilterChip label={`${filter} (${numOfFilteredFoods(filter)})`} onClick={() => {handleChipToggle(filter)}} 
+                  bgc olor={selectedChips.includes(filter) ? 'orange' : 'white'}
                   onDelete={() => {handleChipToggle(filter)}} deleteIcon={selectedChips.includes(filter) ? <DoneIcon style={{color: "black"}}/> : <></>}
                   sx={selectedChips.includes(filter) ? { backgroundColor: 'orange', color: 'black', fontWeight: 'bold', fontFamily: "Roboto Mono", marginTop: 2 } 
                   : { backgroundColor: 'white', fontFamily: "Roboto Mono", marginTop: 2 }}>
-            </Chip>
+            </FilterChip>
           </Grid>
         ))}
       </Grid>
