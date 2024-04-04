@@ -255,7 +255,7 @@ const ItemDisplay = () => {
       
 
         //order = { food: food, quantity: quantity, note: customization };
-        order.push({ food: food, quantity: quantity, note: customization });
+        order.push({ food: food, quantity: quantity, note: customization, portion: itemInfo['Portion Size, Per Order'] });
         
       
         // Update the order in local storage

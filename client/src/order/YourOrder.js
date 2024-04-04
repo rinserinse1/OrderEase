@@ -175,7 +175,7 @@ const YourOrder = () => {
                 <Stack spacing={1} direction={'row'} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                   <StyledButton onClick={() => {}}>-</StyledButton>
                   <div>
-                    {item.quantity}
+                    {item.quantity} 
                   </div>
                   <StyledButton onClick={() => {}}>+</StyledButton>
                 </Stack>
