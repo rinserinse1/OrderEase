@@ -199,7 +199,8 @@ const YourOrder = () => {
             color: 'white',
             textAlign: 'center',
             fontFamily: 'Roboto Mono',
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            width: '100%'
           }}
         >
           No items Added For Order To Be Placed
