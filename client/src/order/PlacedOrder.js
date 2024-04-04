@@ -5,6 +5,7 @@ import {
   Button,
   Grid,
   Paper,
+  Box
 } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Link, useParams } from 'react-router-dom';
@@ -47,8 +48,20 @@ const PlacedOrder = () => {
 
 
             <br></br><br></br><br></br>
-            YOUR ORDER HAS BEEN PLACED
-            <br></br><br></br><br></br>
+            <Box
+            height="100%"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            flexDirection="column"
+            p={2}
+            sx={{ border: '2px solid grey', bgcolor: "white", boxShadow: 2, mb: -2, borderRadius: '10px', padding: '20% 0 20% 0' }}
+            >
+              <Typography variant="h5" align="center" gutterBottom fontWeight='Bold'>
+                Your order has been placed!
+              </Typography>
+            </Box>
+            <br></br><br></br><br></br><br></br><br></br>
             <Button 
             component={Link} 
             to={`/menucategories/${id}`}
@@ -60,7 +73,8 @@ const PlacedOrder = () => {
               color: 'white',
               textAlign: 'center',
               fontFamily: 'Roboto Mono',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              padding: '5% 0 5% 0'
             }}
             >
         
@@ -81,7 +95,8 @@ const PlacedOrder = () => {
               color: 'white',
               textAlign: 'center',
               fontFamily: 'Roboto Mono',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              padding: '5% 0 5% 0'
             }}
             >
               
