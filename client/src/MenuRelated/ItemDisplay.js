@@ -312,7 +312,7 @@ const ItemDisplay = () => {
         onClick={handleCustomizeIconClick}
         style={{
           display: 'block',
-          backgroundColor: 'primary',
+          backgroundColor: '#7B68EE',
           color: 'white',
           textAlign: 'center',
           fontFamily: 'Roboto Mono',
@@ -329,7 +329,7 @@ const ItemDisplay = () => {
           color="primary"
           style={{
             display: 'block',
-            backgroundColor: 'primary',
+            backgroundColor: '#4CBB17',
             color: 'white',
             textAlign: 'center',
             fontFamily: 'Roboto Mono',

@@ -74,11 +74,12 @@ const PlacedOrder = () => {
               textAlign: 'center',
               fontFamily: 'Roboto Mono',
               fontWeight: 'bold',
-              padding: '5% 0 5% 0'
+              padding: '5% 0 5% 0',
+              fontSize: '5vw'
             }}
             >
         
-              Order Again
+              Order More Items
             </Button>
 
             <br></br><br></br><br></br>
@@ -91,12 +92,13 @@ const PlacedOrder = () => {
             color="primary"
             style={{
               display: 'block',
-              backgroundColor: 'green',
+              backgroundColor: '#4CBB17',
               color: 'white',
               textAlign: 'center',
               fontFamily: 'Roboto Mono',
               fontWeight: 'bold',
-              padding: '5% 0 5% 0'
+              padding: '5% 0 5% 0',
+              fontSize: '5vw'
             }}
             >
               
