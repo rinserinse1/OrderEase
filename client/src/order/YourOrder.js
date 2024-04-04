@@ -157,7 +157,7 @@ const YourOrder = () => {
             <TableCell></TableCell>
             <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Food Item</TableCell>
             <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Quantity</TableCell>
-            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Size</TableCell>
+            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Size (per portion)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -175,12 +175,12 @@ const YourOrder = () => {
                 <Stack spacing={1} direction={'row'} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                   <StyledButton onClick={() => {}}>-</StyledButton>
                   <div>
-                    {item.quantity}
+                    {item.quantity} 
                   </div>
                   <StyledButton onClick={() => {}}>+</StyledButton>
                 </Stack>
               </TableCell>
-              <TableCell>item size</TableCell>
+              <TableCell>{item.portion}</TableCell>
             </TableRow>
           ))}
         </TableBody>
