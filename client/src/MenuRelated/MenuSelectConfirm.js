@@ -7,7 +7,7 @@ import Regular_Menu from "../images/Regular_Menu_Final.png"
 
 const MenuSelectConfirm = () => {
 
-  const {id} = useParams();  //this is either deluxe or regular
+  const {id} = useParams(); 
   const [error, setError] = useState("");
 
 
@@ -35,7 +35,7 @@ const MenuSelectConfirm = () => {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        mt={2} // Adjust margin top as needed
+        mt={2} 
       >
         <img
           src={id === "deluxe" ? Deluxe_Menu : Regular_Menu}
@@ -65,12 +65,12 @@ const MenuSelectConfirm = () => {
               <>
                 Upgrade to the Deluxe Menu for an all-inclusive Korean BBQ adventure. Beyond the Regular Menu's favorites, you'll get exclusive access to 'Deluxe Delights', including:
                 <Box component="ul" sx={{ m: 0, p: 0, listStyleType: 'none' }}>
-                  <li><b>Marinated Beef Short Ribs:</b><br />Grilled to perfection.</li>
-                  <li><b>Savory Pork Dumplings:</b><br />Crispy and flavorful.</li>
-                  <li><b>Creamy Corn Cheese:</b><br />A cheesy delight.</li>
-                  <li><b>Cold Buckwheat Noodles:</b><br />Refreshing and light.</li>
-                  <li><b>Pork Backbone Stew:</b><br />Rich and hearty.</li>
-                  <li><b>Sizzling Dolsot Bibimbap:</b><br />A hot stone pot of mixed rice and vegetables.</li>
+                  <li><b> 1. Marinated Beef Short Ribs:</b><br />Grilled to perfection.</li>
+                  <li><b> 2. Savory Pork Dumplings:</b><br />Crispy and flavorful.</li>
+                  <li><b> 3. Creamy Corn Cheese:</b><br />A cheesy delight.</li>
+                  <li><b> 4. Cold Buckwheat Noodles:</b><br />Refreshing and light.</li>
+                  <li><b> 5. Pork Backbone Stew:</b><br />Rich and hearty.</li>
+                  <li><b> 6. Sizzling Dolsot Bibimbap:</b><br />A hot stone pot of mixed rice and vegetables.</li>
                 </Box>
                 It's the ultimate choice for those eager to explore the full spectrum of Korean culinary wonders.
               </>
