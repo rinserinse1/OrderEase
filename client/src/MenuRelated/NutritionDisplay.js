@@ -6,7 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import {Button, Typography, Container} from '@mui/material'
+import {Button, Typography, Container, Box} from '@mui/material'
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
 import RegularFoods from "../FoodInfo/RegularFoods.json"
@@ -49,19 +49,47 @@ const NutritionDisplay = () => {
   return (
     <>
       <Container maxWidth="md" sx={{ textAlign: 'center', marginTop: '20px' }}>
-      <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
-        Item: {itemInfo.name}
-      </Typography>
+      <Box 
+      height="100%"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      flexDirection="column"
+      p={2}
+      sx={{ border: '2px solid grey', bgcolor: "white", borderRadius: '10px', fontFamily: 'Roboto Mono' }}>
+        <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
+          Item: {itemInfo.name}
+        </Typography>
+        <br></br>
+        <Box 
+          component="img"
+          src={itemInfo.photo}
+          sx={{width: '80vw', height: '20vh', objectFit: 'cover', boxShadow: 3, border: 1}}>
+        </Box>
+        <br></br>
+      </Box>
         <br></br><br></br>
-        Photo:  <img src={itemInfo.photo} alt={itemInfo.name} style={{ maxWidth: '30%', height: '20%' }} />
-        <br></br><br></br>
-        Calories: {nutritionalInfo.calories}
-        <br></br><br></br>
-        Fat: {nutritionalInfo.fat}
-        <br></br><br></br>
-        Carbohydrate: {nutritionalInfo.carbohydrates}
-        <br></br><br></br>
-        Protein: {nutritionalInfo.protein}
+        <Box 
+        height="100%"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        flexDirection="column"
+        p={2}
+        sx={{ border: '2px solid grey', bgcolor: "white", borderRadius: '10px', fontFamily: 'Roboto Mono' }}>
+        <Typography variant='h5' style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize: "20px", fontWeight: "bold"}}>
+          Nutritional Information:
+        </Typography>
+        <br></br>
+        <div><b>Calories:</b> {nutritionalInfo.calories} g</div>
+        <br></br>
+        <div><b>Fat:</b> {nutritionalInfo.fat} g</div>
+        <br></br>
+        <div><b>Carbohydrate:</b> {nutritionalInfo.carbohydrates} g</div>
+        <br></br>
+        <div><b>Protein:</b> {nutritionalInfo.protein} g</div>
+        </Box>
+
         <br></br><br></br>
 
         <Button 
@@ -71,9 +99,11 @@ const NutritionDisplay = () => {
         color="primary"
         style={{
           display: 'block',
-          
+          border: 1,
           backgroundColor: 'green',
           color: 'white',
+          boxShadow: 3,
+          fontWeight: 'bold'
         }}
       >
         Go Back
