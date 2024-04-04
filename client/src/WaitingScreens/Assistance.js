@@ -35,7 +35,7 @@ const Assistance = () => {
           <Button 
             variant="contained" 
             color="primary" 
-            sx={{ marginBottom: '20px', marginTop: '20px' }}
+            sx={{ marginBottom: '20px', marginTop: '15vh' }}
             onClick={handleContinueBrowsing}
           >
             Continue Browsing
