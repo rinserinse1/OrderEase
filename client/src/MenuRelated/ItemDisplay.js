@@ -269,7 +269,7 @@ const ItemDisplay = () => {
 
 
   return (
-    <div>
+    <div style={{margin: '-64px 0 -25px 0'}}>
       <Box component={"img"} src={itemInfo.photo} alt={itemInfo.name} sx={{objectFit: 'cover', width: '100vw', height: '30vh', position: 'relative', zIndex: -10}}></Box>
       <Box paddingTop={'3vh'} paddingLeft={'5vw'} paddingRight={'5vw'} paddingBottom={'5vh'} marginTop={'-4vh'} sx={{height: '100%', backgroundColor: "#F9F9F9", borderTopLeftRadius: '25px', borderTopRightRadius: '25px', border: 1}}>
         <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
