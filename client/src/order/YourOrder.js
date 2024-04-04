@@ -189,6 +189,8 @@ const YourOrder = () => {
 
     <br /><br />
 
+
+
     {foodList.length == 0 ? (
         <Button
           variant="contained"
@@ -225,6 +227,26 @@ const YourOrder = () => {
         </Button>
       )}
 
+        <br></br>
+        <Button 
+          component={Link} 
+          to={`/paying/${id}`}
+          variant="contained" 
+          color="primary"
+          style={{
+            display: 'block',
+            backgroundColor: 'green',
+            color: 'white',
+            textAlign: 'center',
+            fontFamily: 'Roboto Mono',
+            fontWeight: 'bold'
+          }}
+          >
+              
+          Pay for Items
+          </Button>
+
+
     <br/><br/>
 
     <Typography variant="h4" gutterBottom sx={{ display: 'flex', alignItems: 'center', fontFamily: 'Roboto Mono' }}><strong>Order History</strong></Typography>
@@ -249,7 +271,8 @@ const YourOrder = () => {
               <TableCell>
                 {item.quantity}
               </TableCell>
-              <TableCell>item size</TableCell>
+              <TableCell>{item.portion}</TableCell>
+              
             </TableRow>
           ))}
         </TableBody>
