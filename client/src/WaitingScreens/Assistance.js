@@ -24,7 +24,7 @@ const Assistance = () => {
   return (
     <>
     <br></br><br></br>
-      <Container maxWidth="sm" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+      <Container maxWidth="sm" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
         <Box p={2} sx={{ border: '2px solid grey', bgcolor: 'white', textAlign: 'center', marginBottom: '10px'}}>
           <Typography variant="h4" gutterBottom>
             Assistance on the way.
