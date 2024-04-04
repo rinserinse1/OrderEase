@@ -76,7 +76,7 @@ const AssistanceModal = ({ open, onClose }) => {
 
 
 export default function Footer() {
-    const {id} = useParams();  //this is either deluxe or regular
+    const {id} = useParams();  
  const [value, setValue] = useState(0);
 
   const [assistanceModalOpen, setAssistanceModalOpen] = useState(false);
