@@ -37,7 +37,7 @@ const Paying = () => {
           <Button 
           variant="contained" color="error" sx={{ marginTop: '190px' }}
           component={Link} 
-          to={`/placedorder/${id}`}>
+          to={`/yourorder/${id}`}>
           Cancel
           </Button>
         </Box>
