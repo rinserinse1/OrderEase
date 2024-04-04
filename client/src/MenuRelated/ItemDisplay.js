@@ -322,7 +322,6 @@ const ItemDisplay = () => {
           Customize your order
         </Button>
         <br></br>
-        CUSTOM ORDER = {customization}
         <Button 
           component={Link} 
           to={`/menuitems/${id}/${category}`}
