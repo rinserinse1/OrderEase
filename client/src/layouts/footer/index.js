@@ -99,12 +99,17 @@ export default function Footer() {
     }
   };
 
+  const getNumberOfItems = () => {
+    const temp = JSON.parse(localStorage.getItem('foodList')).length;
+    return "View Order (" + temp + ")";
+  }
+
   return (
     <>
       <Box sx={{ width: '100%', position: 'fixed', bottom: 0, zIndex: 9999 }}>
         <BottomNavigation value={value} showLabels>
           <BottomNavigationAction label="Categories" component={Link} to={`/menucategories/${id}`} icon={<GridViewOutlinedIcon />} />
-          <BottomNavigationAction label="View Order" component={Link} to={`/yourorder/${id}`} icon={<ShoppingCartOutlinedIcon />} />
+          <BottomNavigationAction label={getNumberOfItems()} component={Link} to={`/yourorder/${id}`} icon={<ShoppingCartOutlinedIcon />} />
           <BottomNavigationAction label="Assistance" icon={<HelpOutlineOutlinedIcon /> } onClick={handleAssistanceIconClick} /> 
           <span>{assistanceTimeIcon}</span>
 
