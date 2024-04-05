@@ -57,7 +57,7 @@ const CustomizeModal = ({ open, onClose, cancel, setCustomization, customization
           <br/><br/>
 
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
-            <Button variant="contained" color="error" onClick={cancel} sx={{width: '30vw', border: 1, boxShadow: 3}}>Cancel</Button>
+            <Button variant="contained" color="error" onClick={cancel} sx={{width: '30vw', border: 1, boxShadow: 3}}>Discard</Button>
             <Button       
             variant="contained" color="success" onClick={onClose} sx={{width: '30vw', border: 1, boxShadow: 3}}>Save</Button>
           </Box>
