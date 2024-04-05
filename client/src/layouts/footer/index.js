@@ -55,6 +55,19 @@ export default function Footer() {
   const [value, setValue] = useState(null);
   const [assistanceModalOpen, setAssistanceModalOpen] = useState(false);
 
+  const handleAssistanceIconClick = () => {
+
+
+    const temp = localStorage.getItem('assistance') //check the value
+      if (temp == "true"){
+        window.location.href = `/assistance/${id}`;
+        return;
+      }
+      else {
+        setAssistanceModalOpen(true);
+      }
+    }
+  
   useEffect(() => {
     const basePath = location.pathname.split('/')[1];
     if (basePath === 'menucategories') {
@@ -81,7 +94,7 @@ export default function Footer() {
         <BottomNavigation value={value} showLabels /* onChange={(event, newValue) => setValue(newValue)} */>
           <BottomNavigationAction label="Categories" component={Link} to={`/menucategories/${id}`} icon={<GridViewOutlinedIcon />} />
           <BottomNavigationAction label="View Order" component={Link} to={`/yourorder/${id}`} icon={<ShoppingCartOutlinedIcon />} />
-          <BottomNavigationAction label="Assistance" icon={<HelpOutlineOutlinedIcon />} onClick={() => setAssistanceModalOpen(true)} />
+          <BottomNavigationAction label="Assistance" icon={<HelpOutlineOutlinedIcon />} onClick={handleAssistanceIconClick} />
         </BottomNavigation>
       </Box>
       <AssistanceModal open={assistanceModalOpen} onClose={handleModalClose} />
