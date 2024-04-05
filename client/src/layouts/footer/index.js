@@ -100,8 +100,12 @@ export default function Footer() {
   };
 
   const getNumberOfItems = () => {
-    const temp = JSON.parse(localStorage.getItem('foodList')).length;
-    return "View Order (" + temp + ")";
+    if (localStorage.getItem('foodList') == null) {
+      return "View Order";
+    } else {
+      const temp = JSON.parse(localStorage.getItem('foodList')).length;
+      return "View Order (" + temp + ")";
+    }
   }
 
   return (
