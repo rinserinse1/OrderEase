@@ -280,23 +280,25 @@ const YourOrder = () => {
       )}
 
         <br></br>
+        {orderHistory.length == 0 ? <></> : 
         <Button 
-          component={Link} 
-          to={`/paying/${id}`}
-          variant="contained" 
-          color="primary"
-          style={{
-            display: 'block',
-            backgroundColor: 'green',
-            color: 'white',
-            textAlign: 'center',
-            fontFamily: 'Roboto Mono',
-            fontWeight: 'bold'
-          }}
-          >
-              
-          Pay for Items
-          </Button>
+        component={Link} 
+        to={`/paying/${id}`}
+        variant="contained" 
+        color="primary"
+        style={{
+          display: 'block',
+          backgroundColor: 'green',
+          color: 'white',
+          textAlign: 'center',
+          fontFamily: 'Roboto Mono',
+          fontWeight: 'bold'
+        }}
+        >
+            
+        Pay for Items
+        </Button>}
+        
 
 
     <br/><br/>
