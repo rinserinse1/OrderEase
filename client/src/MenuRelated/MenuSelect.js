@@ -6,11 +6,11 @@ import DeluxeMenuImage from "../images/Deluxe_Menu_Final.PNG";
 import RegularMenuImage from "../images/Regular_Menu_Final.png";
 
 const menus = [
-  { name: 'Deluxe Menu', image: DeluxeMenuImage, link: '/menuselectconfirm/deluxe' },
-  { name: 'Regular Menu', image: RegularMenuImage, link: '/menuselectconfirm/regular' }
+  { name: 'Deluxe Menu', image: DeluxeMenuImage, link: '/menuselectconfirm/deluxe', price: '$39.99' },
+  { name: 'Regular Menu', image: RegularMenuImage, link: '/menuselectconfirm/regular', price: '$29.99' }
 ];
 
-const MenuOption = ({ name, image, link }) => (
+const MenuOption = ({ name, image, link, price }) => (
   <Grid item xs={12} sm={6}>
     <Box display="flex" justifyContent="center">
       <Card sx={{ maxWidth: '100%', boxShadow: 3, border: 1 }}> 
@@ -25,6 +25,9 @@ const MenuOption = ({ name, image, link }) => (
             <Box sx={{ backgroundColor: 'white', textAlign: 'center', p: '10px' }}>
               <Typography variant="h6" fontWeight='bold'>
                 {name}
+              </Typography>
+              <Typography variant="subtitle1" fontWeight='bold'>
+                {price}
               </Typography>
             </Box>
           </Stack>

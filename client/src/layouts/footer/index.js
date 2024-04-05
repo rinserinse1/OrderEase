@@ -59,7 +59,7 @@ export default function Footer() {
   const handleAssistanceIconClick = () => {
 
 
-    const temp = localStorage.getItem('assistance') //check the value
+    const temp = localStorage.getItem('assistance')
       if (temp == "true"){
         window.location.href = `/assistance/${id}`;
         return;
@@ -102,7 +102,7 @@ export default function Footer() {
   return (
     <>
       <Box sx={{ width: '100%', position: 'fixed', bottom: 0, zIndex: 9999 }}>
-        <BottomNavigation value={value} showLabels /* onChange={(event, newValue) => setValue(newValue)} */>
+        <BottomNavigation value={value} showLabels>
           <BottomNavigationAction label="Categories" component={Link} to={`/menucategories/${id}`} icon={<GridViewOutlinedIcon />} />
           <BottomNavigationAction label="View Order" component={Link} to={`/yourorder/${id}`} icon={<ShoppingCartOutlinedIcon />} />
           <BottomNavigationAction label="Assistance" icon={<HelpOutlineOutlinedIcon /> } onClick={handleAssistanceIconClick} /> 
