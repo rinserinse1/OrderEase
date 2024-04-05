@@ -58,7 +58,7 @@ export default function Footer() {
   const handleAssistanceIconClick = () => {
 
 
-    const temp = localStorage.getItem('assistance') //check the value
+    const temp = localStorage.getItem('assistance')
       if (temp == "true"){
         window.location.href = `/assistance/${id}`;
         return;

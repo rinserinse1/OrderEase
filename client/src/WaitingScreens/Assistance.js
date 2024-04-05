@@ -1,54 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Button, Typography, Container, Box, CircularProgress } from '@mui/material';
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; 
 
 const Assistance = () => {
-  const { id } = useParams();  
-
-  /*useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      window.location.href = `/menucategories/${id}`;
-    }, 10000); 
-
-    
-    return () => clearTimeout(timeoutId);
-  }, [id]);*/
-
+  const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if "assistance" is already in local storage
-    const assistanceInStorage = localStorage.getItem('assistance');
+    localStorage.setItem('assistance', JSON.stringify(true));
 
+    const timer = setTimeout(() => {
+      localStorage.setItem('assistance', JSON.stringify(false));
+      navigate(-1); 
+    }, 10000); 
 
-
-      localStorage.setItem('assistance', JSON.stringify(true));
-
-        const timer = setTimeout(() => {
-          localStorage.setItem('assistance', JSON.stringify(false));
-          window.history.back();
-        }, 10000); // 10 seconds in milliseconds
-
-        return () => clearTimeout(timer);
-      
-    
-  }, []);
+    return () => clearTimeout(timer);
+  }, [navigate]);
 
   const handleCancel = () => {
-    // Set assistance to false when cancel is pressed
     localStorage.setItem('assistance', JSON.stringify(false));
+    navigate(-1); 
   };
 
-  // this will just use the history of the browser, alternatively we have to import like it says here "https://stackoverflow.com/questions/52039083/handle-back-button-with-react-router"
   const handleContinueBrowsing = () => {
-    window.history.back();
+    navigate(`/menucategories/${id}`);
   };
 
   return (
     <>
       <br /><br />
       <Container maxWidth="sm" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-        <Box p={2} sx={{ border: '2px solid grey', bgcolor: 'white', textAlign: 'center', marginBottom: '10px'}}>
+        <Box p={2} sx={{ border: '2px solid grey', bgcolor: 'white', textAlign: 'center', marginBottom: '10px' }}>
           <Typography variant="h4" gutterBottom>
             Assistance on the way.<br />Please wait...
           </Typography>
@@ -68,8 +50,6 @@ const Assistance = () => {
             variant="contained" 
             color="error" 
             sx={{ marginTop: '20px' }}
-            component={Link} 
-            to={`/menucategories/${id}`}
             onClick={handleCancel}
           >
             Cancel
