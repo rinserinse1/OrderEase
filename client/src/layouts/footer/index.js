@@ -40,7 +40,7 @@ const AssistanceModal = ({ open, onClose }) => {
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
             <Button variant="contained" color="error" onClick={() => onClose(false)}>No, Cancel</Button>
-            <Button variant="contained" color="success" onClick={() => onClose(true)}>Yes, Confirm</Button>
+            <Button variant="contained" color="success" onClick={() => { onClose(true); }}>Yes, Confirm</Button>
           </Box>
         </Box>
       </Modal>
@@ -54,6 +54,7 @@ export default function Footer() {
   const navigate = useNavigate();
   const [value, setValue] = useState(null);
   const [assistanceModalOpen, setAssistanceModalOpen] = useState(false);
+  const [assistanceTimeIcon, setAssistanceTimeIcon] = useState("");
 
   const handleAssistanceIconClick = () => {
 
@@ -65,10 +66,12 @@ export default function Footer() {
       }
       else {
         setAssistanceModalOpen(true);
+        
       }
     }
   
   useEffect(() => {
+    
     const basePath = location.pathname.split('/')[1];
     if (basePath === 'menucategories') {
       setValue(0);
@@ -82,9 +85,17 @@ export default function Footer() {
   }, [location.pathname]);
 
   const handleModalClose = (confirmed) => {
+
     setAssistanceModalOpen(false);
     if (confirmed) {
+      setAssistanceTimeIcon("RANDOM");
+      setTimeout(() => {
+        setAssistanceTimeIcon(""); // Clear the icon after 10 seconds
+    }, 10000); // 10 seconds delay
       navigate(`/assistance/${id}`);
+    }
+    else{
+      setAssistanceTimeIcon("")
     }
   };
 
@@ -94,7 +105,10 @@ export default function Footer() {
         <BottomNavigation value={value} showLabels /* onChange={(event, newValue) => setValue(newValue)} */>
           <BottomNavigationAction label="Categories" component={Link} to={`/menucategories/${id}`} icon={<GridViewOutlinedIcon />} />
           <BottomNavigationAction label="View Order" component={Link} to={`/yourorder/${id}`} icon={<ShoppingCartOutlinedIcon />} />
-          <BottomNavigationAction label="Assistance" icon={<HelpOutlineOutlinedIcon />} onClick={handleAssistanceIconClick} />
+          <BottomNavigationAction label="Assistance" icon={<HelpOutlineOutlinedIcon /> } onClick={handleAssistanceIconClick} /> 
+          <span>{assistanceTimeIcon}</span>
+
+
         </BottomNavigation>
       </Box>
       <AssistanceModal open={assistanceModalOpen} onClose={handleModalClose} />
