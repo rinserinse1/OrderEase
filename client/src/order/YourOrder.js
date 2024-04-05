@@ -90,6 +90,11 @@ const YourOrder = () => {
   const [foodList, setFoodList] = useState([]);
   const [orderHistory, setOrderHistory] = useState([]);
 
+  
+
+
+
+
   useEffect(() => {
 
     const getDataFromLocalStorage = () => {
@@ -145,6 +150,53 @@ const YourOrder = () => {
   };
 
 
+
+  const reduceQuantity = (index) => {
+
+    const temp = localStorage.getItem('foodList');  
+
+    const parsedTemp = JSON.parse(temp);  //get info in copy
+    //console.log(parsedTemp);
+
+
+
+    if(parsedTemp[index].quantity <= 1){  //if quantity is 1 or less, return
+      return;
+    }
+    parsedTemp[index].quantity -= 1; //else --1 in copy
+
+    localStorage.setItem('foodList', JSON.stringify(parsedTemp));  //set the copy as the main
+
+    const storedFoodList = localStorage.getItem('foodList'); 
+    if (storedFoodList) {
+      setFoodList(JSON.parse(storedFoodList));  //update foodlist
+    }
+
+  };
+
+
+  const increaseQuantity = (index) => {
+
+    const temp = localStorage.getItem('foodList'); //get info in copy
+
+    const parsedTemp = JSON.parse(temp);
+    //console.log(parsedTemp);
+
+    parsedTemp[index].quantity += 1; //add quantity
+
+    localStorage.setItem('foodList', JSON.stringify(parsedTemp)); //set the copy as the main
+
+
+    const storedFoodList = localStorage.getItem('foodList'); 
+    if (storedFoodList) {
+      setFoodList(JSON.parse(storedFoodList)); //update foodlist
+    }
+
+  };
+
+
+
+
   return (
     <Container maxWidth="md">
       <br /><br />
@@ -173,11 +225,11 @@ const YourOrder = () => {
               </TableCell>
               <TableCell>
                 <Stack spacing={1} direction={'row'} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                  <StyledButton onClick={() => {}}>-</StyledButton>
+                  <StyledButton onClick={() => reduceQuantity(index)}>-</StyledButton> 
                   <div>
                     {item.quantity} 
                   </div>
-                  <StyledButton onClick={() => {}}>+</StyledButton>
+                  <StyledButton  onClick={() => increaseQuantity(index)}>+</StyledButton>
                 </Stack>
               </TableCell>
               <TableCell>{item.portion}</TableCell>
@@ -280,40 +332,7 @@ const YourOrder = () => {
     </TableContainer>
 
     <br></br><br></br>
-      {/* {foodList.length == 0 ? (
-        <Button
-          variant="contained"
-          color="primary"
-          style={{
-            display: 'block',
-            backgroundColor: 'grey',
-            color: 'white',
-            textAlign: 'center',
-            fontFamily: 'Roboto Mono',
-            fontWeight: 'bold'
-          }}
-        >
-          No items Added For Order To Be Placed
-        </Button>
-      ) : (
-        <Button
-          component={Link}
-          to={`/placedorder/${id}`}
-          variant="contained"
-          color="primary"
-          style={{
-            display: 'block',
-            backgroundColor: 'green',
-            color: 'white',
-            textAlign: 'center',
-            fontFamily: 'Roboto Mono',
-            fontWeight: 'bold'
-          }}
-          onClick={handlePlaceOrder}
-        >
-          Place Order
-        </Button>
-      )} */}
+
     </Container>
   );
 };
