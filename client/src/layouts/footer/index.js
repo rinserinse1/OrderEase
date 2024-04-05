@@ -12,8 +12,11 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 import {  Stack, AppBar, Toolbar } from '@mui/material';
 
 // ----------------------------------------------------------------------
-const AssistanceModal = ({ open, onClose }) => {
+const AssistanceModal = ({ open, onClose}) => {
     const {id} = useParams();  
+
+
+
     return (
       <>
       
@@ -81,13 +84,26 @@ export default function Footer() {
 
   const [assistanceModalOpen, setAssistanceModalOpen] = useState(false);
 
+
   const handleAssistanceIconClick = () => {
+
+
+    const temp = localStorage.getItem('assistance') //check the value
+    if (temp == "true"){
+      window.location.href = `/assistance/${id}`;
+      return;
+    }
+
     setAssistanceModalOpen(true);
   };
 
   const closeAssistanceModal = () => {
     setAssistanceModalOpen(false);
   };
+
+
+
+
 
   return (
     <>
@@ -112,7 +128,7 @@ export default function Footer() {
     </BottomNavigation>
   </Box>
 
-  <AssistanceModal open={assistanceModalOpen} onClose={closeAssistanceModal} />
+  <AssistanceModal open={assistanceModalOpen} onClose={closeAssistanceModal}  />
 
   </>
   );
