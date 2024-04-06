@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import React, { Component }  from 'react';
-import Nav from './nav';
 import Footer from "./footer"
 // ----------------------------------------------------------------------
 
@@ -38,7 +37,6 @@ export default function DashboardLayout() {
   return (
     <StyledRoot>
 
-      <Nav openNav={open} onCloseNav={() => setOpen(false)} />
       <Footer onOpenNav={() => setOpen(true)} />
       <Main>
         <Outlet />
