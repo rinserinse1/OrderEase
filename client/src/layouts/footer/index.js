@@ -5,6 +5,7 @@ import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import CloseIcon from '@mui/icons-material/Close';
+import PendingIcon from '@mui/icons-material/Pending';
 
 const AssistanceModal = ({ open, onClose }) => {
   return (
@@ -88,7 +89,6 @@ export default function Footer() {
 
     setAssistanceModalOpen(false);
     if (confirmed) {
-      setAssistanceTimeIcon("RANDOM");
       setTimeout(() => {
         setAssistanceTimeIcon(""); // Clear the icon after 10 seconds
     }, 10000); // 10 seconds delay
@@ -114,8 +114,7 @@ export default function Footer() {
         <BottomNavigation value={value} showLabels>
           <BottomNavigationAction label="Categories" component={Link} to={`/menucategories/${id}`} icon={<GridViewOutlinedIcon />} />
           <BottomNavigationAction label={getNumberOfItems()} component={Link} to={`/yourorder/${id}`} icon={<ShoppingCartOutlinedIcon />} />
-          <BottomNavigationAction label="Assistance" icon={<HelpOutlineOutlinedIcon /> } onClick={handleAssistanceIconClick} /> 
-          <span>{assistanceTimeIcon}</span>
+          <BottomNavigationAction label="Assistance" icon={JSON.parse(localStorage.getItem('assistance')) ? <PendingIcon color='error'/> : <HelpOutlineOutlinedIcon /> } onClick={handleAssistanceIconClick} /> 
 
 
         </BottomNavigation>
