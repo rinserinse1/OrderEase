@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Typography, Container, Box, CircularProgress, Button } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 const Paying = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [showCheckMark, setShowCheckMark] = useState(false);
   const [showThankYouMessage, setShowThankYouMessage] = useState(false);
