@@ -3,7 +3,6 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Button, Typography, Container, TextField, Grid, Chip } from '@mui/material'
@@ -25,12 +24,11 @@ const FilterChip = styled(Chip, options
     backgroundColor: bgcolor
 }}));
 
-//import mozarellasticks from "../images/mozarellasticks.jpg"
 
 const MenuItems = () => {
 
   const { id, category } = useParams();
-  const [error, setError] = useState("");
+
 
     const [foods, setFoods] = useState([]);
     const [categoryInfo, setCategoryInfo] = useState([]);
@@ -42,7 +40,6 @@ const MenuItems = () => {
         setFoods(DeluxeFoods.categories.find(cat => cat.name === category).foods);
         setCategoryInfo(DeluxeFoods.categories.find(cat => cat.name === category).filters);
       } else {
-        setError("Invalid id parameter.");
       }
     }, []);
     console.log(foods)  //THIS IS UR DATA ****

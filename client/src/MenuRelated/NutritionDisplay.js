@@ -1,11 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import React, { useState, useEffect, } from 'react';
 import {Button, Typography, Container, Box} from '@mui/material'
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
@@ -16,19 +9,10 @@ import DeluxeFoods from "../FoodInfo/DeluxeFoods.json"
 const NutritionDisplay = () => {
 
   const { id, category, food } = useParams();
-  //console.log(id)
-  //console.log(category)
-  //console.log(food)
-  //console.log(DeluxeFoods.categories.find(cat => cat.name === category).foods.find(cat => cat.name === food).nutritionalInfo)
 
-  const [error, setError] = useState("");
-  
-    //console.log(RegularFoods.categories)
+  const [itemInfo, setItemInfo] = useState([]);
+  const [nutritionalInfo, setNutritionalInfo] = useState([]);
 
-    const [itemInfo, setItemInfo] = useState([]);
-    const [nutritionalInfo, setNutritionalInfo] = useState([]);
-    //const [foods, setFoods] = useState([]);
-    //const deluxeFoods = DeluxeFoods;
 
     useEffect(() => {
         if (id === "regular") {
@@ -38,13 +22,13 @@ const NutritionDisplay = () => {
             setItemInfo(DeluxeFoods.categories.find(cat => cat.name === category).foods.find(cat => cat.name === food));
             setNutritionalInfo(DeluxeFoods.categories.find(cat => cat.name === category).foods.find(cat => cat.name === food).nutritionalInfo);
         } else {
-          setError("Invalid id parameter.");
+
         }
       }, [DeluxeFoods]);
 
 
-      console.log(itemInfo)                    //THESE ARE BOTH UR DATA *****
-      console.log(nutritionalInfo.calories)
+     // console.log(itemInfo)                    //THESE ARE BOTH UR DATA *****
+     // console.log(nutritionalInfo.calories)
 
   return (
     <>

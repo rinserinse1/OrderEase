@@ -9,7 +9,7 @@ import DeluxeFoods from "../FoodInfo/DeluxeFoods.json";
 
 const MenuCategories = () => {
   const { id } = useParams();
-  const [error, setError] = useState("");
+
   const [categories, setCategories] = useState([]);
 
 
@@ -19,7 +19,7 @@ const MenuCategories = () => {
     } else if (id === "deluxe") {
       setCategories(DeluxeFoods.categories);
     } else {
-      setError("Invalid id parameter.");
+
     }
   }, [id]);
   console.log(categories)

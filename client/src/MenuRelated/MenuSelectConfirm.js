@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {  } from "react";
 import { Button, Typography, Container, Box } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 import Deluxe_Menu from "../images/Deluxe_Menu_Final.PNG";
@@ -6,7 +6,6 @@ import Regular_Menu from "../images/Regular_Menu_Final.png";
 
 const MenuSelectConfirm = () => {
   const { id } = useParams();
-  const [error, setError] = useState("");
 
   const menuPrices = {
     deluxe: "$39.99",

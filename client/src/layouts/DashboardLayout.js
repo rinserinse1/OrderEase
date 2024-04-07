@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
-import React, { Component }  from 'react';
+import React, { }  from 'react';
 import Footer from "./footer"
 // ----------------------------------------------------------------------
 

@@ -1,47 +1,17 @@
-import React, { useContext, useState, useEffect }  from 'react';
+import React, { }  from 'react';
 import {
   Container,
   Typography,
   Button,
-  Grid,
-  Paper,
   Box
 } from '@mui/material';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import { Link, useParams } from 'react-router-dom';
 
 
 
 const PlacedOrder = () => {
-  const [item, setItem] = useState('');
+
   const { id } = useParams();
-
-  const isSmallScreen = useMediaQuery('(max-width:800px)');
-  const [foodList, setFoodList] = useState([]);
-
-  useEffect(() => {
-
-    const getFoodListFromLocalStorage = () => {
-      const storedFoodList = localStorage.getItem('foodList');
-      if (storedFoodList) {
-        setFoodList(JSON.parse(storedFoodList));
-      }
-    };
-
-
-    getFoodListFromLocalStorage();
-  }, []); 
-
-  console.log(foodList);
-
-  const handleRemoveItem = (indexToRemove) => {
-    const updatedFoodList = foodList.filter((item, index) => index !== indexToRemove);
-    setFoodList(updatedFoodList);
-    localStorage.setItem('foodList', JSON.stringify(updatedFoodList));
-  };
-
-
-
 
   return (
     <Container maxWidth="md">

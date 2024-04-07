@@ -8,12 +8,11 @@ import { Unstable_NumberInput as BaseNumberInput } from '@mui/base/Unstable_Numb
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 import { styled } from '@mui/system';
-import GlobalStyles from '@mui/material/GlobalStyles';
 import CloseIcon from '@mui/icons-material/Close';
 
 
 const CustomizeModal = ({ open, onClose, cancel, setCustomization, customization }) => {
-  const {id} = useParams();  
+
   return (
     <>
     
@@ -206,7 +205,6 @@ const ItemDisplay = () => {
   const { id, category, food } = useParams();
 
 
-  const [error, setError] = useState("");
   const [itemInfo, setItemInfo] = useState([]);
 
   // Variable that tracks the quantity of the item
@@ -238,13 +236,12 @@ const ItemDisplay = () => {
         } else if (id === "deluxe") {
             setItemInfo(DeluxeFoods.categories.find(cat => cat.name === category).foods.find(cat => cat.name === food));
         } else {
-          setError("Invalid id parameter.");
         }
       }, []);
 
 
-      console.log(itemInfo)   //THIS IS UR DATA ****
-      console.log(customization)
+      //console.log(itemInfo)   //THIS IS UR DATA ****
+      //console.log(customization)
 
 
 

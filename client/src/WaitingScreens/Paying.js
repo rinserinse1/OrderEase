@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, {  useEffect,  } from 'react';
 import { Button, Typography, Container, Box, CircularProgress } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+
+
 const Paying = () => {
   const { id } = useParams();  // This is either deluxe or regular
-  const [error, setError] = useState("");
 
 
   useEffect(() => {

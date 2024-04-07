@@ -2,7 +2,7 @@
 
 
 import MenuCategories from './MenuRelated/MenuCategories';
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, } from 'react';
 import {BrowserRouter as Router, Route, Navigate,  Routes, useLocation, useRoutes} from "react-router-dom";
 
 import Error from "./notFound/NotFound"
