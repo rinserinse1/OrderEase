@@ -56,8 +56,8 @@ const NutritionDisplay = () => {
       justifyContent="center"
       flexDirection="column"
       p={2}
-      sx={{ border: '2px solid grey', bgcolor: "white", borderRadius: '10px', }}>
-        <Typography variant="h6" style={{ color: 'black', fontSize:"30px" }}>
+      sx={{ border: '2px solid grey', bgcolor: "white", borderRadius: '10px', fontFamily: 'Roboto Mono' }}>
+        <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
           Item: {itemInfo.name}
         </Typography>
         <br></br>
@@ -76,8 +76,8 @@ const NutritionDisplay = () => {
         justifyContent="center"
         flexDirection="column"
         p={2}
-        sx={{ border: '2px solid grey', bgcolor: "white", borderRadius: '10px', }}>
-        <Typography variant='h5' style={{ color: 'black',  fontSize: "20px", fontWeight: "bold"}}>
+        sx={{ border: '2px solid grey', bgcolor: "white", borderRadius: '10px', fontFamily: 'Roboto Mono' }}>
+        <Typography variant='h5' style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize: "20px", fontWeight: "bold"}}>
           Nutritional Information:
         </Typography>
         <br></br>
@@ -104,6 +104,7 @@ const NutritionDisplay = () => {
           color: 'white',
           boxShadow: 3,
           fontWeight: 'bold',
+          fontFamily: 'Roboto Mono'
         }}
       >
         Go Back

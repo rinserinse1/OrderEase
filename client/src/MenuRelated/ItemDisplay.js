@@ -36,6 +36,7 @@ const CustomizeModal = ({ open, onClose, cancel, setCustomization, customization
             width: 'calc(100% - 40px)',
             maxWidth: 300,
             borderRadius: '10px',
+            fontFamily: 'Roboto Mono'
           }}
         >
           <IconButton
@@ -48,18 +49,18 @@ const CustomizeModal = ({ open, onClose, cancel, setCustomization, customization
           >
             <CloseIcon />
           </IconButton>
-          <Typography id="customize-modal-title" variant="h6" component="h2" fontWeight={'bold'}>
+          <Typography id="customize-modal-title" variant="h6" component="h2" fontWeight={'bold'} fontFamily={'Roboto Mono'}>
             Enter in additional specifications
           </Typography>
 
           <br/>
-          <TextField variant="outlined" label="Enter comments here..." value={customization} multiline={true} onChange={(event) => {setCustomization(event.target.value)}} sx={{   width: '100%',  }} />
+          <TextField variant="outlined" label="Enter comments here..." value={customization} multiline={true} onChange={(event) => {setCustomization(event.target.value)}} sx={{   width: '100%',   fontFamily: 'Roboto Mono'}} />
           <br/><br/>
 
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
-            <Button variant="contained" color="error" onClick={cancel} sx={{width: '30vw', border: 1, boxShadow: 3, fontWeight: 'Bold'}}>Discard</Button>
+            <Button variant="contained" color="error" onClick={cancel} sx={{width: '30vw', border: 1, boxShadow: 3, fontFamily: 'Roboto Mono', fontWeight: 'Bold'}}>Discard</Button>
             <Button       
-            variant="contained" color="success" onClick={onClose} sx={{width: '30vw', border: 1, boxShadow: 3,  fontWeight: 'Bold'}}>Save</Button>
+            variant="contained" color="success" onClick={onClose} sx={{width: '30vw', border: 1, boxShadow: 3, fontFamily: 'Roboto Mono', fontWeight: 'Bold'}}>Save</Button>
           </Box>
         </Box>
       </Modal>
@@ -275,15 +276,15 @@ const ItemDisplay = () => {
     <div style={{margin: '-64px 0 -25px 0'}}>
       <Box component={"img"} src={itemInfo.photo} alt={itemInfo.name} sx={{objectFit: 'cover', width: '100vw', height: '30vh', position: 'relative', zIndex: -10}}></Box>
       <Box paddingTop={'3vh'} paddingLeft={'5vw'} paddingRight={'5vw'} paddingBottom={'5vh'} marginTop={'-4vh'} sx={{height: '100%', backgroundColor: "#F9F9F9", borderTopLeftRadius: '25px', borderTopRightRadius: '25px', border: 1}}>
-        <Typography variant="h6" style={{ color: 'black', fontSize:"30px" }}>
+        <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
           Item: {itemInfo.name}
         </Typography>
         <br/>
-        <Typography variant="h7" style={{ color: 'black', fontSize:"18px" }}>
+        <Typography variant="h7" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"18px" }}>
           Portion Size per Order: {itemInfo['Portion Size, Per Order']}
           <br></br><br></br>
         </Typography>
-        <Typography variant="h8" style={{ color: 'black', fontSize:"15px" }}>
+        <Typography variant="h8" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"15px" }}>
           <b>Description:</b> <br></br>{itemInfo.description}
           <br></br><br></br><br></br>
         </Typography>
@@ -300,6 +301,7 @@ const ItemDisplay = () => {
           backgroundColor: 'primary',
           color: 'white',
           textAlign: 'center',
+          fontFamily: 'Roboto Mono',
           fontWeight: 'bold'
         }}
         >
@@ -317,6 +319,7 @@ const ItemDisplay = () => {
           backgroundColor: '#7B68EE',
           color: 'white',
           textAlign: 'center',
+          fontFamily: 'Roboto Mono',
           fontWeight: 'bold'
         }}
         >
@@ -325,7 +328,7 @@ const ItemDisplay = () => {
         <br></br>
 
         {tempCustomization !== "" && (
-        <Typography>
+        <Typography sx={{ fontFamily: 'Roboto Mono' }}>
         <span style={{ fontWeight: 'bold' }}>Custom comment:</span> {tempCustomization}
         </Typography>
         )}
@@ -341,6 +344,7 @@ const ItemDisplay = () => {
             backgroundColor: '#4CBB17',
             color: 'white',
             textAlign: 'center',
+            fontFamily: 'Roboto Mono',
             fontWeight: 'bold'
           }}
         >
@@ -363,7 +367,7 @@ const ItemDisplay = () => {
               backgroundColor: 'green',
               color: 'white',
               textAlign: 'center',
-
+              fontFamily: 'Roboto Mono',
               fontWeight: 'bold'
             }}
             onClick={addToOrder}

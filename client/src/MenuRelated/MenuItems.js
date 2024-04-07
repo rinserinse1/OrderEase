@@ -78,7 +78,7 @@ const MenuItems = () => {
     <>
           
       <Container maxWidth="md" sx={{ textAlign: 'center', marginTop: '20px' }}>
-      <Typography variant="h6" style={{ color: 'black',  fontSize:"30px" }}>
+      <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
         {category}
       </Typography>
       <br></br><br></br>
@@ -92,7 +92,7 @@ const MenuItems = () => {
         onChange={handleSearchInputChange}
         InputProps={{
         startAdornment: <SearchOutlinedIcon />,
-        sx: { backgroundColor: 'white',  }
+        sx: { backgroundColor: 'white', fontFamily: 'Roboto Mono' }
         }}
       />      
       <br/><br/><br/>
@@ -102,27 +102,28 @@ const MenuItems = () => {
             <FilterChip label={`${filter} (${numOfFilteredFoods(filter)})`} onClick={() => {handleChipToggle(filter)}} 
                   bgcolor={selectedChips.includes(filter) ? 'orange' : 'white'}
                   onDelete={() => {handleChipToggle(filter)}} deleteIcon={selectedChips.includes(filter) ? <DoneIcon style={{color: "black"}}/> : <></>}
-                  sx={selectedChips.includes(filter) ? { backgroundColor: 'orange', color: 'black', fontWeight: 'bold',  marginTop: 2 } 
-                  : { backgroundColor: 'white', marginTop: 2 }}>
+                  sx={selectedChips.includes(filter) ? { backgroundColor: 'orange', color: 'black', fontWeight: 'bold', fontFamily: "Roboto Mono", marginTop: 2 } 
+                  : { backgroundColor: 'white', fontFamily: "Roboto Mono", marginTop: 2 }}>
             </FilterChip>
           </Grid>
         ))}
       </Grid>
       <br/><br/>
       <TableContainer component={Paper} style={{
+        fontFamily: 'Roboto Mono',
         backgroundColor: '#F9F9F9',
         border: 'none',
         boxShadow: 'none', 
         marginRight: '100px',
       }}>
-        <Table aria-label="order data table" >
+        <Table aria-label="order data table" style={{ fontFamily: 'Roboto Mono' }}>
           <TableBody>
             {filteredFoods.map((item, index) => (
               <TableRow key={index} sx={{border: 1}}>
                 <TableCell component="th" scope="row" style={{ paddingRight: '-10px', width: '50%', borderBottom: 1 }} >
                   <img src={item.photo} alt={item.name} style={{ objectFit: 'cover', width: '100%', height: '30vw', borderRadius: '25px' }} />
                 </TableCell>
-                <TableCell sx={{fontWeight: '550', borderBottom: 1, }}>
+                <TableCell sx={{fontWeight: '550', borderBottom: 1, fontFamily: 'Roboto Mono'}}>
                 {item.name}
                 <br></br><br></br>
                   {'(' + item['Portion Size, Per Order'] + ')'}
@@ -140,9 +141,10 @@ const MenuItems = () => {
                       fontWeight: 'bold',
                       position: 'relative',
                       boxShadow: 3,
+                      fontFamily: 'Roboto Mono'
                     }}
                   >
-                         <Typography style = {{fontSize:"15px", textAlign:"center",}} >VIEW ITEM</Typography>
+                         <Typography style = {{fontSize:"15px", textAlign:"center", fontFamily: 'Roboto Mono'}} >VIEW ITEM</Typography>
                   </Button>
 
                 </TableCell>
@@ -162,6 +164,7 @@ const MenuItems = () => {
         color="primary"
         style={{
           display: 'block',
+          fontFamily: 'Roboto Mono',
           backgroundColor: 'green',
           color: 'white',
         }}
