@@ -1,10 +1,8 @@
-import { useState } from 'react';
-import { Outlet } from 'react-router-dom';
-import { styled } from '@mui/material/styles';
-import React, { Component }  from 'react';
-import Footer from "./footer"
-// ----------------------------------------------------------------------
-
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import { styled } from "@mui/material/styles";
+import React from "react";
+import Footer from "./footer";
 
 const APP_BAR_MOBILE = 64;
 const APP_BAR_DESKTOP = 92;
