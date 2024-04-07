@@ -36,15 +36,15 @@ const AssistanceModal = ({ open, onClose }) => {
           >
             <CloseIcon />
           </IconButton>
-          <Typography id="assistance-modal-title" variant="h6" component="h2" fontWeight={'bold'} >
+          <Typography id="assistance-modal-title" variant="h6" component="h2" fontWeight={'bold'} fontFamily={'Roboto Mono'}>
             Do you want to call a server for assistance?
           </Typography>
-          <Box sx={{ display: "flex", justifyContent: "space-between", mt: 2 }}>
+          <Box sx={{ display: "flex", fontFamily: 'Roboto Mono', justifyContent: "space-between", mt: 2 }}>
             <Button
               variant="contained"
               color="error"
               onClick={() => onClose(false)}
-              sx={{ fontWeight: 'Bold'}}
+              sx={{fontFamily: 'Roboto Mono', fontWeight: 'Bold'}}
             >
               No, Cancel
             </Button>
@@ -52,7 +52,7 @@ const AssistanceModal = ({ open, onClose }) => {
               variant="contained"
               color="success"
               onClick={() => onClose(true)}
-              sx={{ fontWeight: 'Bold'}}
+              sx={{fontFamily: 'Roboto Mono', fontWeight: 'Bold'}}
             >
               Yes, Confirm
             </Button>

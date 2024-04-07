@@ -72,6 +72,7 @@ const PlacedOrder = () => {
               backgroundColor: 'green',
               color: 'white',
               textAlign: 'center',
+              fontFamily: 'Roboto Mono',
               fontWeight: 'bold',
               padding: '5% 0 5% 0',
               fontSize: '5vw'
@@ -94,6 +95,7 @@ const PlacedOrder = () => {
               backgroundColor: '#4CBB17',
               color: 'white',
               textAlign: 'center',
+              fontFamily: 'Roboto Mono',
               fontWeight: 'bold',
               padding: '5% 0 5% 0',
               fontSize: '5vw'
