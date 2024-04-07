@@ -48,7 +48,7 @@ const MenuCategories = () => {
     <>
 
       <Container maxWidth="md" sx={{ textAlign: 'center', marginTop: '20px' }}>
-        <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
+        <Typography variant="h6" style={{ color: 'black', fontSize:"30px" }}>
           {id.charAt(0).toUpperCase() + id.slice(1)} Menu Categories
         </Typography>
         <br/><br/>
@@ -63,7 +63,7 @@ const MenuCategories = () => {
           onChange={handleSearchInputChange}
           InputProps={{
             startAdornment: <SearchOutlinedIcon />,
-            sx: { backgroundColor: 'white', fontFamily: 'Roboto Mono' }
+            sx: { backgroundColor: 'white',}
           }}
         />
         <br/><br/>
@@ -102,7 +102,6 @@ const MenuCategories = () => {
             <Typography variant="subtitle1" component="div" sx={{
               fontWeight: 'bold',
               textAlign: 'center',
-              fontFamily: 'Roboto Mono',
               whiteSpace: 'nowrap',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -111,7 +110,6 @@ const MenuCategories = () => {
             </Typography>
             <Typography variant="subtitle1" color="text.secondary" sx={{
               fontWeight: 'bold',
-              fontFamily: 'Roboto Mono'
             }}>
               ({category.foods.length})
             </Typography>
