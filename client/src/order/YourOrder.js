@@ -311,7 +311,7 @@ const YourOrder = () => {
           <TableRow>
             <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Food Item</TableCell>
             <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Quantity</TableCell>
-            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Size</TableCell>
+            <TableCell sx={{fontWeight: 700, fontSize: '110%'}}>Size (per portion)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
