@@ -1,680 +1,680 @@
 {
-  "categories": [{
-      "name": "Appetizers",
-      "foods": [{
-          "name": "Tteokbokki (Rice Cakes)",
-          "nutritionalInfo": {
-              "calories": 90,
-              "fat": 1,
-              "carbohydrates": 20,
-              "protein": 2
-          },
-          "description": "Savor the chewy delight of soft spicy rice cakes, glazed in a rich, fiery sauce. Perfect for sharing, this quintessential Korean comfort food is a must-try.",
-          "Portion Size, Per Order": "4 pieces",
-          "photo": "https://hips.hearstapps.com/hmg-prod/images/tteokbokki-horizontal-4-jpg-1595262663.jpg",
-          "tags": ["Spicy", "Lactose-Free"]
-      }, {
-          "name": "Mat-Tang (Fried Sweet Potatoes)",
-          "nutritionalInfo": {
-              "calories": 160,
-              "fat": 2,
-              "carbohydrates": 34,
-              "protein": 1
-          },
-          "description": "Indulge in golden-fried sweet potatoes, candied to perfection and drizzled with a sweet garlic sauce, offering a unique blend of textures and flavors.",
-          "Portion Size, Per Order": "100 grams",
-          "photo": "https://drivemehungry.com/wp-content/uploads/2020/11/korean-candied-sweet-potatoes-6.jpg",
-          "tags": ["Plant-Based", "Gluten-Free", "Lactose-Free"]
-      }, {
-          "name": "Dak Gang Jeong (Deep-Fried Boneless Chicken)",
-          "nutritionalInfo": {
-              "calories": 220,
-              "fat": 9,
-              "carbohydrates": 18,
-              "protein": 14
-          },
-          "description": "Experience the crunch with our deep-fried boneless chicken, glazed in Sweet & Spicy or Soy Garlic for a memorable fusion of Korean flavors. Specify your choice of glaze.",
-          "Portion Size, Per Order": "100 grams",
-          "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Dak-gangjeong_3.jpg",
-          "tags": ["Spicy", "Lactose-Free"]
-      }, {
-          "name": "Japchae (Glass Noodles)",
-          "nutritionalInfo": {
-              "calories": 120,
-              "fat": 1,
-              "carbohydrates": 25,
-              "protein": 3
-          },
-          "description": "Glass noodles and sautéed vegetables, tossed in a savory sauce, make for a delightful mix of textures and tastes, showcasing the best of Korean stir-fry.",
-          "Portion Size, Per Order": "100 grams",
-          "photo": "https://www.koreanbapsang.com/wp-content/uploads/2010/01/DSC5028-4.jpg",
-          "tags": ["Gluten-Free", "Vegetarian", "Lactose-Free"]
-      }, {
-          "name": "Vegetarian Dumpling",
-          "nutritionalInfo": {
-              "calories": 70,
-              "fat": 3,
-              "carbohydrates": 9,
-              "protein": 2
-          },
-          "description": "Our deep-fried vegetable dumplings are a crispy wonder, filled with a hearty mix of vegetables, perfect for a veggie-packed bite.",
-          "Portion Size, Per Order": "1 piece",
-          "photo": "https://www.koreanbapsang.com/wp-content/uploads/2009/09/DSC_1354-350x350.jpg",
-          "tags": ["Vegetarian", "Lactose-Free"]
-      }, {
-          "name": "Kim Ma Ri (Deep-Fried Seaweed Rolls)",
-          "nutritionalInfo": {
-              "calories": 80,
-              "fat": 4,
-              "carbohydrates": 10,
-              "protein": 2
-          },
-          "description": "Dive into the crispy world of deep-fried seaweed rolls, offering a crunchy exterior wrapped around a soft, flavorful filling.",
-          "Portion Size, Per Order": "1 piece",
-          "photo": "https://koreankitchencardiff.com/wp-content/uploads/2020/05/img_20200512_181245_786-2.jpg?w=1024",
-          "tags": ["Plant-Based", "Lactose-Free"]
-      }, {
-          "name": "Edamame (Salted Soybean in Pod)",
-          "nutritionalInfo": {
-              "calories": 122,
-              "fat": 5,
-              "carbohydrates": 10,
-              "protein": 11
-          },
-          "description": "Enjoy a simple, yet satisfying snack of edamame. Each order serves these lightly salted soybeans in the pod, perfect for a healthy, nibble-worthy treat.",
-          "Portion Size, Per Order": "100 grams",
-          "photo": "https://plantbasedmatters.net/wp-content/uploads/2020/01/Korean-Style-Stir-Fry-Edamame-500x500.jpeg",
-          "tags": ["Plant-Based", "Gluten-Free", "Lactose-Free", "Low-Calorie"]
-      }, {
-          "name": "Tang Su Yuk (Deep-Fried Pork)",
-          "nutritionalInfo": {
-              "calories": 250,
-              "fat": 12,
-              "carbohydrates": 20,
-              "protein": 13
-          },
-          "description": "A serving of crispy deep-fried pork, bathed in a tangy sweet & sour sauce. This dish is a delightful blend of textures and flavors, offering a satisfying crunch with every bite.",
-          "Portion Size, Per Order": "100 grams",
-          "photo": "https://i.ytimg.com/vi/TEszU_dPh-U/maxresdefault.jpg",
-          "tags": ["Lactose-Free"]
-      }, {
-          "name": "Takoyaki (Octopus Balls)",
-          "nutritionalInfo": {
-              "calories": 70,
-              "fat": 3.5,
-              "carbohydrates": 8,
-              "protein": 4
-          },
-          "description": "Savor the flavors of Japan with our Takoyaki. Each order presents a piece of grilled octopus ball, smothered in Takoyaki sauce, for a warm, savory treat with a chewy octopus center.",
-          "Portion Size, Per Order": "1 piece",
-          "photo": "https://mamaloli.com/wp-content/uploads/2011/12/takoyaki-14.jpg",
-          "tags": ["Lactose-Free"]
-      }, {
-          "name": "Potato & Veg Croquette",
-          "nutritionalInfo": {
-              "calories": 150,
-              "fat": 9,
-              "carbohydrates": 16,
-              "protein": 3
-          },
-          "description": "Crispy on the outside, soft and flavorful on the inside, our deep-fried mashed potato and vegetable croquette is a comforting piece of culinary delight, blending smooth potatoes with vibrant veggies.",
-          "Portion Size, Per Order": "1 piece",
-          "photo": "https://i.ytimg.com/vi/nfsfaV_PhtU/maxresdefault.jpg",
-          "tags": ["Vegetarian", "Lactose-Free"]
-      }, {
-          "name": "Ssam (Lettuce Wrap)",
-          "nutritionalInfo": {
-              "calories": 20,
-              "fat": 1,
-              "carbohydrates": 2,
-              "protein": 1
-          },
-          "description": "Wrap your senses around our Ssam, offering a piece of Lettuce to wrap your BBQ meat for a burst of flavor in every bite.",
-          "Portion Size, Per Order": "1 piece",
-          "photo": "https://i2.wp.com/hipfoodiemom.com/wp-content/uploads/2022/02/Ssam-Korean-Lettuce-Wraps_c.jpg",
-          "tags": ["Low-Calorie", "Lactose-Free", "Gluten-Free"]
-      }],
-      "filters": ["Gluten-Free", "Vegetarian", "Plant-Based", "Spicy", "Low-Calorie", "Lactose-Free"]
-  }, {
-      "name": "BBQ Meat - Beef",
-      "foods": [{
-          "name": "Bulgogi (Marinated Beef)",
-          "nutritionalInfo": {
-              "calories": 260,
-              "fat": 15,
-              "carbohydrates": 5,
-              "protein": 26
-          },
-          "description": "Succulent slices of beef marinated in a blend of soy sauce, sugar, sesame oil, and garlic, then grilled to perfection.",
-          "Portion Size, Per Order": "100 grams",
-          "photo": "https://thestayathomechef.com/wp-content/uploads/2021/02/Korean-Beef-Bulgogi-4.jpg",
-          "tags": ["High-Protein", "Lactose-Free", "Marinated"]
-      }, {
-          "name": "Woo-samgyeob (Thin Slice Beef Brisket)",
-          "nutritionalInfo": {
-              "calories": 200,
-              "fat": 14,
-              "carbohydrates": 0,
-              "protein": 18
-          },
-          "description": "Delicate thin slices of beef brisket, offering a tender texture and rich flavor, ideal for grilling.",
-          "Portion Size, Per Order": "100 grams",
-          "photo": "https://meatboxbc.com/cdn/shop/products/Bisket_Roll_800x.jpg?v=1531847318",
-          "tags": ["Low-Fat", "High-Protein", "Lactose-Free"]
-      }, {
-          "name": "Beef Sausage",
-          "nutritionalInfo": {
-              "calories": 180,
-              "fat": 15,
-              "carbohydrates": 1,
-              "protein": 12
-          },
-          "description": "Juicy and flavorful beef sausage, a perfect addition to any BBQ feast.",
-          "Portion Size, Per Order": "1 piece",
-          "photo": "https://theredcellarblog.files.wordpress.com/2019/06/soondae_3.jpg",
-          "tags": ["Gluten-Free", "Lactose-Free"]
-      }],
-      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free", "Marinated"]
-  }, {
-      "name": "BBQ Meat - Pork",
-      "foods": [{
-          "name": "Spicy Dwaeji Bulgogi (Marinated Spicy Pork)",
-          "nutritionalInfo": {
-              "calories": 270,
-              "fat": 19,
-              "carbohydrates": 6,
-              "protein": 21
-          },
-          "description": "Tender pork slices marinated in a fiery sauce, bringing a spicy kick to your BBQ.",
-          "Portion Size, Per Order": "100 grams",
-          "photo": "https://www.siftandsimmer.com/wp-content/uploads/2023/05/spicy-pork-bulgogi2.jpg",
-          "tags": ["Spicy", "High-Protein", "Lactose-Free", "Marinated"]
-      }, {
-          "name": "Dwaeji Galbi (Marinated Pork Ribs)",
-          "nutritionalInfo": {
-              "calories": 310,
-              "fat": 22,
-              "carbohydrates": 5,
-              "protein": 24
-          },
-          "description": "Succulent pork ribs soaked in a savory marinade, ready to sizzle on the grill.",
-          "Portion Size, Per Order": "100 grams",
-          "photo": "https://stellanspice.com/wp-content/uploads/2021/06/Screenshot-168.png",
-          "tags": ["High-Protein", "Lactose-Free"]
-      }, {
-          "name": "Samgyeopsal-Gui (Pork Belly)",
-          "nutritionalInfo": {
-              "calories": 290,
-              "fat": 23,
-              "carbohydrates": 0,
-              "protein": 19
-          },
-          "description": "A Korean BBQ staple, thick slices of pork belly with a rich and satisfying flavor.",
-          "Portion Size, Per Order": "1 piece",
-          "photo": "https://www.maangchi.com/wp-content/uploads/2009/09/grilled-porkbelly_grilled.jpg",
-          "tags": ["Lactose-Free"]
-      }, {
-          "name": "Thin Samgyeopsal-Gui (Thin Slice Pork Belly)",
-          "nutritionalInfo": {
-              "calories": 250,
-              "fat": 20,
-              "carbohydrates": 0,
-              "protein": 17
-          },
-          "description": "Thinly sliced pork belly that crisps up beautifully on the grill, offering a lighter but equally delicious option.",
-          "Portion Size, Per Order": "100 grams",
-          "photo": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/tqjgmhcb/bfd09643-50f6-4665-8b92-fefeea891256.jpg",
-          "tags": ["Gluten-Free", "Low-Fat", "Lactose-Free"]
-      }],
-      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free", "Marinated"]
-  }, {
-      "name": "BBQ Meat - Chicken",
-      "foods": [{
-          "name": "Spicy Dak Bulgogi (Marinated Spicy Chicken)",
-          "nutritionalInfo": {
-              "calories": 210,
-              "fat": 8,
-              "carbohydrates": 5,
-              "protein": 26
-          },
-          "description": "Juicy chicken marinated in a spicy and sweet sauce, delivering a kick of flavor with every bite.",
-          "Portion Size, Per Order": "100 grams",
-          "photo": "https://www.beyondkimchee.com/wp-content/uploads/2021/01/Korean-spicy-chicken-bbq-3-1.jpg",
-          "tags": ["Spicy", "High-Protein", "Lactose-Free"]
-      }, {
-          "name": "Ganjang Dak Bulgogi (Marinated Chicken with Soy Sauce)",
-          "nutritionalInfo": {
-              "calories": 190,
-              "fat": 6,
-              "carbohydrates": 4,
-              "protein": 29
-          },
-          "description": "Tender chicken pieces soaked in a rich soy sauce marinade, offering a savory and slightly sweet flavor.",
-          "Portion Size, Per Order": "100 grams",
-          "photo": "https://www.koreanbapsang.com/wp-content/uploads/2012/03/DSC_1832-1-e1562126872480.jpg",
-          "tags": ["High-Protein", "Lactose-Free", "Marinated"]
-      }],
-      "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free", "Marinated"]
-  }, {
-      "name": "Drinks",
-      "thumbnail": "https://thesmartlocal.kr/wp-content/uploads/2020/04/Korean-Alcohol-Concoctions16.jpg",
-      "foods": [{
-          "name": "Coca-Cola",
-          "description": "Classic Coca-Cola.",
-          "nutritionalInfo": {
-              "calories": 140,
-              "fat": 0,
-              "carbohydrates": 39,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "355ml can",
-          "tags": [],
-          "photo": "https://nosherz.com/cdn/shop/products/imageService.jpg?v=1643129037&width=1080"
-      }, {
-          "name": "Coca-Cola Zero",
-          "description": "Zero sugar Coca-Cola.",
-          "nutritionalInfo": {
-              "calories": 0,
-              "fat": 0,
-              "carbohydrates": 0,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "355ml can",
-          "tags": ["Sugar-Free", "Carbohydrates-Free"],
-          "photo": "https://www.coca-cola.com/content/dam/onexp/us/en/brands/coca-cola-zero/en_coca-cola_prod_zero%20sugar%20_750x750_v1.jpg"
-      }, {
-          "name": "Pepsi",
-          "description": "Classic Pepsi taste.",
-          "nutritionalInfo": {
-              "calories": 150,
-              "fat": 0,
-              "carbohydrates": 41,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "355ml can",
-          "tags": [],
-          "photo": "https://giftshop.sunnybrook.ca/cdn/shop/products/IMG_20210114_111605.png?v=1610642125"
-      }, {
-          "name": "Pepsi Zero Sugar",
-          "description": "Zero sugar Pepsi.",
-          "nutritionalInfo": {
-              "calories": 0,
-              "fat": 0,
-              "carbohydrates": 0,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "355ml can",
-          "tags": ["Sugar-Free", "Carbohydrates-Free"],
-          "photo": "https://assets.shop.loblaws.ca/products/20322361001/b1/en/open/20322361001_open_a01_@2.png"
-      }, {
-          "name": "Sprite",
-          "description": "Lemon-lime Sprite.",
-          "nutritionalInfo": {
-              "calories": 140,
-              "fat": 0,
-              "carbohydrates": 38,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "355ml can",
-          "tags": [],
-          "photo": "https://motherspizzahalifax.ca/wp-content/uploads/2020/08/Sprite.webp"
-      }, {
-          "name": "Sprite Zero",
-          "description": "Zero sugar Sprite.",
-          "nutritionalInfo": {
-              "calories": 0,
-              "fat": 0,
-              "carbohydrates": 0,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "355ml can",
-          "tags": ["Sugar-Free", "Carbohydrates-Free"],
-          "photo": "https://www.coca-cola.com/content/dam/onexp/au/en/brands/sprite/new/Sprite%20Zero%20Sugar.jpg"
-      }, {
-          "name": "7-Up",
-          "description": "Crisp and clean 7-Up.",
-          "nutritionalInfo": {
-              "calories": 140,
-              "fat": 0,
-              "carbohydrates": 39,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "355ml can",
-          "tags": [],
-          "photo": "https://i5.walmartimages.com/asr/9aed7ff8-1882-4b38-b937-cbc4cc3e16cd.077a7aa52b2bacda88cee393b0446946.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
-      }, {
-          "name": "7-Up Zero Sugar",
-          "description": "Zero sugar 7-Up.",
-          "nutritionalInfo": {
-              "calories": 0,
-              "fat": 0,
-              "carbohydrates": 0,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "355ml can",
-          "tags": ["Sugar-Free"],
-          "photo": "https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12027981&itemId=57&recipeName=680"
-      }, {
-          "name": "Soju",
-          "description": "Korean distilled spirit.",
-          "nutritionalInfo": {
-              "calories": 70,
-              "fat": 0,
-              "carbohydrates": 1,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "1 shot (30ml)",
-          "tags": ["Alcoholic"],
-          "photo": "https://www.everythingwine.ca/media/catalog/product/8/7/873208_jinro_chamisul_classic_soju_750_ml.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700"
-      }, {
-          "name": "Sapporo Premium Beer",
-          "description": "Japanese lager beer.",
-          "nutritionalInfo": {
-              "calories": 140,
-              "fat": 0,
-              "carbohydrates": 10,
-              "protein": 1
-          },
-          "Portion Size, Per Order": "1 cup (12 oz)",
-          "tags": ["Alcoholic"],
-          "photo": "https://bishopscellar.com/wp-content/uploads/2021/11/sapporo.png"
-      }, {
-          "name": "Yakult",
-          "description": "Probiotic milk beverage.",
-          "nutritionalInfo": {
-              "calories": 50,
-              "fat": 0,
-              "carbohydrates": 12,
-              "protein": 1
-          },
-          "Portion Size, Per Order": "1 bottle (80ml)",
-          "tags": ["Non-Alcoholic"],
-          "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Yakult_drink.jpg/640px-Yakult_drink.jpg"
-      }, {
-          "name": "Asahi Super Dry",
-          "description": "Japanese rice lager.",
-          "nutritionalInfo": {
-              "calories": 140,
-              "fat": 0,
-              "carbohydrates": 11,
-              "protein": 1
-          },
-          "Portion Size, Per Order": "1 cup (12 oz)",
-          "tags": ["Alcoholic"],
-          "photo": "https://www.harvestwines.ca/wp-content/uploads/2022/08/Asahi-Super-Dry-500ml.png"
-      }, {
-          "name": "Makgeolli",
-          "description": "Korean rice wine.",
-          "nutritionalInfo": {
-              "calories": 50,
-              "fat": 0,
-              "carbohydrates": 7,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "1 cup (6 oz)",
-          "tags": ["Alcoholic"],
-          "photo": "https://bishopscellar.com/wp-content/uploads/2020/03/Kooksoondang-Ssal-Makkoli.png"
-      }, {
-          "name": "Non-Alcoholic Beer",
-          "description": "Beer taste without alcohol.",
-          "nutritionalInfo": {
-              "calories": 50,
-              "fat": 0,
-              "carbohydrates": 5,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "1 cup (12 oz)",
-          "tags": ["Non-Alcoholic"],
-          "photo": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&imageId=1450137-894__1&recipeName=350"
-      }, {
-          "name": "Red Wine",
-          "description": "Classic red wine.",
-          "nutritionalInfo": {
-              "calories": 125,
-              "fat": 0,
-              "carbohydrates": 4,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "1 glass (5 oz)",
-          "tags": ["Alcoholic"],
-          "photo": "https://upload.wikimedia.org/wikipedia/en/c/c0/Red_Wine_Glass.jpg"
-      }, {
-          "name": "White Wine",
-          "description": "Crisp white wine.",
-          "nutritionalInfo": {
-              "calories": 120,
-              "fat": 0,
-              "carbohydrates": 4,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "1 glass (5 oz)",
-          "tags": ["Alcoholic"],
-          "photo": "https://cb.scene7.com/is/image/Crate/VineyardWhiteWine12ozSHF15/$web_pdp_main_carousel_low$/240201163333/vineyard-12-oz.-white-wine-glass.jpg"
-      }, {
-          "name": "Non-Alcoholic Red Wine",
-          "description": "Red wine, no alcohol.",
-          "nutritionalInfo": {
-              "calories": 30,
-              "fat": 0,
-              "carbohydrates": 7,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "1 glass (5 oz)",
-          "tags": ["Non-Alcoholic"],
-          "photo": "https://upsidedrinks.ca/cdn/shop/products/Ariel-Red-Cabernet-non-alcoholic.jpg?v=1651768689&width=900"
-      }, {
-          "name": "S.Pellegrino Mineral Water",
-          "description": "Sparkling mineral water that is carbonated.",
-          "nutritionalInfo": {
-              "calories": 35,
-              "fat": 0,
-              "carbohydrates": 8,
-              "protein": 0
-          },
-          "Portion Size, Per Order": "1 glass (5 oz)",
-          "tags": ["Non-Alcoholic", "Sparkling"],
-          "photo": "https://hips.hearstapps.com/delish/assets/15/49/1449356763-spellegrino.jpg"
-      }],
-      "filters": ["Sugar-Free", "Low-Calorie", "Alcoholic", "Non-Alcoholic", "Sparkling", "Carbohydrates-Free"]
-  }, {
-      "name": "Dessert Menu",
-      "foods": [{
-          "name": "Chocolate Ice Cream",
-          "description": "Rich chocolate flavor in a creamy ice cream.",
-          "nutritionalInfo": {
-              "calories": 200,
-              "fat": 11,
-              "carbohydrates": 25,
-              "protein": 3
-          },
-          "Portion Size, Per Order": "2 scoops",
-          "photo": "https://www.onceuponachef.com/images/2022/08/homemade-chocolate-ice-cream-760x971.jpg",
-          "tags": ["Gluten-Free"]
-      }, {
-          "name": "Vanilla Ice Cream",
-          "description": "Smooth and creamy with pure vanilla taste.",
-          "nutritionalInfo": {
-              "calories": 190,
-              "fat": 10,
-              "carbohydrates": 22,
-              "protein": 3
-          },
-          "Portion Size, Per Order": "2 scoops",
-          "photo": "https://static.toiimg.com/thumb/63971154.cms?width=573&height=430",
-          "tags": ["Gluten-Free"]
-      }, {
-          "name": "Strawberry Ice Cream",
-          "description": "Creamy ice cream with real strawberry pieces.",
-          "nutritionalInfo": {
-              "calories": 180,
-              "fat": 9,
-              "carbohydrates": 23,
-              "protein": 3
-          },
-          "Portion Size, Per Order": "2 scoops",
-          "photo": "https://www.allrecipes.com/thmb/pH8hoFfytcOT9XVK1DSmxv3L0OU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/140877-easy-eggless-strawberry-ice-cream-ddmfs-3x4-1-092e4d11b59049c8b3843014ea3c57f2.jpg",
-          "tags": ["Gluten-Free", "Fruit-Infused"]
-      }, {
-          "name": "Green-Tea Ice Cream",
-          "description": "Unique green-tea flavor in a refreshing ice cream.",
-          "nutritionalInfo": {
-              "calories": 150,
-              "fat": 8,
-              "carbohydrates": 22,
-              "protein": 4
-          },
-          "Portion Size, Per Order": "2 scoops",
-          "photo": "https://www.thespruceeats.com/thmb/uXJIpnsD8coT0fLfdiO0lqsDe7I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/green-tea-matcha-ice-cream-2031118-hero-01-14e95fdc74154590b112b62048ba8f67.jpg",
-          "tags": ["Gluten-Free", "Low-Calorie"]
-      }, {
-          "name": "Mango Ice Cream",
-          "description": "Tropical mango flavor in a smooth ice cream.",
-          "nutritionalInfo": {
-              "calories": 175,
-              "fat": 7,
-              "carbohydrates": 28,
-              "protein": 3
-          },
-          "Portion Size, Per Order": "2 scoops",
-          "photo": "https://hot-thai-kitchen.com/wp-content/uploads/2016/06/mango-ice-cream-blog.jpg",
-          "tags": ["Gluten-Free", "Fruit-Infused"]
-      }, {
-          "name": "Classic Cheesecake",
-          "description": "Creamy cheesecake with a berry topping.",
-          "nutritionalInfo": {
-              "calories": 310,
-              "fat": 18,
-              "carbohydrates": 32,
-              "protein": 6
-          },
-          "Portion Size, Per Order": "1 slice",
-          "photo": "https://www.allrecipes.com/thmb/IsIVofRRaO-P0Iv_3sUaSNkwWE8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Easy-Classic-Cheesecake2-2814f4f9999943688d54f103a13919b8.jpg",
-          "tags": ["Nut-Free"]
-      }, {
-          "name": "Chocolate Lava Cake",
-          "description": "Warm cake with a molten chocolate center.",
-          "nutritionalInfo": {
-              "calories": 290,
-              "fat": 16,
-              "carbohydrates": 35,
-              "protein": 4
-          },
-          "Portion Size, Per Order": "1 cake",
-          "photo": "https://www.billyparisi.com/wp-content/uploads/2022/02/lava-cake-1.jpg",
-          "tags": ["Nut-Free"]
-      }],
-      "filters": ["Gluten-Free", "Vegan", "Dairy-Free", "Nut-Free", "Low-Calorie", "Fruit-Infused"]
-  }, {
-      "name": "Deluxe Delights",
-      "foods": [{
-          "name": "La Galbi (Beef Short Ribs)",
-          "description": "Succulent beef short ribs, marinated and grilled.",
-          "nutritionalInfo": {
-              "calories": 250,
-              "fat": 15,
-              "carbohydrates": 5,
-              "protein": 22
-          },
-          "Portion Size, Per Order": "1 piece",
-          "photo": "https://www.koreanbapsang.com/wp-content/uploads/2013/08/DSC8866-5-e1707539703959.jpg",
-          "tags": ["Grilled", "Marinated"]
-      }, {
-          "name": "Pork Dumpling",
-          "description": "Crispy deep-fried pork dumpling.",
-          "nutritionalInfo": {
-              "calories": 100,
-              "fat": 5,
-              "carbohydrates": 10,
-              "protein": 6
-          },
-          "Portion Size, Per Order": "1 piece",
-          "photo": "https://twoplaidaprons.com/wp-content/uploads/2020/05/Chinese-pork-dumplings-picking-up-a-dumpling-with-chopsticks-500x375.jpg",
-          "tags": ["Fried"]
-      }, {
-          "name": "Corn Cheese",
-          "description": "Creamy, cheesy corn served Korean style.",
-          "nutritionalInfo": {
-              "calories": 200,
-              "fat": 12,
-              "carbohydrates": 15,
-              "protein": 5
-          },
-          "Portion Size, Per Order": "1 small plate",
-          "photo": "https://jasmineandtea.com/wp-content/uploads/2021/04/korean-corn-cheese-recipe.jpg",
-          "tags": ["Cheesy"]
-      }, {
-          "name": "Cheese Sauce",
-          "description": "Rich and velvety cheese sauce.",
-          "nutritionalInfo": {
-              "calories": 150,
-              "fat": 10,
-              "carbohydrates": 5,
-              "protein": 8
-          },
-          "Portion Size, Per Order": "1 small bowl",
-          "photo": "https://sallysbakingaddiction.com/wp-content/uploads/2014/03/homemade-spicy-nacho-cheese-sauce-2.jpg",
-          "tags": ["Cheesy"]
-      }, {
-          "name": "Naengmyeon (Cold Noodles with Beef Broth)",
-          "description": "Cold buckwheat noodles, served with beef broth and half boiled egg.",
-          "nutritionalInfo": {
-              "calories": 180,
-              "fat": 1,
-              "carbohydrates": 40,
-              "protein": 8
-          },
-          "Portion Size, Per Order": "1 small bowl",
-          "photo": "https://static01.nyt.com/images/2023/11/21/multimedia/26EATrex-naengmyeon-cfbl/26EATrex-naengmyeon-cfbl-superJumbo.jpg",
-          "tags": ["Cold", "Noodles"]
-      }, {
-          "name": "Gamjatang (Pork Stew)",
-          "description": "Hearty pork back bone stew with potatoes.",
-          "nutritionalInfo": {
-              "calories": 300,
-              "fat": 20,
-              "carbohydrates": 15,
-              "protein": 20
-          },
-          "Portion Size, Per Order": "1 small bowl",
-          "photo": "https://thesubversivetable.com/wp-content/uploads/2022/03/Gamjatang-2-scaled.jpg",
-          "tags": ["Stew", "Pork"]
-      }, {
-          "name": "Kimchi Ramen Stew",
-          "description": "Spicy and tangy Kimchi stew with pork and ramen noodles.",
-          "nutritionalInfo": {
-              "calories": 250,
-              "fat": 15,
-              "carbohydrates": 10,
-              "protein": 18
-          },
-          "Portion Size, Per Order": "1 small bowl",
-          "photo": "https://lindseyeatsla.com/wp-content/uploads/2019/09/Lindseyeatsla_Kimchi_Stew-8.jpg",
-          "tags": ["Stew", "Spicy"]
-      }, {
-          "name": "Doenjang Jjigae (Soybean Stew with Brisket)",
-          "description": "Soybean paste stew with tender beef brisket.",
-          "nutritionalInfo": {
-              "calories": 220,
-              "fat": 12,
-              "carbohydrates": 8,
-              "protein": 20
-          },
-          "Portion Size, Per Order": "1 small bowl",
-          "photo": "https://twoplaidaprons.com/wp-content/uploads/2022/08/doenjang-jjigae-boiling-thumbnail.jpg",
-          "tags": ["Stew"]
-      }, {
-          "name": "Dolsot Bibimbap",
-          "description": "Mixed rice with vegetables in a sizzling stone pot.",
-          "nutritionalInfo": {
-              "calories": 500,
-              "fat": 15,
-              "carbohydrates": 80,
-              "protein": 12
-          },
-          "Portion Size, Per Order": "1 small bowl",
-          "photo": "https://upload.wikimedia.org/wikipedia/commons/4/44/Dolsot-bibimbap.jpg",
-          "tags": ["Rice", "Vegetables"]
-      }],
-      "filters": ["Fried", "Grilled", "Cheesy", "Cold", "Stew", "Marinated"]
-  }]
+    "categories": [{
+        "name": "Appetizers",
+        "foods": [{
+            "name": "Tteokbokki (Rice Cakes)",
+            "nutritionalInfo": {
+                "calories": 90,
+                "fat": 1,
+                "carbohydrates": 20,
+                "protein": 2
+            },
+            "description": "Savor the chewy delight of soft spicy rice cakes, glazed in a rich, fiery sauce. Perfect for sharing, this quintessential Korean comfort food is a must-try.",
+            "Portion Size, Per Order": "4 pieces",
+            "photo": "https://hips.hearstapps.com/hmg-prod/images/tteokbokki-horizontal-4-jpg-1595262663.jpg",
+            "tags": ["Spicy", "Lactose-Free"]
+        }, {
+            "name": "Mat-Tang (Fried Sweet Potatoes)",
+            "nutritionalInfo": {
+                "calories": 160,
+                "fat": 2,
+                "carbohydrates": 34,
+                "protein": 1
+            },
+            "description": "Indulge in golden-fried sweet potatoes, candied to perfection and drizzled with a sweet garlic sauce, offering a unique blend of textures and flavors.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://drivemehungry.com/wp-content/uploads/2020/11/korean-candied-sweet-potatoes-6.jpg",
+            "tags": ["Plant-Based", "Gluten-Free", "Lactose-Free"]
+        }, {
+            "name": "Dak Gang Jeong (Deep-Fried Boneless Chicken)",
+            "nutritionalInfo": {
+                "calories": 220,
+                "fat": 9,
+                "carbohydrates": 18,
+                "protein": 14
+            },
+            "description": "Experience the crunch with our deep-fried boneless chicken, glazed in Sweet & Spicy or Soy Garlic for a memorable fusion of Korean flavors. Specify your choice of glaze.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Dak-gangjeong_3.jpg",
+            "tags": ["Spicy", "Lactose-Free"]
+        }, {
+            "name": "Japchae (Glass Noodles)",
+            "nutritionalInfo": {
+                "calories": 120,
+                "fat": 1,
+                "carbohydrates": 25,
+                "protein": 3
+            },
+            "description": "Glass noodles and sautéed vegetables, tossed in a savory sauce, make for a delightful mix of textures and tastes, showcasing the best of Korean stir-fry.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://www.koreanbapsang.com/wp-content/uploads/2010/01/DSC5028-4.jpg",
+            "tags": ["Gluten-Free", "Vegetarian", "Lactose-Free"]
+        }, {
+            "name": "Vegetarian Dumpling",
+            "nutritionalInfo": {
+                "calories": 70,
+                "fat": 3,
+                "carbohydrates": 9,
+                "protein": 2
+            },
+            "description": "Our deep-fried vegetable dumplings are a crispy wonder, filled with a hearty mix of vegetables, perfect for a veggie-packed bite.",
+            "Portion Size, Per Order": "1 piece",
+            "photo": "https://www.koreanbapsang.com/wp-content/uploads/2009/09/DSC_1354-350x350.jpg",
+            "tags": ["Vegetarian", "Lactose-Free"]
+        }, {
+            "name": "Kim Ma Ri (Deep-Fried Seaweed Rolls)",
+            "nutritionalInfo": {
+                "calories": 80,
+                "fat": 4,
+                "carbohydrates": 10,
+                "protein": 2
+            },
+            "description": "Dive into the crispy world of deep-fried seaweed rolls, offering a crunchy exterior wrapped around a soft, flavorful filling.",
+            "Portion Size, Per Order": "1 piece",
+            "photo": "https://koreankitchencardiff.com/wp-content/uploads/2020/05/img_20200512_181245_786-2.jpg?w=1024",
+            "tags": ["Plant-Based", "Lactose-Free"]
+        }, {
+            "name": "Edamame (Salted Soybean in Pod)",
+            "nutritionalInfo": {
+                "calories": 122,
+                "fat": 5,
+                "carbohydrates": 10,
+                "protein": 11
+            },
+            "description": "Enjoy a simple, yet satisfying snack of edamame. Each order serves these lightly salted soybeans in the pod, perfect for a healthy, nibble-worthy treat.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://plantbasedmatters.net/wp-content/uploads/2020/01/Korean-Style-Stir-Fry-Edamame-500x500.jpeg",
+            "tags": ["Plant-Based", "Gluten-Free", "Lactose-Free", "Low-Calorie"]
+        }, {
+            "name": "Tang Su Yuk (Deep-Fried Pork)",
+            "nutritionalInfo": {
+                "calories": 250,
+                "fat": 12,
+                "carbohydrates": 20,
+                "protein": 13
+            },
+            "description": "A serving of crispy deep-fried pork, bathed in a tangy sweet & sour sauce. This dish is a delightful blend of textures and flavors, offering a satisfying crunch with every bite.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://i.ytimg.com/vi/TEszU_dPh-U/maxresdefault.jpg",
+            "tags": ["Lactose-Free"]
+        }, {
+            "name": "Takoyaki (Octopus Balls)",
+            "nutritionalInfo": {
+                "calories": 70,
+                "fat": 3.5,
+                "carbohydrates": 8,
+                "protein": 4
+            },
+            "description": "Savor the flavors of Japan with our Takoyaki. Each order presents a piece of grilled octopus ball, smothered in Takoyaki sauce, for a warm, savory treat with a chewy octopus center.",
+            "Portion Size, Per Order": "1 piece",
+            "photo": "https://mamaloli.com/wp-content/uploads/2011/12/takoyaki-14.jpg",
+            "tags": ["Lactose-Free"]
+        }, {
+            "name": "Potato & Veg Croquette",
+            "nutritionalInfo": {
+                "calories": 150,
+                "fat": 9,
+                "carbohydrates": 16,
+                "protein": 3
+            },
+            "description": "Crispy on the outside, soft and flavorful on the inside, our deep-fried mashed potato and vegetable croquette is a comforting piece of culinary delight, blending smooth potatoes with vibrant veggies.",
+            "Portion Size, Per Order": "1 piece",
+            "photo": "https://i.ytimg.com/vi/nfsfaV_PhtU/maxresdefault.jpg",
+            "tags": ["Vegetarian", "Lactose-Free"]
+        }, {
+            "name": "Ssam (Lettuce Wrap)",
+            "nutritionalInfo": {
+                "calories": 20,
+                "fat": 1,
+                "carbohydrates": 2,
+                "protein": 1
+            },
+            "description": "Wrap your senses around our Ssam, offering a piece of Lettuce to wrap your BBQ meat for a burst of flavor in every bite.",
+            "Portion Size, Per Order": "1 piece",
+            "photo": "https://i2.wp.com/hipfoodiemom.com/wp-content/uploads/2022/02/Ssam-Korean-Lettuce-Wraps_c.jpg",
+            "tags": ["Low-Calorie", "Lactose-Free", "Gluten-Free"]
+        }],
+        "filters": ["Gluten-Free", "Vegetarian", "Plant-Based", "Spicy", "Low-Calorie", "Lactose-Free"]
+    }, {
+        "name": "BBQ Meat - Beef",
+        "foods": [{
+            "name": "Bulgogi (Marinated Beef)",
+            "nutritionalInfo": {
+                "calories": 260,
+                "fat": 15,
+                "carbohydrates": 5,
+                "protein": 26
+            },
+            "description": "Succulent slices of beef marinated in a blend of soy sauce, sugar, sesame oil, and garlic, then grilled to perfection.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://thestayathomechef.com/wp-content/uploads/2021/02/Korean-Beef-Bulgogi-4.jpg",
+            "tags": ["High-Protein", "Lactose-Free", "Marinated"]
+        }, {
+            "name": "Woo-samgyeob (Thin Slice Beef Brisket)",
+            "nutritionalInfo": {
+                "calories": 200,
+                "fat": 14,
+                "carbohydrates": 0,
+                "protein": 18
+            },
+            "description": "Delicate thin slices of beef brisket, offering a tender texture and rich flavor, ideal for grilling.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://meatboxbc.com/cdn/shop/products/Bisket_Roll_800x.jpg?v=1531847318",
+            "tags": ["Low-Fat", "High-Protein", "Lactose-Free"]
+        }, {
+            "name": "Beef Sausage",
+            "nutritionalInfo": {
+                "calories": 180,
+                "fat": 15,
+                "carbohydrates": 1,
+                "protein": 12
+            },
+            "description": "Juicy and flavorful beef sausage, a perfect addition to any BBQ feast.",
+            "Portion Size, Per Order": "1 piece",
+            "photo": "https://theredcellarblog.files.wordpress.com/2019/06/soondae_3.jpg",
+            "tags": ["Gluten-Free", "Lactose-Free"]
+        }],
+        "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free", "Marinated"]
+    }, {
+        "name": "BBQ Meat - Pork",
+        "foods": [{
+            "name": "Spicy Dwaeji Bulgogi (Marinated Spicy Pork)",
+            "nutritionalInfo": {
+                "calories": 270,
+                "fat": 19,
+                "carbohydrates": 6,
+                "protein": 21
+            },
+            "description": "Tender pork slices marinated in a fiery sauce, bringing a spicy kick to your BBQ.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://www.siftandsimmer.com/wp-content/uploads/2023/05/spicy-pork-bulgogi2.jpg",
+            "tags": ["Spicy", "High-Protein", "Lactose-Free", "Marinated"]
+        }, {
+            "name": "Dwaeji Galbi (Marinated Pork Ribs)",
+            "nutritionalInfo": {
+                "calories": 310,
+                "fat": 22,
+                "carbohydrates": 5,
+                "protein": 24
+            },
+            "description": "Succulent pork ribs soaked in a savory marinade, ready to sizzle on the grill.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://stellanspice.com/wp-content/uploads/2021/06/Screenshot-168.png",
+            "tags": ["High-Protein", "Lactose-Free"]
+        }, {
+            "name": "Samgyeopsal-Gui (Pork Belly)",
+            "nutritionalInfo": {
+                "calories": 290,
+                "fat": 23,
+                "carbohydrates": 0,
+                "protein": 19
+            },
+            "description": "A Korean BBQ staple, thick slices of pork belly with a rich and satisfying flavor.",
+            "Portion Size, Per Order": "1 piece",
+            "photo": "https://www.maangchi.com/wp-content/uploads/2009/09/grilled-porkbelly_grilled.jpg",
+            "tags": ["Lactose-Free"]
+        }, {
+            "name": "Thin Samgyeopsal-Gui (Thin Slice Pork Belly)",
+            "nutritionalInfo": {
+                "calories": 250,
+                "fat": 20,
+                "carbohydrates": 0,
+                "protein": 17
+            },
+            "description": "Thinly sliced pork belly that crisps up beautifully on the grill, offering a lighter but equally delicious option.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/tqjgmhcb/bfd09643-50f6-4665-8b92-fefeea891256.jpg",
+            "tags": ["Gluten-Free", "Low-Fat", "Lactose-Free"]
+        }],
+        "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free", "Marinated"]
+    }, {
+        "name": "BBQ Meat - Chicken",
+        "foods": [{
+            "name": "Spicy Dak Bulgogi (Marinated Spicy Chicken)",
+            "nutritionalInfo": {
+                "calories": 210,
+                "fat": 8,
+                "carbohydrates": 5,
+                "protein": 26
+            },
+            "description": "Juicy chicken marinated in a spicy and sweet sauce, delivering a kick of flavor with every bite.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://www.beyondkimchee.com/wp-content/uploads/2021/01/Korean-spicy-chicken-bbq-3-1.jpg",
+            "tags": ["Spicy", "High-Protein", "Lactose-Free"]
+        }, {
+            "name": "Ganjang Dak Bulgogi (Marinated Chicken with Soy Sauce)",
+            "nutritionalInfo": {
+                "calories": 190,
+                "fat": 6,
+                "carbohydrates": 4,
+                "protein": 29
+            },
+            "description": "Tender chicken pieces soaked in a rich soy sauce marinade, offering a savory and slightly sweet flavor.",
+            "Portion Size, Per Order": "100 grams",
+            "photo": "https://www.koreanbapsang.com/wp-content/uploads/2012/03/DSC_1832-1-e1562126872480.jpg",
+            "tags": ["High-Protein", "Lactose-Free", "Marinated"]
+        }],
+        "filters": ["Gluten-Free", "Spicy", "Low-Fat", "High-Protein", "Lactose-Free", "Marinated"]
+    }, {
+        "name": "Drinks",
+        "thumbnail": "https://thesmartlocal.kr/wp-content/uploads/2020/04/Korean-Alcohol-Concoctions16.jpg",
+        "foods": [{
+            "name": "Coca-Cola",
+            "description": "Classic Coca-Cola.",
+            "nutritionalInfo": {
+                "calories": 140,
+                "fat": 0,
+                "carbohydrates": 39,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "355ml can",
+            "tags": [],
+            "photo": "https://nosherz.com/cdn/shop/products/imageService.jpg?v=1643129037&width=1080"
+        }, {
+            "name": "Coca-Cola Zero",
+            "description": "Zero sugar Coca-Cola.",
+            "nutritionalInfo": {
+                "calories": 0,
+                "fat": 0,
+                "carbohydrates": 0,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "355ml can",
+            "tags": ["Sugar-Free", "Carbohydrates-Free"],
+            "photo": "https://www.coca-cola.com/content/dam/onexp/us/en/brands/coca-cola-zero/en_coca-cola_prod_zero%20sugar%20_750x750_v1.jpg"
+        }, {
+            "name": "Pepsi",
+            "description": "Classic Pepsi taste.",
+            "nutritionalInfo": {
+                "calories": 150,
+                "fat": 0,
+                "carbohydrates": 41,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "355ml can",
+            "tags": [],
+            "photo": "https://giftshop.sunnybrook.ca/cdn/shop/products/IMG_20210114_111605.png?v=1610642125"
+        }, {
+            "name": "Pepsi Zero Sugar",
+            "description": "Zero sugar Pepsi.",
+            "nutritionalInfo": {
+                "calories": 0,
+                "fat": 0,
+                "carbohydrates": 0,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "355ml can",
+            "tags": ["Sugar-Free", "Carbohydrates-Free"],
+            "photo": "https://assets.shop.loblaws.ca/products/20322361001/b1/en/open/20322361001_open_a01_@2.png"
+        }, {
+            "name": "Sprite",
+            "description": "Lemon-lime Sprite.",
+            "nutritionalInfo": {
+                "calories": 140,
+                "fat": 0,
+                "carbohydrates": 38,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "355ml can",
+            "tags": [],
+            "photo": "https://motherspizzahalifax.ca/wp-content/uploads/2020/08/Sprite.webp"
+        }, {
+            "name": "Sprite Zero",
+            "description": "Zero sugar Sprite.",
+            "nutritionalInfo": {
+                "calories": 0,
+                "fat": 0,
+                "carbohydrates": 0,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "355ml can",
+            "tags": ["Sugar-Free", "Carbohydrates-Free"],
+            "photo": "https://www.coca-cola.com/content/dam/onexp/au/en/brands/sprite/new/Sprite%20Zero%20Sugar.jpg"
+        }, {
+            "name": "7-Up",
+            "description": "Crisp and clean 7-Up.",
+            "nutritionalInfo": {
+                "calories": 140,
+                "fat": 0,
+                "carbohydrates": 39,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "355ml can",
+            "tags": [],
+            "photo": "https://i5.walmartimages.com/asr/9aed7ff8-1882-4b38-b937-cbc4cc3e16cd.077a7aa52b2bacda88cee393b0446946.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+        }, {
+            "name": "7-Up Zero Sugar",
+            "description": "Zero sugar 7-Up.",
+            "nutritionalInfo": {
+                "calories": 0,
+                "fat": 0,
+                "carbohydrates": 0,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "355ml can",
+            "tags": ["Sugar-Free"],
+            "photo": "https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12027981&itemId=57&recipeName=680"
+        }, {
+            "name": "Soju",
+            "description": "Korean distilled spirit.",
+            "nutritionalInfo": {
+                "calories": 70,
+                "fat": 0,
+                "carbohydrates": 1,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "1 shot (30ml)",
+            "tags": ["Alcoholic"],
+            "photo": "https://www.everythingwine.ca/media/catalog/product/8/7/873208_jinro_chamisul_classic_soju_750_ml.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700"
+        }, {
+            "name": "Sapporo Premium Beer",
+            "description": "Japanese lager beer.",
+            "nutritionalInfo": {
+                "calories": 140,
+                "fat": 0,
+                "carbohydrates": 10,
+                "protein": 1
+            },
+            "Portion Size, Per Order": "1 cup (12 oz)",
+            "tags": ["Alcoholic"],
+            "photo": "https://bishopscellar.com/wp-content/uploads/2021/11/sapporo.png"
+        }, {
+            "name": "Yakult",
+            "description": "Probiotic milk beverage.",
+            "nutritionalInfo": {
+                "calories": 50,
+                "fat": 0,
+                "carbohydrates": 12,
+                "protein": 1
+            },
+            "Portion Size, Per Order": "1 bottle (80ml)",
+            "tags": ["Non-Alcoholic"],
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Yakult_drink.jpg/640px-Yakult_drink.jpg"
+        }, {
+            "name": "Asahi Super Dry",
+            "description": "Japanese rice lager.",
+            "nutritionalInfo": {
+                "calories": 140,
+                "fat": 0,
+                "carbohydrates": 11,
+                "protein": 1
+            },
+            "Portion Size, Per Order": "1 cup (12 oz)",
+            "tags": ["Alcoholic"],
+            "photo": "https://www.harvestwines.ca/wp-content/uploads/2022/08/Asahi-Super-Dry-500ml.png"
+        }, {
+            "name": "Makgeolli",
+            "description": "Korean rice wine.",
+            "nutritionalInfo": {
+                "calories": 50,
+                "fat": 0,
+                "carbohydrates": 7,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "1 cup (6 oz)",
+            "tags": ["Alcoholic"],
+            "photo": "https://bishopscellar.com/wp-content/uploads/2020/03/Kooksoondang-Ssal-Makkoli.png"
+        }, {
+            "name": "Non-Alcoholic Beer",
+            "description": "Beer taste without alcohol.",
+            "nutritionalInfo": {
+                "calories": 50,
+                "fat": 0,
+                "carbohydrates": 5,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "1 cup (12 oz)",
+            "tags": ["Non-Alcoholic"],
+            "photo": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&imageId=1450137-894__1&recipeName=350"
+        }, {
+            "name": "Red Wine",
+            "description": "Classic red wine.",
+            "nutritionalInfo": {
+                "calories": 125,
+                "fat": 0,
+                "carbohydrates": 4,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "1 glass (5 oz)",
+            "tags": ["Alcoholic"],
+            "photo": "https://upload.wikimedia.org/wikipedia/en/c/c0/Red_Wine_Glass.jpg"
+        }, {
+            "name": "White Wine",
+            "description": "Crisp white wine.",
+            "nutritionalInfo": {
+                "calories": 120,
+                "fat": 0,
+                "carbohydrates": 4,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "1 glass (5 oz)",
+            "tags": ["Alcoholic"],
+            "photo": "https://cb.scene7.com/is/image/Crate/VineyardWhiteWine12ozSHF15/$web_pdp_main_carousel_low$/240201163333/vineyard-12-oz.-white-wine-glass.jpg"
+        }, {
+            "name": "Non-Alcoholic Red Wine",
+            "description": "Red wine, no alcohol.",
+            "nutritionalInfo": {
+                "calories": 30,
+                "fat": 0,
+                "carbohydrates": 7,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "1 glass (5 oz)",
+            "tags": ["Non-Alcoholic"],
+            "photo": "https://upsidedrinks.ca/cdn/shop/products/Ariel-Red-Cabernet-non-alcoholic.jpg?v=1651768689&width=900"
+        }, {
+            "name": "S.Pellegrino Mineral Water",
+            "description": "Sparkling mineral water that is carbonated.",
+            "nutritionalInfo": {
+                "calories": 35,
+                "fat": 0,
+                "carbohydrates": 8,
+                "protein": 0
+            },
+            "Portion Size, Per Order": "1 glass (5 oz)",
+            "tags": ["Non-Alcoholic", "Sparkling"],
+            "photo": "https://hips.hearstapps.com/delish/assets/15/49/1449356763-spellegrino.jpg"
+        }],
+        "filters": ["Sugar-Free", "Low-Calorie", "Alcoholic", "Non-Alcoholic", "Sparkling", "Carbohydrates-Free"]
+    }, {
+        "name": "Dessert Menu",
+        "foods": [{
+            "name": "Chocolate Ice Cream",
+            "description": "Rich chocolate flavor in a creamy ice cream.",
+            "nutritionalInfo": {
+                "calories": 200,
+                "fat": 11,
+                "carbohydrates": 25,
+                "protein": 3
+            },
+            "Portion Size, Per Order": "2 scoops",
+            "photo": "https://www.onceuponachef.com/images/2022/08/homemade-chocolate-ice-cream-760x971.jpg",
+            "tags": ["Gluten-Free"]
+        }, {
+            "name": "Vanilla Ice Cream",
+            "description": "Smooth and creamy with pure vanilla taste.",
+            "nutritionalInfo": {
+                "calories": 190,
+                "fat": 10,
+                "carbohydrates": 22,
+                "protein": 3
+            },
+            "Portion Size, Per Order": "2 scoops",
+            "photo": "https://static.toiimg.com/thumb/63971154.cms?width=573&height=430",
+            "tags": ["Gluten-Free"]
+        }, {
+            "name": "Strawberry Ice Cream",
+            "description": "Creamy ice cream with real strawberry pieces.",
+            "nutritionalInfo": {
+                "calories": 180,
+                "fat": 9,
+                "carbohydrates": 23,
+                "protein": 3
+            },
+            "Portion Size, Per Order": "2 scoops",
+            "photo": "https://www.allrecipes.com/thmb/pH8hoFfytcOT9XVK1DSmxv3L0OU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/140877-easy-eggless-strawberry-ice-cream-ddmfs-3x4-1-092e4d11b59049c8b3843014ea3c57f2.jpg",
+            "tags": ["Gluten-Free", "Fruit-Infused"]
+        }, {
+            "name": "Green-Tea Ice Cream",
+            "description": "Unique green-tea flavor in a refreshing ice cream.",
+            "nutritionalInfo": {
+                "calories": 150,
+                "fat": 8,
+                "carbohydrates": 22,
+                "protein": 4
+            },
+            "Portion Size, Per Order": "2 scoops",
+            "photo": "https://www.thespruceeats.com/thmb/uXJIpnsD8coT0fLfdiO0lqsDe7I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/green-tea-matcha-ice-cream-2031118-hero-01-14e95fdc74154590b112b62048ba8f67.jpg",
+            "tags": ["Gluten-Free", "Low-Calorie"]
+        }, {
+            "name": "Mango Ice Cream",
+            "description": "Tropical mango flavor in a smooth ice cream.",
+            "nutritionalInfo": {
+                "calories": 175,
+                "fat": 7,
+                "carbohydrates": 28,
+                "protein": 3
+            },
+            "Portion Size, Per Order": "2 scoops",
+            "photo": "https://hot-thai-kitchen.com/wp-content/uploads/2016/06/mango-ice-cream-blog.jpg",
+            "tags": ["Gluten-Free", "Fruit-Infused"]
+        }, {
+            "name": "Classic Cheesecake",
+            "description": "Creamy cheesecake with a berry topping.",
+            "nutritionalInfo": {
+                "calories": 310,
+                "fat": 18,
+                "carbohydrates": 32,
+                "protein": 6
+            },
+            "Portion Size, Per Order": "1 slice",
+            "photo": "https://www.allrecipes.com/thmb/IsIVofRRaO-P0Iv_3sUaSNkwWE8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Easy-Classic-Cheesecake2-2814f4f9999943688d54f103a13919b8.jpg",
+            "tags": ["Nut-Free"]
+        }, {
+            "name": "Chocolate Lava Cake",
+            "description": "Warm cake with a molten chocolate center.",
+            "nutritionalInfo": {
+                "calories": 290,
+                "fat": 16,
+                "carbohydrates": 35,
+                "protein": 4
+            },
+            "Portion Size, Per Order": "1 cake",
+            "photo": "https://www.billyparisi.com/wp-content/uploads/2022/02/lava-cake-1.jpg",
+            "tags": ["Nut-Free"]
+        }],
+        "filters": ["Gluten-Free", "Vegan", "Dairy-Free", "Nut-Free", "Low-Calorie", "Fruit-Infused"]
+    }, {
+        "name": "Deluxe Delights",
+        "foods": [{
+            "name": "La Galbi (Beef Short Ribs)",
+            "description": "Succulent beef short ribs, marinated and grilled.",
+            "nutritionalInfo": {
+                "calories": 250,
+                "fat": 15,
+                "carbohydrates": 5,
+                "protein": 22
+            },
+            "Portion Size, Per Order": "1 piece",
+            "photo": "https://www.koreanbapsang.com/wp-content/uploads/2013/08/DSC8866-5-e1707539703959.jpg",
+            "tags": ["Grilled", "Marinated"]
+        }, {
+            "name": "Pork Dumpling",
+            "description": "Crispy deep-fried pork dumpling.",
+            "nutritionalInfo": {
+                "calories": 100,
+                "fat": 5,
+                "carbohydrates": 10,
+                "protein": 6
+            },
+            "Portion Size, Per Order": "1 piece",
+            "photo": "https://twoplaidaprons.com/wp-content/uploads/2020/05/Chinese-pork-dumplings-picking-up-a-dumpling-with-chopsticks-500x375.jpg",
+            "tags": ["Fried"]
+        }, {
+            "name": "Corn Cheese",
+            "description": "Creamy, cheesy corn served Korean style.",
+            "nutritionalInfo": {
+                "calories": 200,
+                "fat": 12,
+                "carbohydrates": 15,
+                "protein": 5
+            },
+            "Portion Size, Per Order": "1 small plate",
+            "photo": "https://jasmineandtea.com/wp-content/uploads/2021/04/korean-corn-cheese-recipe.jpg",
+            "tags": ["Cheesy"]
+        }, {
+            "name": "Cheese Sauce",
+            "description": "Rich and velvety cheese sauce.",
+            "nutritionalInfo": {
+                "calories": 150,
+                "fat": 10,
+                "carbohydrates": 5,
+                "protein": 8
+            },
+            "Portion Size, Per Order": "1 small bowl",
+            "photo": "https://sallysbakingaddiction.com/wp-content/uploads/2014/03/homemade-spicy-nacho-cheese-sauce-2.jpg",
+            "tags": ["Cheesy"]
+        }, {
+            "name": "Naengmyeon (Cold Noodles with Beef Broth)",
+            "description": "Cold buckwheat noodles, served with beef broth and half boiled egg.",
+            "nutritionalInfo": {
+                "calories": 180,
+                "fat": 1,
+                "carbohydrates": 40,
+                "protein": 8
+            },
+            "Portion Size, Per Order": "1 small bowl",
+            "photo": "https://static01.nyt.com/images/2023/11/21/multimedia/26EATrex-naengmyeon-cfbl/26EATrex-naengmyeon-cfbl-superJumbo.jpg",
+            "tags": ["Cold", "Noodles"]
+        }, {
+            "name": "Gamjatang (Pork Stew)",
+            "description": "Hearty pork back bone stew with potatoes.",
+            "nutritionalInfo": {
+                "calories": 300,
+                "fat": 20,
+                "carbohydrates": 15,
+                "protein": 20
+            },
+            "Portion Size, Per Order": "1 small bowl",
+            "photo": "https://thesubversivetable.com/wp-content/uploads/2022/03/Gamjatang-2-scaled.jpg",
+            "tags": ["Stew", "Pork"]
+        }, {
+            "name": "Kimchi Ramen Stew",
+            "description": "Spicy and tangy Kimchi stew with pork and ramen noodles.",
+            "nutritionalInfo": {
+                "calories": 250,
+                "fat": 15,
+                "carbohydrates": 10,
+                "protein": 18
+            },
+            "Portion Size, Per Order": "1 small bowl",
+            "photo": "https://lindseyeatsla.com/wp-content/uploads/2019/09/Lindseyeatsla_Kimchi_Stew-8.jpg",
+            "tags": ["Stew", "Spicy"]
+        }, {
+            "name": "Doenjang Jjigae (Soybean Stew with Brisket)",
+            "description": "Soybean paste stew with tender beef brisket.",
+            "nutritionalInfo": {
+                "calories": 220,
+                "fat": 12,
+                "carbohydrates": 8,
+                "protein": 20
+            },
+            "Portion Size, Per Order": "1 small bowl",
+            "photo": "https://twoplaidaprons.com/wp-content/uploads/2022/08/doenjang-jjigae-boiling-thumbnail.jpg",
+            "tags": ["Stew"]
+        }, {
+            "name": "Dolsot Bibimbap",
+            "description": "Mixed rice with vegetables in a sizzling stone pot.",
+            "nutritionalInfo": {
+                "calories": 500,
+                "fat": 15,
+                "carbohydrates": 80,
+                "protein": 12
+            },
+            "Portion Size, Per Order": "1 small bowl",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/4/44/Dolsot-bibimbap.jpg",
+            "tags": ["Rice", "Vegetables"]
+        }],
+        "filters": ["Fried", "Grilled", "Cheesy", "Cold", "Stew", "Marinated"]
+    }]
 }
