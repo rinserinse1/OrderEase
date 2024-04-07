@@ -12,7 +12,7 @@ export default function Error() {
         justifyContent: 'center',
         alignItems: 'center',
         minHeight: '80vh',
-        overflow: 'hidden', // Hide overflow to prevent scrollbars
+        overflow: 'hidden', 
       }}
     >
       <Container

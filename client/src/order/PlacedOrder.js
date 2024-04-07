@@ -7,15 +7,12 @@ import {
 } from '@mui/material';
 import { Link, useParams } from 'react-router-dom';
 
-
-
 const PlacedOrder = () => {
 
   const { id } = useParams();
 
   return (
     <Container maxWidth="md">
-
 
             <br></br><br></br><br></br>
             <Box
@@ -48,12 +45,11 @@ const PlacedOrder = () => {
               fontSize: '5vw'
             }}
             >
-        
+
               Order More Items
             </Button>
 
             <br></br><br></br><br></br>
-
 
             <Button 
             component={Link} 
@@ -71,7 +67,7 @@ const PlacedOrder = () => {
               fontSize: '5vw'
             }}
             >
-              
+
               Pay for Items
             </Button>
 
@@ -80,5 +76,3 @@ const PlacedOrder = () => {
 };
 
 export default PlacedOrder;
-
-

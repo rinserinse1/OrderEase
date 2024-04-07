@@ -1,10 +1,6 @@
-
-
-
 import MenuCategories from './MenuRelated/MenuCategories';
 import React, { useState, useEffect, } from 'react';
 import {BrowserRouter as Router, Route, Navigate,  Routes, useLocation, useRoutes} from "react-router-dom";
-
 import Error from "./notFound/NotFound"
 import DashboardLayout from './layouts';
 import MenuItems from './MenuRelated/MenuItems';
@@ -28,10 +24,6 @@ const App  = () =>  {
   
     return <MenuCategories {...children} {...props} hey = {window.location.pathname} />;
   }
-
-
-
-
 
   const routes = useRoutes([
     {

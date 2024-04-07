@@ -5,14 +5,12 @@ import { useParams } from 'react-router-dom'
 import RegularFoods from "../FoodInfo/RegularFoods.json"
 import DeluxeFoods from "../FoodInfo/DeluxeFoods.json"
 
-
 const NutritionDisplay = () => {
 
   const { id, category, food } = useParams();
 
   const [itemInfo, setItemInfo] = useState([]);
   const [nutritionalInfo, setNutritionalInfo] = useState([]);
-
 
     useEffect(() => {
         if (id === "regular") {
@@ -25,10 +23,6 @@ const NutritionDisplay = () => {
 
         }
       }, [DeluxeFoods]);
-
-
-     // console.log(itemInfo)                    //THESE ARE BOTH UR DATA *****
-     // console.log(nutritionalInfo.calories)
 
   return (
     <>
@@ -96,10 +90,8 @@ const NutritionDisplay = () => {
         </Container>
         <br></br><br></br><br></br>
 
-
     </>
     );
   };
-    
+
 export default NutritionDisplay;
-    

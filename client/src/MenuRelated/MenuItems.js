@@ -24,11 +24,9 @@ const FilterChip = styled(Chip, options
     backgroundColor: bgcolor
 }}));
 
-
 const MenuItems = () => {
 
   const { id, category } = useParams();
-
 
     const [foods, setFoods] = useState([]);
     const [categoryInfo, setCategoryInfo] = useState([]);
@@ -42,7 +40,7 @@ const MenuItems = () => {
       } else {
       }
     }, []);
-    console.log(foods)  //THIS IS UR DATA ****
+    console.log(foods)  
 
     const [selectedChips, setSelectedChips] = useState([]);
 
@@ -59,8 +57,7 @@ const MenuItems = () => {
     const handleSearchInputChange = (event) => {
       setSearchQuery(event.target.value.toLowerCase());
     };
-  
-    // Filter menu items based on search query and filters
+
     const filteredFoods = foods.filter(food =>
       food.name.toLowerCase().includes(searchQuery) && 
       selectedChips.every(filter => food.tags.includes(filter))
@@ -73,7 +70,7 @@ const MenuItems = () => {
 
   return (
     <>
-          
+
       <Container maxWidth="md" sx={{ textAlign: 'center', marginTop: '20px' }}>
       <Typography variant="h6" style={{ color: 'black', fontFamily: 'Roboto Mono', fontSize:"30px" }}>
         {category}
@@ -134,7 +131,7 @@ const MenuItems = () => {
                       display: 'block',
                       backgroundColor: 'green',
                       color: 'white',
-                      textTransform: 'none', // Prevent text from being all caps
+                      textTransform: 'none', 
                       fontWeight: 'bold',
                       position: 'relative',
                       boxShadow: 3,
@@ -145,14 +142,12 @@ const MenuItems = () => {
 
                 </TableCell>
 
-
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
 
-      
       <Button 
         component={Link} 
         to={`/menucategories/${id}`}
@@ -169,10 +164,9 @@ const MenuItems = () => {
       </Button>
         </Container>
         <br></br><br></br><br></br>
-        
+
     </>
     );
   };
-    
+
 export default MenuItems;
-    

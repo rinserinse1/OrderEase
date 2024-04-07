@@ -10,18 +10,17 @@ import AddIcon from '@mui/icons-material/Add';
 import { styled } from '@mui/system';
 import CloseIcon from '@mui/icons-material/Close';
 
-
 const CustomizeModal = ({ open, onClose, cancel, setCustomization, customization }) => {
 
   return (
     <>
-    
+
       <Modal
         open={open}
         onClose={onClose}
         aria-labelledby="customize-modal-title"
         aria-describedby="customize-modal-description"
-        
+
       >
         <Box
           sx={{
@@ -204,10 +203,8 @@ const ItemDisplay = () => {
 
   const { id, category, food } = useParams();
 
-
   const [itemInfo, setItemInfo] = useState([]);
 
-  // Variable that tracks the quantity of the item
   const [quantity, setQuantity] = useState(1);
 
   const [customizeModalOpen, setCustomizeModalOpen] = useState(false);
@@ -221,14 +218,12 @@ const ItemDisplay = () => {
     setCustomizeModalOpen(false);
     setTempCustomization(customization);
   };
-  
+
   const cancelCustomizeModal = () => {
     setCustomization("");
     setTempCustomization("");
     setCustomizeModalOpen(false);
   };
-  // Variable that tracks the customization of the item entered in (string form)
-
 
     useEffect(() => {
         if (id === "regular") {
@@ -239,33 +234,27 @@ const ItemDisplay = () => {
         }
       }, []);
 
-
-      //console.log(itemInfo)   //THIS IS UR DATA ****
-      //console.log(customization)
-
-
-
       const addToOrder = () => {
         let order = [];
-        
+
         const storedOrder = localStorage.getItem('foodList');
         if (storedOrder) {
           order = JSON.parse(storedOrder);
         }
-      
+
         order.push({
           food: itemInfo.name,
           quantity: quantity,
           note: customization,
           portion: itemInfo['Portion Size, Per Order']
         });
-      
+
         localStorage.setItem('foodList', JSON.stringify(order));
-      
+
         setQuantity(1); 
         setCustomization(""); 
         setTempCustomization(""); 
-      
+
         alert('Added to Order');
       };
 
@@ -285,8 +274,6 @@ const ItemDisplay = () => {
           <b>Description:</b> <br></br>{itemInfo.description}
           <br></br><br></br><br></br>
         </Typography>
-
-
 
         <Button 
         component={Link} 
@@ -347,7 +334,7 @@ const ItemDisplay = () => {
         >
           Go Back
         </Button>
-        
+
         <br></br><br></br>
 
         <Grid container spacing={2}>
@@ -369,7 +356,7 @@ const ItemDisplay = () => {
             }}
             onClick={addToOrder}
             >
-              
+
               Add to Order
             </Button>
           </Grid>
@@ -381,6 +368,5 @@ const ItemDisplay = () => {
     </div>
     );
   };
-    
+
 export default ItemDisplay;
-    

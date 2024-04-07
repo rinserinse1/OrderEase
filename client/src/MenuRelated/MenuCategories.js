@@ -5,13 +5,10 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import RegularFoods from "../FoodInfo/RegularFoods.json";
 import DeluxeFoods from "../FoodInfo/DeluxeFoods.json";
 
-
-
 const MenuCategories = () => {
   const { id } = useParams();
 
   const [categories, setCategories] = useState([]);
-
 
   useEffect(() => {
     if (id === "regular") {
@@ -24,25 +21,16 @@ const MenuCategories = () => {
   }, [id]);
   console.log(categories)
 
-
-
-
     const [searchQuery, setSearchQuery] = useState('');
 
     const handleSearchInputChange = (event) => {
       setSearchQuery(event.target.value);
-      // Here you can perform any additional actions you need, like filtering data based on the search query.
-
 
     }
 
-  // Filter categories based on search query
   const filteredCategories = categories.filter(category =>
     category.name.toLowerCase().includes(searchQuery)
   );
-
-
-
 
   return (
     <>

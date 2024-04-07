@@ -79,6 +79,8 @@ export default function Footer() {
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
+  const hideFooterOnPaths = ['/paying'];
+  const shouldHideFooter = hideFooterOnPaths.some(path => location.pathname.includes(path));
   const [assistanceModalOpen, setAssistanceModalOpen] = useState(false);
 
   const isAssistanceActive = () => {
@@ -132,6 +134,10 @@ export default function Footer() {
     const items = JSON.parse(localStorage.getItem("foodList") || "[]");
     return items.length ? `View Order (${items.length})` : "View Order";
   };
+
+  if(shouldHideFooter){
+    return null;
+  }
 
   return (
     <>
