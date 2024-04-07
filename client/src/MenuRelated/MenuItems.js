@@ -91,10 +91,8 @@ const MenuItems = () => {
         value={searchQuery}
         onChange={handleSearchInputChange}
         InputProps={{
-          startAdornment: (
-            <SearchOutlinedIcon />
-          ),
-          sx: { backgroundColor: 'white' }
+        startAdornment: <SearchOutlinedIcon />,
+        sx: { backgroundColor: 'white', fontFamily: 'Roboto Mono' }
         }}
       />      
       <br/><br/><br/>
@@ -125,7 +123,7 @@ const MenuItems = () => {
                 <TableCell component="th" scope="row" style={{ paddingRight: '-10px', width: '50%', borderBottom: 1 }} >
                   <img src={item.photo} alt={item.name} style={{ objectFit: 'cover', width: '100%', height: '30vw', borderRadius: '25px' }} />
                 </TableCell>
-                <TableCell sx={{fontWeight: '550', borderBottom: 1}}>
+                <TableCell sx={{fontWeight: '550', borderBottom: 1, fontFamily: 'Roboto Mono'}}>
                 {item.name}
                 <br></br><br></br>
                   {'(' + item['Portion Size, Per Order'] + ')'}
@@ -142,10 +140,11 @@ const MenuItems = () => {
                       textTransform: 'none', // Prevent text from being all caps
                       fontWeight: 'bold',
                       position: 'relative',
-                      boxShadow: 3 
+                      boxShadow: 3,
+                      fontFamily: 'Roboto Mono'
                     }}
                   >
-                         <Typography style = {{fontSize:"15px", textAlign:"center"}} >VIEW ITEM</Typography>
+                         <Typography style = {{fontSize:"15px", textAlign:"center", fontFamily: 'Roboto Mono'}} >VIEW ITEM</Typography>
                   </Button>
 
                 </TableCell>
@@ -165,7 +164,7 @@ const MenuItems = () => {
         color="primary"
         style={{
           display: 'block',
-          
+          fontFamily: 'Roboto Mono',
           backgroundColor: 'green',
           color: 'white',
         }}

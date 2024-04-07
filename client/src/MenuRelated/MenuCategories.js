@@ -63,7 +63,7 @@ const MenuCategories = () => {
           onChange={handleSearchInputChange}
           InputProps={{
             startAdornment: <SearchOutlinedIcon />,
-            sx: { backgroundColor: 'white' }
+            sx: { backgroundColor: 'white', fontFamily: 'Roboto Mono' }
           }}
         />
         <br/><br/>
@@ -79,7 +79,7 @@ const MenuCategories = () => {
           justifyContent: 'space-between',
           height: 'auto', 
           boxShadow: 3,
-          borderRadius: 2,
+          borderRadius: 3,
         }}>
           <CardMedia
             component="img"
@@ -102,11 +102,16 @@ const MenuCategories = () => {
             <Typography variant="subtitle1" component="div" sx={{
               fontWeight: 'bold',
               textAlign: 'center',
+              fontFamily: 'Roboto Mono',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
             }}>
               {category.name}
             </Typography>
             <Typography variant="subtitle1" color="text.secondary" sx={{
               fontWeight: 'bold',
+              fontFamily: 'Roboto Mono'
             }}>
               ({category.foods.length})
             </Typography>

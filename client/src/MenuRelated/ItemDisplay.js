@@ -35,7 +35,8 @@ const CustomizeModal = ({ open, onClose, cancel, setCustomization, customization
             p: 4,
             width: 'calc(100% - 40px)',
             maxWidth: 300,
-            borderRadius: '10px'
+            borderRadius: '10px',
+            fontFamily: 'Roboto Mono'
           }}
         >
           <IconButton
@@ -48,18 +49,18 @@ const CustomizeModal = ({ open, onClose, cancel, setCustomization, customization
           >
             <CloseIcon />
           </IconButton>
-          <Typography id="customize-modal-title" variant="h6" component="h2" fontWeight={'bold'}>
+          <Typography id="customize-modal-title" variant="h6" component="h2" fontWeight={'bold'} fontFamily={'Roboto Mono'}>
             Enter in additional specifications
           </Typography>
 
           <br/>
-          <TextField variant="outlined" label="Enter comments here..." value={customization} multiline={true} onChange={(event) => {setCustomization(event.target.value)}} sx={{width: '100%'}}/>
+          <TextField variant="outlined" label="Enter comments here..." value={customization} multiline={true} onChange={(event) => {setCustomization(event.target.value)}} sx={{   width: '100%',   fontFamily: 'Roboto Mono'}} />
           <br/><br/>
 
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
-            <Button variant="contained" color="error" onClick={cancel} sx={{width: '30vw', border: 1, boxShadow: 3}}>Discard</Button>
+            <Button variant="contained" color="error" onClick={cancel} sx={{width: '30vw', border: 1, boxShadow: 3, fontFamily: 'Roboto Mono', fontWeight: 'Bold'}}>Discard</Button>
             <Button       
-            variant="contained" color="success" onClick={onClose} sx={{width: '30vw', border: 1, boxShadow: 3}}>Save</Button>
+            variant="contained" color="success" onClick={onClose} sx={{width: '30vw', border: 1, boxShadow: 3, fontFamily: 'Roboto Mono', fontWeight: 'Bold'}}>Save</Button>
           </Box>
         </Box>
       </Modal>

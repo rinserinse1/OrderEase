@@ -103,7 +103,8 @@ const NutritionDisplay = () => {
           backgroundColor: 'green',
           color: 'white',
           boxShadow: 3,
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          fontFamily: 'Roboto Mono'
         }}
       >
         Go Back
