@@ -326,9 +326,11 @@ const ItemDisplay = () => {
         </Button>
         <br></br>
 
-        <Typography sx={{fontFamily: 'Roboto Mono'}}>
-          {tempCustomization == "" ? "" : `Custom comment: ${tempCustomization}` }
+        {tempCustomization !== "" && (
+        <Typography sx={{ fontFamily: 'Roboto Mono' }}>
+        <span style={{ fontWeight: 'bold' }}>Custom comment:</span> {tempCustomization}
         </Typography>
+        )}
 
         <br></br>
         <Button 
