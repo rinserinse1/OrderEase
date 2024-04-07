@@ -322,6 +322,10 @@ const ItemDisplay = () => {
           Customize your order
         </Button>
         <br></br>
+        <Typography>
+          {customization == "" ? "" : `Custom comment: ${customization}` }
+        </Typography>
+        <br></br>
         <Button 
           component={Link} 
           to={`/menuitems/${id}/${category}`}
