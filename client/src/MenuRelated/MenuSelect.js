@@ -28,7 +28,6 @@ const MenuOption = ({ name, image, link, price }) => (
           maxWidth: "100%",
           boxShadow: 3,
           border: 1,
-          fontFamily: "Roboto Mono",
         }}
       >
         <ButtonBase component={Link} to={link} sx={{ width: "100%" }}>
@@ -49,14 +48,12 @@ const MenuOption = ({ name, image, link, price }) => (
               <Typography
                 variant="h6"
                 fontWeight="bold"
-                sx={{ fontFamily: "Roboto Mono" }}
               >
                 {name}
               </Typography>
               <Typography
                 variant="subtitle1"
                 fontWeight="bold"
-                sx={{ fontFamily: "Roboto Mono" }}
               >
                 {price}
               </Typography>
@@ -72,7 +69,7 @@ const MenuSelectConfirm = () => {
   localStorage.clear();
   return (
     <>
-      <Box sx={{ my: 4, fontFamily: "Roboto Mono" }}>
+      <Box sx={{ my: 4, }}>
         <Container maxWidth="sm">
           <Box
             height="100%"
@@ -94,7 +91,6 @@ const MenuSelectConfirm = () => {
               align="center"
               gutterBottom
               fontWeight="Bold"
-              sx={{ fontFamily: "Roboto Mono" }}
             >
               Thank you for choosing OrderEase to enhance your dining
               experience!
@@ -105,7 +101,6 @@ const MenuSelectConfirm = () => {
               mt={1}
               gutterBottom
               fontWeight="Light"
-              sx={{ fontFamily: "Roboto Mono" }}
             >
               Welcome to All You Can Eat KBBQ, please pick one of our two all
               you can eat menus below.

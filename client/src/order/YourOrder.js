@@ -169,7 +169,6 @@ const YourOrder = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          fontFamily: "Roboto Mono",
           fontWeight: "bold",
           mt: 2,
           mb: 2
@@ -183,13 +182,13 @@ const YourOrder = () => {
     <TableHead>
       <TableRow>
         <TableCell></TableCell> 
-        <TableCell sx={{ fontFamily: 'Roboto Mono', fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
+        <TableCell sx={{  fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
           Food Item
         </TableCell>
-        <TableCell sx={{ fontFamily: 'Roboto Mono', fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
+        <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
           Quantity
         </TableCell>
-        <TableCell sx={{ fontFamily: 'Roboto Mono', fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
+        <TableCell sx={{  fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
           Size (per portion)
         </TableCell>
       </TableRow>
@@ -203,7 +202,6 @@ const YourOrder = () => {
                   </IconButton>
                 </TableCell>
                 <TableCell sx={{ 
-                fontFamily: 'Roboto Mono', 
                 textAlign: 'center', 
                 fontSize: "0.9rem", 
                 padding: '6px 10px',
@@ -223,7 +221,7 @@ const YourOrder = () => {
                     {item.note}
                   </Typography>
                 </TableCell>
-                <TableCell sx={{ fontFamily: 'Roboto Mono', textAlign: "center", fontSize: "0.9rem" }}>
+                <TableCell sx={{  textAlign: "center", fontSize: "0.9rem" }}>
             <Stack
               spacing={1}
               direction="row"
@@ -231,13 +229,13 @@ const YourOrder = () => {
               alignItems="center"
             >
               <StyledButton onClick={() => reduceQuantity(index)}>-</StyledButton>
-              <Typography variant="body1" sx={{ minWidth: '20px', textAlign: 'center', fontFamily: 'Roboto Mono' }}>
+              <Typography variant="body1" sx={{ minWidth: '20px', textAlign: 'center',  }}>
                 {item.quantity}
               </Typography>
               <StyledButton onClick={() => increaseQuantity(index)}>+</StyledButton>
             </Stack>
                 </TableCell>
-                <TableCell sx={{ fontFamily: 'Roboto Mono', textAlign: "center", p: 1 }}>
+                <TableCell sx={{  textAlign: "center", p: 1 }}>
                   {item.portion}
                 </TableCell>
               </TableRow>
@@ -255,7 +253,6 @@ const YourOrder = () => {
             backgroundColor: "grey",
             color: "white",
             textAlign: "center",
-            fontFamily: "Roboto Mono",
             fontWeight: "bold",
             width: "100%",
           }}
@@ -272,7 +269,6 @@ const YourOrder = () => {
       backgroundColor: "green",
       color: "white",
       textAlign: "center",
-      fontFamily: "Roboto Mono",
       fontWeight: "bold",
     }}
     onClick={handlePlaceOrder}
@@ -291,7 +287,6 @@ const YourOrder = () => {
       backgroundColor: "green",
       color: "white",
       textAlign: "center",
-      fontFamily: "Roboto Mono",
       fontWeight: "bold",
     }}
   >
@@ -308,7 +303,6 @@ const YourOrder = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        fontFamily: "Roboto Mono",
         fontWeight: "bold",
         mt: 2,
         mb: 2
@@ -321,13 +315,13 @@ const YourOrder = () => {
   <Table aria-label="order history table">
     <TableHead>
       <TableRow>
-        <TableCell sx={{ fontFamily: 'Roboto Mono', fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
+        <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
           Food Item
         </TableCell>
-        <TableCell sx={{ fontFamily: 'Roboto Mono', fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
+        <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
           Quantity
         </TableCell>
-        <TableCell sx={{ fontFamily: 'Roboto Mono', fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
+        <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
           Size (per portion)
         </TableCell>
       </TableRow>
@@ -336,7 +330,6 @@ const YourOrder = () => {
       {orderHistory.map((item, index) => (
         <TableRow key={index}>
         <TableCell sx={{
-          fontFamily: 'Roboto Mono',
           textAlign: 'center',
           fontSize: "0.9rem",
           whiteSpace: 'normal',
@@ -356,14 +349,12 @@ const YourOrder = () => {
           </Typography>
         </TableCell>
         <TableCell sx={{
-          fontFamily: 'Roboto Mono',
           textAlign: "center",
           fontSize: "0.9rem"
         }}>
           {item.quantity}
         </TableCell>
         <TableCell sx={{
-          fontFamily: 'Roboto Mono',
           textAlign: "center",
           fontSize: "0.9rem"
         }}>
@@ -391,7 +382,6 @@ const YourOrder = () => {
       p: 4,
       width: isSmallScreen ? "auto" : "calc(100% - 40px)",
       maxWidth: 300,
-      fontFamily: 'Roboto Mono', 
     }}
   >
     <IconButton
@@ -404,7 +394,7 @@ const YourOrder = () => {
       id="delete-confirmation-title"
       variant="h6"
       component="h2"
-      sx={{ fontWeight: 'bold', fontFamily: 'Roboto Mono' }} 
+      sx={{ fontWeight: 'bold',  }} 
     >
       {`Do you want to remove the item "${
         selectedItemIndex !== null && foodList[selectedItemIndex]
@@ -417,7 +407,7 @@ const YourOrder = () => {
         variant="contained"
         color="error"
         onClick={() => handleModalClose(false)}
-        sx={{ mr: 1, fontWeight: 'bold', fontFamily: 'Roboto Mono' }} 
+        sx={{ mr: 1, fontWeight: 'bold', }} 
       >
         No, Cancel
       </Button>
@@ -425,7 +415,7 @@ const YourOrder = () => {
         variant="contained"
         color="success"
         onClick={() => handleModalClose(true)}
-        sx={{ mr: 1, fontWeight: 'bold', fontFamily: 'Roboto Mono' }}
+        sx={{ mr: 1, fontWeight: 'bold',  }}
       >
         Yes, Confirm
       </Button>
