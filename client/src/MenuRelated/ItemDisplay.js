@@ -247,29 +247,29 @@ const ItemDisplay = () => {
 
 
 
-      const addToOrder = (note) => {
+      const addToOrder = () => {
         let order = [];
-      
+        
         const storedOrder = localStorage.getItem('foodList');
-      
         if (storedOrder) {
           order = JSON.parse(storedOrder);
         }
       
-
-        //order = { food: food, quantity: quantity, note: customization };
-        order.push({ food: food, quantity: quantity, note: customization, portion: itemInfo['Portion Size, Per Order'] });
-        
+        order.push({
+          food: itemInfo.name,
+          quantity: quantity,
+          note: customization,
+          portion: itemInfo['Portion Size, Per Order']
+        });
       
-        // Update the order in local storage
         localStorage.setItem('foodList', JSON.stringify(order));
+      
+        setQuantity(1); 
+        setCustomization(""); 
+        setTempCustomization(""); 
       
         alert('Added to Order');
       };
-
-
-
-
 
   return (
     <div style={{margin: '-64px 0 -25px 0'}}>
@@ -354,7 +354,7 @@ const ItemDisplay = () => {
 
         <Grid container spacing={2}>
           <Grid item xs={6} md={8}>
-            {<NumberInput min={1} max={99} defaultValue={1} onChange={(event, val) => {setQuantity(val)}} />}
+            {<NumberInput min={1} max={99} value={quantity} onChange={(event, val) => {setQuantity(val)}} />}
           </Grid>
           <Grid item xs={6} md={8}>
             <Button 
