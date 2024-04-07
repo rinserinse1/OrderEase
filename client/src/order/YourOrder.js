@@ -172,99 +172,69 @@ const YourOrder = () => {
           fontFamily: "Roboto Mono",
           fontWeight: "bold",
           mt: 2,
-          mb: 2,
+          mb: 2
         }}
       >
         Your Order
       </Typography>
-
-      <TableContainer component={Paper} sx={{ border: 1, mb: 2 }}>
-        <Table aria-label="food items table">
-          <TableHead>
-            <TableRow>
-              <TableCell></TableCell>
-              <TableCell
-                sx={{
-                  fontWeight: "bold",
-                  fontSize: "1.1rem",
-                  textAlign: "center",
-                }}
-              >
-                Food Item
-              </TableCell>
-              <TableCell
-                sx={{
-                  fontWeight: "bold",
-                  fontSize: "1.1rem",
-                  textAlign: "center",
-                }}
-              >
-                Quantity
-              </TableCell>
-              <TableCell
-                sx={{
-                  fontWeight: "bold",
-                  fontSize: "1.1rem",
-                  textAlign: "center",
-                }}
-              >
-                Size (per portion)
-              </TableCell>
-            </TableRow>
-          </TableHead>
+  
+      <TableContainer component={Paper} sx={{ border: 1, mb: 2}}>
+  <Table aria-label="food items table">
+    <TableHead>
+      <TableRow>
+        <TableCell></TableCell> 
+        <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
+          Food Item
+        </TableCell>
+        <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
+          Quantity
+        </TableCell>
+        <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
+          Size (per portion)
+        </TableCell>
+      </TableRow>
+    </TableHead>
           <TableBody>
             {foodList.map((item, index) => (
               <TableRow key={index}>
                 <TableCell sx={{ textAlign: "center", p: 1 }}>
-                  <IconButton
-                    onClick={() => handleModalOpen(index)}
-                    sx={{ color: "black" }}
-                  >
+                  <IconButton onClick={() => handleModalOpen(index)} sx={{ color: "black" }}>
                     <DeleteIcon />
                   </IconButton>
                 </TableCell>
-                <TableCell
-                  sx={{
-                    textAlign: "center",
-                    fontSize: "0.9rem",
-                    padding: "6px 10px",
-                    maxWidth: "200px",
-                    whiteSpace: "normal",
-                    wordBreak: "normal",
-                  }}
-                >
+                <TableCell sx={{ 
+                textAlign: 'center', 
+                fontSize: "0.9rem", 
+                padding: '6px 10px',
+                maxWidth: '200px',
+                whiteSpace: 'normal',
+                wordBreak: 'normal', 
+              }}>
                   {item.food}
-                  <Typography
-                    variant="body2"
-                    sx={{
+                  <Typography 
+                    variant="body2" 
+                    sx={{ 
                       fontStyle: "italic",
-                      wordBreak: "normal",
-                      fontSize: "0.8rem",
+                      wordBreak: 'normal', 
+                      fontSize: "0.8rem", 
                     }}
                   >
                     {item.note}
                   </Typography>
                 </TableCell>
                 <TableCell sx={{ textAlign: "center", fontSize: "0.9rem" }}>
-                  <Stack
-                    spacing={1}
-                    direction="row"
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <StyledButton onClick={() => reduceQuantity(index)}>
-                      -
-                    </StyledButton>
-                    <Typography
-                      variant="body1"
-                      sx={{ minWidth: "20px", textAlign: "center" }}
-                    >
-                      {item.quantity}
-                    </Typography>
-                    <StyledButton onClick={() => increaseQuantity(index)}>
-                      +
-                    </StyledButton>
-                  </Stack>
+            <Stack
+              spacing={1}
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <StyledButton onClick={() => reduceQuantity(index)}>-</StyledButton>
+              <Typography variant="body1" sx={{ minWidth: '20px', textAlign: 'center' }}>
+                {item.quantity}
+              </Typography>
+              <StyledButton onClick={() => increaseQuantity(index)}>+</StyledButton>
+            </Stack>
                 </TableCell>
                 <TableCell sx={{ textAlign: "center", p: 1 }}>
                   {item.portion}
@@ -291,197 +261,171 @@ const YourOrder = () => {
         >
           No items Added For Order To Be Placed
         </Button>
-      ) : (
-        <Button
-          component={Link}
-          to={`/placedorder/${id}`}
-          variant="contained"
-          sx={{
-            display: "block",
-            backgroundColor: "green",
-            color: "white",
-            textAlign: "center",
-            fontFamily: "Roboto Mono",
-            fontWeight: "bold",
-          }}
-          onClick={handlePlaceOrder}
-        >
-          Place Order
-        </Button>
-      )}
-      <br />
-      {orderHistory.length === 0 ? null : (
-        <Button
-          component={Link}
-          to={`/paying/${id}`}
-          variant="contained"
-          sx={{
-            display: "block",
-            backgroundColor: "green",
-            color: "white",
-            textAlign: "center",
-            fontFamily: "Roboto Mono",
-            fontWeight: "bold",
-          }}
-        >
-          Pay for Items
-        </Button>
+) : (
+  <Button
+    component={Link}
+    to={`/placedorder/${id}`}
+    variant="contained"
+    sx={{
+      display: "block",
+      backgroundColor: "green",
+      color: "white",
+      textAlign: "center",
+      fontFamily: "Roboto Mono",
+      fontWeight: "bold",
+    }}
+    onClick={handlePlaceOrder}
+  >
+    Place Order
+  </Button>
+)}
+<br />
+{orderHistory.length === 0 ? null : (
+  <Button
+    component={Link}
+    to={`/paying/${id}`}
+    variant="contained"
+    sx={{
+      display: "block",
+      backgroundColor: "green",
+      color: "white",
+      textAlign: "center",
+      fontFamily: "Roboto Mono",
+      fontWeight: "bold",
+    }}
+  >
+    Pay for Items
+  </Button>
       )}
 
-      <br />
-      <br />
-      <Typography
-        variant="h4"
-        component="div"
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          fontWeight: "bold",
-          mt: 2,
-          mb: 2,
-        }}
-      >
-        Order History
-      </Typography>
-
-      <TableContainer component={Paper} sx={{ border: 1, mb: 2 }}>
-        <Table aria-label="order history table">
-          <TableHead>
-            <TableRow>
-              <TableCell
-                sx={{
-                  fontWeight: "bold",
-                  fontSize: "1.1rem",
-                  textAlign: "center",
-                }}
-              >
-                Food Item
-              </TableCell>
-              <TableCell
-                sx={{
-                  fontWeight: "bold",
-                  fontSize: "1.1rem",
-                  textAlign: "center",
-                }}
-              >
-                Quantity
-              </TableCell>
-              <TableCell
-                sx={{
-                  fontWeight: "bold",
-                  fontSize: "1.1rem",
-                  textAlign: "center",
-                }}
-              >
-                Size (per portion)
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {orderHistory.map((item, index) => (
-              <TableRow key={index}>
-                <TableCell
-                  sx={{
-                    textAlign: "center",
-                    fontSize: "0.9rem",
-                    whiteSpace: "normal",
-                    wordBreak: "break-word",
-                    maxWidth: "200px",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                  }}
-                >
-                  {item.food}
-                  <Typography
-                    sx={{
-                      fontStyle: "italic",
-                      fontSize: "0.8rem",
-                      display: "block",
-                      wordBreak: "break-word",
-                    }}
-                  >
-                    {item.note}
-                  </Typography>
-                </TableCell>
-                <TableCell
-                  sx={{
-                    textAlign: "center",
-                    fontSize: "0.9rem",
-                  }}
-                >
-                  {item.quantity}
-                </TableCell>
-                <TableCell
-                  sx={{
-                    textAlign: "center",
-                    fontSize: "0.9rem",
-                  }}
-                >
-                  {item.portion}
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <Modal
-        open={isModalOpen}
-        onClose={() => handleModalClose(false)}
-        aria-labelledby="delete-confirmation-title"
-        aria-describedby="delete-confirmation-description"
-      >
-        <Box
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            bgcolor: "white",
-            boxShadow: 24,
-            p: 4,
-            width: isSmallScreen ? "auto" : "calc(100% - 40px)",
-            maxWidth: 300,
-          }}
-        >
-          <IconButton
-            sx={{ position: "absolute", top: 8, right: 8 }}
-            onClick={() => handleModalClose(false)}
-          >
-            <CloseIcon />
-          </IconButton>
-          <Typography
-            id="delete-confirmation-title"
-            variant="h6"
-            component="h2"
-            sx={{ fontWeight: "bold" }}
-          >
-            {`Do you want to remove the item "${
-              selectedItemIndex !== null && foodList[selectedItemIndex]
-                ? foodList[selectedItemIndex].food
-                : ""
-            }"?`}
+<br />
+<br />
+<Typography
+      variant="h4"
+      component="div"
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        fontWeight: "bold",
+        mt: 2,
+        mb: 2
+      }}
+    >
+      Order History
+    </Typography>
+    
+    <TableContainer component={Paper} sx={{ border: 1, mb: 2 }}>
+  <Table aria-label="order history table">
+    <TableHead>
+      <TableRow>
+        <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
+          Food Item
+        </TableCell>
+        <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
+          Quantity
+        </TableCell>
+        <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center' }}>
+          Size (per portion)
+        </TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      {orderHistory.map((item, index) => (
+        <TableRow key={index}>
+        <TableCell sx={{
+          textAlign: 'center',
+          fontSize: "0.9rem",
+          whiteSpace: 'normal',
+          wordBreak: 'break-word',
+          maxWidth: '200px',  
+          overflow: 'hidden',
+          textOverflow: 'ellipsis'
+        }}>
+          {item.food}
+          <Typography sx={{
+            fontStyle: "italic",
+            fontSize: "0.8rem",
+            display: 'block', 
+            wordBreak: 'break-word'
+          }}>
+            {item.note}
           </Typography>
-          <Box sx={{ display: "flex", justifyContent: "space-between", mt: 2 }}>
-            <Button
-              variant="contained"
-              color="error"
-              onClick={() => handleModalClose(false)}
-              sx={{ mr: 1, fontWeight: "bold", fontFamily: "Roboto Mono" }}
-            >
-              No, Cancel
-            </Button>
-            <Button
-              variant="contained"
-              color="success"
-              onClick={() => handleModalClose(true)}
-              sx={{ mr: 1, fontWeight: "bold", fontFamily: "Roboto Mono" }}
-            >
-              Yes, Confirm
-            </Button>
-          </Box>
-        </Box>
-      </Modal>
+        </TableCell>
+        <TableCell sx={{
+          textAlign: "center",
+          fontSize: "0.9rem"
+        }}>
+          {item.quantity}
+        </TableCell>
+        <TableCell sx={{
+          textAlign: "center",
+          fontSize: "0.9rem"
+        }}>
+          {item.portion}
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+</TableContainer>
+<Modal
+  open={isModalOpen}
+  onClose={() => handleModalClose(false)}
+  aria-labelledby="delete-confirmation-title"
+  aria-describedby="delete-confirmation-description"
+>
+  <Box
+    sx={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      bgcolor: "white",
+      boxShadow: 24,
+      p: 4,
+      width: isSmallScreen ? "auto" : "calc(100% - 40px)",
+      maxWidth: 300,
+    }}
+  >
+    <IconButton
+      sx={{ position: "absolute", top: 8, right: 8 }}
+      onClick={() => handleModalClose(false)}
+    >
+      <CloseIcon />
+    </IconButton>
+    <Typography
+      id="delete-confirmation-title"
+      variant="h6"
+      component="h2"
+      sx={{ fontWeight: 'bold' }} 
+    >
+      {`Do you want to remove the item "${
+        selectedItemIndex !== null && foodList[selectedItemIndex]
+          ? foodList[selectedItemIndex].food
+          : ""
+      }"?`}
+    </Typography>
+    <Box sx={{ display: "flex", justifyContent: "space-between", mt: 2 }}>
+      <Button
+        variant="contained"
+        color="error"
+        onClick={() => handleModalClose(false)}
+        sx={{ mr: 1, fontWeight: 'bold', fontFamily: 'Roboto Mono' }} 
+      >
+        No, Cancel
+      </Button>
+      <Button
+        variant="contained"
+        color="success"
+        onClick={() => handleModalClose(true)}
+        sx={{ mr: 1, fontWeight: 'bold', fontFamily: 'Roboto Mono' }}
+      >
+        Yes, Confirm
+      </Button>
+    </Box>
+  </Box>
+</Modal>
     </Container>
   );
 };
