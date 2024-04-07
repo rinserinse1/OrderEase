@@ -1,10 +1,6 @@
-
-
-
 import MenuCategories from './MenuRelated/MenuCategories';
-import React, { useState, useEffect, } from 'react';
-import {BrowserRouter as Router, Route, Navigate,  Routes, useLocation, useRoutes} from "react-router-dom";
-
+import React, {useEffect, } from 'react';
+import {BrowserRouter as Navigate, useRoutes} from "react-router-dom";
 import Error from "./notFound/NotFound"
 import DashboardLayout from './layouts';
 import MenuItems from './MenuRelated/MenuItems';
@@ -17,166 +13,136 @@ import Assistance from './WaitingScreens/Assistance'
 import PlacedOrder from './order/PlacedOrder';
 import Paying from './WaitingScreens/Paying';
 
-const App  = () =>  { 
-    
-  var props = window.location.pathname
-  function AddLogging({children}) {
-  
-    useEffect(() => {
-  
-    }, []);
-  
-    return <MenuCategories {...children} {...props} hey = {window.location.pathname} />;
+const App = () => {
+  var props = window.location.pathname;
+  function AddLogging({ children }) {
+    useEffect(() => {}, []);
+
+    return (
+      <MenuCategories {...children} {...props} hey={window.location.pathname} />
+    );
   }
-
-
-
-
 
   const routes = useRoutes([
     {
-      path: 'menuselect' ,
-      element:  <MenuSelect/>
+      path: "menuselect",
+      element: <MenuSelect />,
     },
     {
-      path: 'menuselectconfirm' ,
-      element:  <MenuSelectConfirm/>,
+      path: "menuselectconfirm",
+      element: <MenuSelectConfirm />,
       children: [
         {
-          path: ':id' ,
-          element:  <AddLogging></AddLogging>
+          path: ":id",
+          element: <AddLogging></AddLogging>,
         },
-
       ],
     },
     {
-      path: '/',
+      path: "/",
       element: <DashboardLayout />,
       children: [
         {
-          path: '',
+          path: "",
           element: <Navigate to="/menuselect" replace />,
         },
         {
-          path: 'menucategories',
-          element: <MenuCategories/>,
+          path: "menucategories",
+          element: <MenuCategories />,
           children: [
             {
-              path: ':id' ,
-              element:  <AddLogging></AddLogging>
+              path: ":id",
+              element: <AddLogging></AddLogging>,
             },
-
           ],
         },
 
         {
-          path: 'menuItems' ,
-          element:  <MenuItems/>,
+          path: "menuItems",
+          element: <MenuItems />,
           children: [
             {
-              path: ':id/:category' ,
-              element:  <AddLogging></AddLogging>
+              path: ":id/:category",
+              element: <AddLogging></AddLogging>,
             },
-
           ],
         },
         {
-          path: 'itemDisplay' ,
-          element:  <ItemDisplay/>,
+          path: "itemDisplay",
+          element: <ItemDisplay />,
           children: [
             {
-              path: ':id/:category/:food' ,
-              element:  <AddLogging></AddLogging>
+              path: ":id/:category/:food",
+              element: <AddLogging></AddLogging>,
             },
-
-          ],
-        },
-
-        {
-          path: 'NutritionDisplay' ,
-          element:  <NutritionDisplay/>,
-          children: [
-            {
-              path: ':id/:category/:food' ,
-              element:  <AddLogging></AddLogging>
-            },
-
           ],
         },
 
         {
-          path: 'yourorder' ,
-          element:  <YourOrder/>,
+          path: "NutritionDisplay",
+          element: <NutritionDisplay />,
           children: [
             {
-              path: ':id' ,
-              element:  <AddLogging></AddLogging>
+              path: ":id/:category/:food",
+              element: <AddLogging></AddLogging>,
             },
-
-          ],
-        },
-        {
-          path: 'placedorder' ,
-          element:  <PlacedOrder/>,
-          children: [
-            {
-              path: ':id' ,
-              element:  <AddLogging></AddLogging>
-            },
-
-          ],
-        },
-        {
-          path: 'assistance' ,
-          element:  <Assistance/>,
-          children: [
-            {
-              path: ':id' ,
-              element:  <AddLogging></AddLogging>
-            },
-
-          ],
-        },
-        {
-          path: 'paying' ,
-          element:  <Paying/>,
-          children: [
-            {
-              path: ':id' ,
-              element:  <AddLogging></AddLogging>
-            },
-
           ],
         },
 
-
         {
-          path: '404' ,
-          element:  <Error/>
+          path: "yourorder",
+          element: <YourOrder />,
+          children: [
+            {
+              path: ":id",
+              element: <AddLogging></AddLogging>,
+            },
+          ],
         },
         {
-          path: '*',
+          path: "placedorder",
+          element: <PlacedOrder />,
+          children: [
+            {
+              path: ":id",
+              element: <AddLogging></AddLogging>,
+            },
+          ],
+        },
+        {
+          path: "assistance",
+          element: <Assistance />,
+          children: [
+            {
+              path: ":id",
+              element: <AddLogging></AddLogging>,
+            },
+          ],
+        },
+        {
+          path: "paying",
+          element: <Paying />,
+          children: [
+            {
+              path: ":id",
+              element: <AddLogging></AddLogging>,
+            },
+          ],
+        },
+
+        {
+          path: "404",
+          element: <Error />,
+        },
+        {
+          path: "*",
           element: <Navigate to="/404" replace />,
         },
       ],
     },
-
-
-
   ]);
 
-
-
-    return (
-        <div>
-
-            {routes}
-
-        </div>
-    );
-}
+  return <div>{routes}</div>;
+};
 
 export default App;
-
-
-
