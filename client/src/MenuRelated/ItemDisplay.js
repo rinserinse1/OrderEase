@@ -213,16 +213,19 @@ const ItemDisplay = () => {
 
   const [customizeModalOpen, setCustomizeModalOpen] = useState(false);
   const [customization, setCustomization] = useState("");
+  const [tempCustomization, setTempCustomization] = useState("");
   const handleCustomizeIconClick = () => {
     setCustomizeModalOpen(true);
   };
 
   const closeCustomizeModal = () => {
     setCustomizeModalOpen(false);
+    setTempCustomization(customization);
   };
   
   const cancelCustomizeModal = () => {
     setCustomization("");
+    setTempCustomization("");
     setCustomizeModalOpen(false);
   };
   // Variable that tracks the customization of the item entered in (string form)
@@ -322,9 +325,11 @@ const ItemDisplay = () => {
           Customize your order
         </Button>
         <br></br>
-        <Typography>
-          {customization == "" ? "" : `Custom comment: ${customization}` }
+
+        <Typography sx={{fontFamily: 'Roboto Mono'}}>
+          {tempCustomization == "" ? "" : `Custom comment: ${tempCustomization}` }
         </Typography>
+
         <br></br>
         <Button 
           component={Link} 
