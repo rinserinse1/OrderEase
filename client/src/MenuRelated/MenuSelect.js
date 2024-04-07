@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Box,
-  ButtonBase,
-  Card,
-  CardMedia,
-  Container,
-  Grid,
-  Typography,
-  Stack,
-} from "@mui/material";
+import {Box, ButtonBase, Card, CardMedia, Container, Grid, Typography,Stack,} from "@mui/material";
 import { Link } from "react-router-dom";
 
 import DeluxeMenuImage from "../images/Deluxe_Menu_Final.PNG";

@@ -7,49 +7,89 @@ const Assistance = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    localStorage.setItem('assistance', JSON.stringify(true));
+    localStorage.setItem("assistanceTimestamp", Date.now().toString());
 
-    const timer = setTimeout(() => {
-      localStorage.setItem('assistance', JSON.stringify(false));
-      navigate(-1); 
-    }, 10000); 
+    const expiryCheck = setInterval(() => {
+      const assistanceTimestamp = parseInt(
+        localStorage.getItem("assistanceTimestamp") || "0",
+        10
+      );
+      if (Date.now() - assistanceTimestamp >= 10000) {
+        localStorage.setItem("assistance", JSON.stringify(false));
+        clearInterval(expiryCheck);
+        navigate(-1);
+      }
+    }, 200);
 
-    return () => clearTimeout(timer);
-  }, [navigate]);
+    return () => clearInterval(expiryCheck);
+  }, [navigate, id]);
 
   const handleCancel = () => {
-    localStorage.setItem('assistance', JSON.stringify(false));
-    navigate(-1); 
+    localStorage.setItem("assistance", JSON.stringify(false));
+    localStorage.removeItem("assistanceTimestamp");
+
+    navigate(-1);
   };
 
   const handleContinueBrowsing = () => {
-    navigate(`/menucategories/${id}`);
+    navigate(-1);
   };
 
   return (
     <>
-      <br /><br />
-      <Container maxWidth="sm" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-        <Box p={2} sx={{ border: '2px solid grey', bgcolor: 'white', textAlign: 'center', marginBottom: '10px' }}>
+      <Container
+        maxWidth="sm"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+        }}
+      >
+        <Box
+          p={2}
+          sx={{
+            border: "2px solid grey",
+            bgcolor: "white",
+            textAlign: "center",
+            marginBottom: "10px",
+          }}
+        >
           <Typography variant="h4" gutterBottom>
-            Assistance on the way.<br />Please wait...
+            Assistance on the way.
+            <br />
+            Please wait...
           </Typography>
         </Box>
-        
-        <Box sx={{ position: 'relative', marginTop: '190px', width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start' }}>
-          <CircularProgress sx={{ alignSelf: 'center', marginBottom: '20px' }} />
-          <Button 
-            variant="contained" 
-            color="primary" 
-            sx={{ marginBottom: '20px', marginTop: '15vh' }}
+
+        <Box
+          sx={{
+            position: "relative",
+            marginTop: "190px",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "flex-start",
+          }}
+        >
+          <CircularProgress
+            sx={{ alignSelf: "center", marginBottom: "20px" }}
+          />
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{ marginBottom: "20px", marginTop: "15vh" }}
             onClick={handleContinueBrowsing}
           >
             Continue Browsing
           </Button>
-          <Button 
-            variant="contained" 
-            color="error" 
-            sx={{ marginTop: '20px' }}
+          <Button
+            variant="contained"
+            color="error"
+            sx={{ marginTop: "20px" }}
             onClick={handleCancel}
           >
             Cancel
