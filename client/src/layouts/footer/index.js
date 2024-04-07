@@ -36,7 +36,7 @@ const AssistanceModal = ({ open, onClose }) => {
           >
             <CloseIcon />
           </IconButton>
-          <Typography id="assistance-modal-title" variant="h6" component="h2" fontWeight={'bold'} fontFamily={'Roboto Mono'}>
+          <Typography id="assistance-modal-title" variant="h6" component="h2" fontWeight={'bold'} >
             Do you want to call a server for assistance?
           </Typography>
           <Box sx={{ display: "flex", fontFamily: 'Roboto Mono', justifyContent: "space-between", mt: 2 }}>

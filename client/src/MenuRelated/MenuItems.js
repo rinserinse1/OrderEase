@@ -123,7 +123,7 @@ const MenuItems = () => {
                 <TableCell component="th" scope="row" style={{ paddingRight: '-10px', width: '50%', borderBottom: 1 }} >
                   <img src={item.photo} alt={item.name} style={{ objectFit: 'cover', width: '100%', height: '30vw', borderRadius: '25px' }} />
                 </TableCell>
-                <TableCell sx={{fontWeight: '550', borderBottom: 1, fontFamily: 'Roboto Mono'}}>
+                <TableCell sx={{fontWeight: '550', borderBottom: 1 }}>
                 {item.name}
                 <br></br><br></br>
                   {'(' + item['Portion Size, Per Order'] + ')'}
@@ -141,7 +141,6 @@ const MenuItems = () => {
                       fontWeight: 'bold',
                       position: 'relative',
                       boxShadow: 3,
-                      fontFamily: 'Roboto Mono'
                     }}
                   >
                          <Typography style = {{fontSize:"15px", textAlign:"center", fontFamily: 'Roboto Mono'}} >VIEW ITEM</Typography>

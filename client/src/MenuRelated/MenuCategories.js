@@ -102,7 +102,6 @@ const MenuCategories = () => {
             <Typography variant="subtitle1" component="div" sx={{
               fontWeight: 'bold',
               textAlign: 'center',
-              fontFamily: 'Roboto Mono',
               whiteSpace: 'nowrap',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -111,7 +110,6 @@ const MenuCategories = () => {
             </Typography>
             <Typography variant="subtitle1" color="text.secondary" sx={{
               fontWeight: 'bold',
-              fontFamily: 'Roboto Mono'
             }}>
               ({category.foods.length})
             </Typography>

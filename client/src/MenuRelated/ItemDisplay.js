@@ -49,7 +49,7 @@ const CustomizeModal = ({ open, onClose, cancel, setCustomization, customization
           >
             <CloseIcon />
           </IconButton>
-          <Typography id="customize-modal-title" variant="h6" component="h2" fontWeight={'bold'} fontFamily={'Roboto Mono'}>
+          <Typography id="customize-modal-title" variant="h6" component="h2" fontWeight={'bold'} >
             Enter in additional specifications
           </Typography>
 
