@@ -30,13 +30,14 @@ const MenuSelectConfirm = () => {
             border: "2px solid grey",
             bgcolor: "white",
             borderRadius: "10px",
+            font: "Roboto Mono",
           }}
         >
           <Typography
             variant="h4"
             align="center"
             gutterBottom
-            style={{  fontWeight: "bold" }}
+            style={{ fontFamily: "Roboto Mono", fontWeight: "bold" }}
           >
             You have selected the {id} menu!
           </Typography>
@@ -69,12 +70,14 @@ const MenuSelectConfirm = () => {
             border: "2px solid grey",
             bgcolor: "white",
             borderRadius: "10px",
+            fontFamily: "Roboto Mono",
           }}
         >
           <Typography
             variant="h6"
             align="center"
             gutterBottom
+            style={{ fontFamily: "Roboto Mono" }}
           >
             {id === "deluxe" ? (
               <>
@@ -87,6 +90,7 @@ const MenuSelectConfirm = () => {
                     m: 0,
                     p: 0,
                     listStyleType: "none",
+                    fontFamily: "Roboto Mono",
                   }}
                 >
                   {[
@@ -120,7 +124,7 @@ const MenuSelectConfirm = () => {
                       <Typography
                         variant="body1"
                         component="div"
-                        sx={{ fontWeight: "bold", }}
+                        sx={{ fontWeight: "bold", fontFamily: "Roboto Mono" }}
                       >
                         {item.title}
                       </Typography>
@@ -128,7 +132,7 @@ const MenuSelectConfirm = () => {
                         variant="body1"
                         sx={{
                           ml: 2,
-
+                          fontFamily: "Roboto Mono",
                           fontStyle: "italic",
                         }}
                       >
@@ -160,13 +164,14 @@ const MenuSelectConfirm = () => {
             border: "2px solid grey",
             bgcolor: "white",
             borderRadius: "10px",
+            fontFamily: "Roboto Mono",
           }}
         >
           <Typography
             variant="h4"
             align="center"
             gutterBottom
-            style={{  fontWeight: "bold" }}
+            style={{ fontFamily: "Roboto Mono", fontWeight: "bold" }}
           >
             Confirm menu selection
           </Typography>
@@ -174,7 +179,7 @@ const MenuSelectConfirm = () => {
             variant="h5"
             align="center"
             gutterBottom
-            style={{ fontWeight: "bold" }}
+            style={{ fontFamily: "Roboto Mono", fontWeight: "bold" }}
           >
             Price: {menuPrices[id]}
           </Typography>
