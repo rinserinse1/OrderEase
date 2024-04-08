@@ -10,7 +10,6 @@ import PendingIcon from '@mui/icons-material/Pending';
 const AssistanceModal = ({ open, onClose }) => {
   return (
     <>
-      <GlobalStyles styles={{ body: { backgroundColor: "#FDDFB3" } }} />
       <Modal
         open={open}
         onClose={() => onClose(false)}
