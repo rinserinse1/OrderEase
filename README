@@ -1,9 +1,8 @@
-MERN Stack Application (react + node.js)
+React Application
 
 
 Must have: 
--NODE: version -- 14.x (we used v14.17.1)
-- nvm install 14.17.1 (to download the node version only for the current directory)
+- NODE: version -- 14.x (we used v14.17.1)
 
 
 Package Installation:
@@ -12,7 +11,6 @@ Package Installation:
 
 Application Startup:
 - Open client terminal in editor --> npm start
-
 
 
 Code was made with the following environment:
