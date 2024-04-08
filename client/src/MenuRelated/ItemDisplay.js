@@ -67,11 +67,15 @@ const CustomizeModal = ({ open, onClose, cancel, setCustomization, customization
 };
 
 const NumberInput = React.forwardRef(function CustomNumberInput(props, ref) {
+  const preventEdit = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <BaseNumberInput
       slots={{
         root: StyledInputRoot,
-        input: StyledInput,
+        input: props => <StyledInput {...props} onMouseDown={preventEdit} onTouchStart={preventEdit} readOnly />,
         incrementButton: StyledButton,
         decrementButton: StyledButton,
       }}
