@@ -29,7 +29,7 @@ const MenuCategories = () => {
     }
 
   const filteredCategories = categories.filter(category =>
-    category.name.toLowerCase().includes(searchQuery)
+    category.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
