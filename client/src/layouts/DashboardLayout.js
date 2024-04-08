@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import React, { useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import { styled } from "@mui/material/styles";
-import React from "react";
 import Footer from "./footer";
 
 const APP_BAR_MOBILE = 64;
@@ -25,11 +24,22 @@ const Main = styled("div")(({ theme }) => ({
 }));
 
 export default function DashboardLayout() {
-  const [open, setOpen] = useState(false);
+  const [setOpen] = useState(false);
+  const location = useLocation();
+
+  const shouldHideFooter = () => {
+
+    const hideFooterRoutes = [
+      '/menuselect',
+      '/menuselectconfirm', 
+    ];
+
+    return hideFooterRoutes.some(path => location.pathname.startsWith(path));
+  };
 
   return (
     <StyledRoot>
-      <Footer onOpenNav={() => setOpen(true)} />
+      {!shouldHideFooter() && <Footer onOpenNav={() => setOpen(true)} />}
       <Main>
         <Outlet />
       </Main>
