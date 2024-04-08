@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useLocation, useNavigate } from 'react-router-dom';
-import { Box, BottomNavigation, BottomNavigationAction, Modal, Button, IconButton, Typography, GlobalStyles } from '@mui/material';
+import { Box, BottomNavigation, BottomNavigationAction, Modal, Button, IconButton, Typography, } from '@mui/material';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';

@@ -67,7 +67,7 @@ const Paying = () => {
             <Button
               variant="contained"
               color="error"
-              sx={{ marginTop: "190px" }}
+              sx={{ marginTop: "150px" }}
               component={Link}
               to={`/yourorder/${id}`}
             >

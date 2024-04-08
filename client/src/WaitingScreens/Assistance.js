@@ -66,7 +66,7 @@ const Assistance = () => {
         <Box
           sx={{
             position: "relative",
-            marginTop: "190px",
+            marginTop: "150px",
             width: "100%",
             height: "100%",
             display: "flex",
