@@ -55,18 +55,18 @@ const MenuItems = () => {
     const [searchQuery, setSearchQuery] = useState('');
 
     const handleSearchInputChange = (event) => {
-      setSearchQuery(event.target.value.toLowerCase());
+      setSearchQuery(event.target.value);
     };
 
     const filteredFoods = foods.filter(food =>
-      food.name.toLowerCase().includes(searchQuery) && 
+      food.name.toLowerCase().includes(searchQuery.toLowerCase()) && 
       selectedChips.every(filter => food.tags.includes(filter))
     );
-
+    
     const numOfFilteredFoods = (filter) => {
       const length = foods.filter(food => food.tags.includes(filter)).length;
       return length;
-    }
+    };
 
   return (
     <>
