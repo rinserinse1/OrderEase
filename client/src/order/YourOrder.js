@@ -108,12 +108,11 @@ const YourOrder = () => {
   };
 
   const handleRemoveItem = (indexToRemove) => {
-    const updatedFoodList = foodList.filter(
-      (item, index) => index !== indexToRemove
-    );
+    const updatedFoodList = foodList.filter((item, index) => index !== indexToRemove);
     setFoodList(updatedFoodList);
     localStorage.setItem("foodList", JSON.stringify(updatedFoodList));
-  };
+    window.dispatchEvent(new CustomEvent('foodListUpdated', { detail: { length: updatedFoodList.length } }));
+};
 
   const handlePlaceOrder = () => {
     localStorage.removeItem("foodList");

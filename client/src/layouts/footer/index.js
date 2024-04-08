@@ -93,6 +93,11 @@ export default function Footer() {
   const [assistFlag, setAssistFlag] = useState(isAssistanceActive());
 
   const [value, setValue] = useState(null);
+  const [foodListLength, setFoodListLength] = useState(() => {
+    const items = JSON.parse(localStorage.getItem("foodList") || "[]");
+    return items.length;
+  });
+
   useEffect(() => {
     const basePath = location.pathname.split("/")[1];
 
@@ -113,6 +118,18 @@ export default function Footer() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const handleFoodListUpdate = (event) => {
+      setFoodListLength(event.detail.length);
+    };
+
+    window.addEventListener('foodListUpdated', handleFoodListUpdate);
+
+    return () => {
+      window.removeEventListener('foodListUpdated', handleFoodListUpdate);
+    };
+  }, []);
+
   const handleAssistanceIconClick = () => {
     if (isAssistanceActive()) {
       navigate(`/assistance/${id}`);
@@ -131,9 +148,8 @@ export default function Footer() {
   };
 
   const getNumberOfItems = () => {
-    const items = JSON.parse(localStorage.getItem("foodList") || "[]");
-    return items.length ? `View Order (${items.length})` : "View Order";
-  };
+    return foodListLength ? `View Order (${foodListLength})` : "View Order";
+  };  
 
   if(shouldHideFooter){
     return null;

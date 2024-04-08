@@ -240,25 +240,26 @@ const ItemDisplay = () => {
 
       const addToOrder = () => {
         let order = [];
-
         const storedOrder = localStorage.getItem('foodList');
         if (storedOrder) {
           order = JSON.parse(storedOrder);
         }
-
+      
         order.push({
           food: itemInfo.name,
           quantity: quantity,
           note: customization,
           portion: itemInfo['Portion Size, Per Order']
         });
-
+      
         localStorage.setItem('foodList', JSON.stringify(order));
-
+      
+        window.dispatchEvent(new CustomEvent('foodListUpdated', { detail: { length: order.length } }));
+      
         setQuantity(1); 
         setCustomization(""); 
         setTempCustomization(""); 
-
+      
         alert('Added to Order');
       };
 
