@@ -60,6 +60,12 @@ const MenuOption = ({ name, image, link, price }) => (
               >
                 {price}
               </Typography>
+              <Typography
+                variant="body2"
+                sx={{ fontFamily: "Roboto Mono", mt: 1 }}
+              >
+                Click for more information
+              </Typography>
             </Box>
           </Stack>
         </ButtonBase>
