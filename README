@@ -1,5 +1,11 @@
-React Application
+CPSC 481
 
+Winston Thai, UCID: 30140277
+Shaher Assaf, UCID: 30124428
+Niran Malla, UCID: 30086877
+Taaha Shakeel, UCID: 30063065
+
+React Application
 
 Must have: 
 - NODE: version -- 14.x (we used v14.17.1)
@@ -16,6 +22,7 @@ Application Startup:
 Code was made with the following environment:
 -Google Chrome
 -Client on localhost:3000
+
 
 
 
